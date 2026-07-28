@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도입상담 신청 | 스터디큐브</title>
+    <meta name="description" content="스터디큐브 도입상담 - 전문 영업 담당자가 초스피드로 견적 상담을 도와드립니다." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sub.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="site-header" class="scrolled">
+        <div class="header-inner container">
+            <a href="index.html" class="logo"><span class="logo-study">STUDY</span><span
+                    class="logo-cube">CUBE</span></a>
+            <nav class="gnb" id="gnb">
+                <ul>
+                    <li><a href="contact.html" class="gnb-active">도입문의</a></li>
+                    <li><a href="index.html#sec-barrier">All 배리어프리</a></li>
+                    <li><a href="kiosk.html">키오스크</a></li>
+                    <li><a href="admin-app.html">관리자웹</a></li>
+                    <li><a href="admin-app.html#sec-app">모바일앱</a></li>
+                    <li><a href="entrance.html">입퇴실기</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="sub-hero sub-hero-contact">
+        <div class="sub-hero-bg">
+            <div class="sub-hero-glow g1"></div>
+            <div class="sub-hero-glow g2"></div>
+        </div>
+        <div class="container sub-hero-content">
+            <div class="sub-breadcrumb"><a href="index.html">홈</a> <span>›</span> <span>도입상담</span></div>
+            <div class="sub-hero-badge">CONTACT US</div>
+            <h1>무료 도입상담 신청</h1>
+            <p>원하시는 도입기기 및 솔루션 정보를 남겨 주시면<br />전문 영업 담당자가 <strong>초스피드로 견적 상담</strong>을 도와드립니다.</p>
+            <div class="contact-hero-info">
+                <div class="chi-item"><span class="chi-icon">📞</span>
+                    <div><strong>365일 도입상담 전화</strong><span class="chi-num">1577-3119</span></div>
+                </div>
+                <div class="chi-item"><span class="chi-icon">⏰</span>
+                    <div><strong>운영시간</strong><span>평일 09:00 ~ 18:00</span></div>
+                </div>
+                <div class="chi-item"><span class="chi-icon">📧</span>
+                    <div><strong>이메일</strong><span>tobesmart@tobesmart.co.kr</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="sec-contact-form">
+        <div class="container">
+            <div class="contact-form-layout">
+
+                <!-- Left: Info -->
+                <div class="cf-left reveal-left">
+                    <h2>빠른 상담을 위해<br />정보를 남겨주세요</h2>
+                    <p>담당 전문가가 영업일 기준 24시간 이내로 연락드립니다.</p>
+
+                    <div class="cf-steps">
+                        <div class="cf-step">
+                            <div class="cfs-num">01</div>
+                            <div><strong>상담 신청</strong>
+                                <p>아래 폼에 정보 입력</p>
+                            </div>
+                        </div>
+                        <div class="cfs-line"></div>
+                        <div class="cf-step">
+                            <div class="cfs-num">02</div>
+                            <div><strong>담당자 배정</strong>
+                                <p>지역 전담 매니저 배정</p>
+                            </div>
+                        </div>
+                        <div class="cfs-line"></div>
+                        <div class="cf-step">
+                            <div class="cfs-num">03</div>
+                            <div><strong>맞춤 견적 제공</strong>
+                                <p>매장에 최적화된 솔루션 제안</p>
+                            </div>
+                        </div>
+                        <div class="cfs-line"></div>
+                        <div class="cf-step">
+                            <div class="cfs-num">04</div>
+                            <div><strong>계약 & 설치</strong>
+                                <p>1주일 이내 설치 완료</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cf-guarantee-list">
+                        <div class="cf-gr-item"><span>✅</span> 무료 상담 — 부담 없이 문의하세요</div>
+                        <div class="cf-gr-item"><span>✅</span> 무약정 — 언제든 해지 가능</div>
+                        <div class="cf-gr-item"><span>✅</span> 앱 가입비 0원 / 보증보험료 0원</div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="cf-right reveal-right">
+                    <form class="contact-form-full" id="contact-form-full" onsubmit="handleContactSubmit(event)">
+                        <h3>도입상담 신청서</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cf-name">업체명 / 성함 <span class="req">*</span></label>
+                                <input type="text" id="cf-name" placeholder="예: 스터디큐브 강남점 / 홍길동" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-contact">연락처 (전화 또는 이메일) <span class="req">*</span></label>
+                                <input type="text" id="cf-contact" placeholder="010-0000-0000 또는 email@example.com"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cf-time">상담 가능 시간 <span class="req">*</span></label>
+                                <select id="cf-time" required>
+                                    <option value="">선택해주세요</option>
+                                    <option>오전 9시 ~ 10시</option>
+                                    <option>오전 10시 ~ 11시</option>
+                                    <option>오전 11시 ~ 12시</option>
+                                    <option>오후 12시 ~ 1시</option>
+                                    <option>오후 1시 ~ 2시</option>
+                                    <option>오후 2시 ~ 3시</option>
+                                    <option>오후 3시 ~ 4시</option>
+                                    <option>오후 4시 ~ 5시</option>
+                                    <option>오후 5시 ~ 6시</option>
+                                    <option>언제든 가능</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-region">지역 <span class="req">*</span></label>
+                                <select id="cf-region" required>
+                                    <option value="">선택해주세요</option>
+                                    <optgroup label="수도권">
+                                        <option>서울</option>
+                                        <option>경기도</option>
+                                        <option>인천</option>
+                                    </optgroup>
+                                    <optgroup label="지방">
+                                        <option>부산</option>
+                                        <option>대구</option>
+                                        <option>광주</option>
+                                        <option>대전</option>
+                                        <option>울산</option>
+                                        <option>세종</option>
+                                        <option>강원도</option>
+                                        <option>충청북도</option>
+                                        <option>충청남도</option>
+                                        <option>전라북도</option>
+                                        <option>전라남도</option>
+                                        <option>경상북도</option>
+                                        <option>경상남도</option>
+                                        <option>제주도</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cf-type">상담 내용 선택</label>
+                                <select id="cf-type">
+                                    <option value="">선택해주세요</option>
+                                    <option>신규 도입 상담</option>
+                                    <option>타사 이용 중으로 전환 도입 상담</option>
+                                    <option>기타</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-industry">업종 선택</label>
+                                <select id="cf-industry">
+                                    <option value="">선택해주세요</option>
+                                    <option>스터디카페 / 독서실</option>
+                                    <option>관공서 / 공공기관</option>
+                                    <option>휴게시설</option>
+                                    <option>일반판매시설</option>
+                                    <option>위생시설</option>
+                                    <option>기타</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cf-product">도입 고려 중인 제품</label>
+                            <select id="cf-product">
+                                <option value="">선택해주세요</option>
+                                <option>일반 키오스크</option>
+                                <option>배리어프리 키오스크</option>
+                                <option>출입통제기 (입퇴실기)</option>
+                                <option>관리자 웹 / 모바일앱</option>
+                                <option>테이블오더 / POS</option>
+                                <option>All-in-One 패키지</option>
+                                <option>기타</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cf-msg">문의 내용</label>
+                            <textarea id="cf-msg" rows="5" placeholder="궁금하신 점, 매장 규모, 현재 상황 등을 자유롭게 적어주세요."></textarea>
+                        </div>
+
+                        <!-- Terms -->
+                        <div class="form-terms">
+                            <label class="terms-label">
+                                <input type="checkbox" id="cf-terms" required />
+                                <span class="terms-checkmark"></span>
+                                <span><strong>개인정보 수집 및 이용에 동의합니다.</strong> <small>(필수)</small></span>
+                            </label>
+                            <button type="button" class="terms-view-btn" onclick="toggleTerms()">내용보기</button>
+                            <div class="terms-content" id="terms-content">
+                                수집 목적: 도입상담 서비스 제공 / 수집 항목: 업체명, 성함, 연락처, 이메일 / 보유 기간: 처리 후 즉시 파기 (단, 법령에 따라 보관이 필요한 경우
+                                해당 기간 보관)
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit-contact">
+                            <span class="bsc-icon">📋</span>
+                            도입상담 신청완료
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">✅ 상담 신청이 완료되었습니다! 빠르게 연락드리겠습니다.</div>
+
+    <!-- FOOTER -->
+    <footer id="site-footer">
+        <div class="footer-top">
+            <div class="container footer-top-inner">
+                <div class="footer-logo-area">
+                    <span class="footer-logo">TOBESMART</span>
+                    <p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-col">
+                        <strong>솔루션</strong>
+                        <a href="index.html#sec-barrier">All 배리어프리</a>
+                        <a href="kiosk.html">키오스크</a>
+                        <a href="admin-app.html">관리자웹</a>
+                        <a href="admin-app.html#sec-app">모바일앱</a>
+                        <a href="entrance.html">입퇴실기</a>
+                    </div>
+                    <div class="footer-link-col">
+                        <strong>고객지원</strong>
+                        <a href="contact.html">도입문의</a>
+                        <a href="tel:15773119">전화 상담</a>
+                        <a href="mailto:tobesmart@tobesmart.co.kr">이메일 문의</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <div class="footer-company-info">
+                    <p>대표: 김광 &nbsp;|&nbsp; 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p>
+                    <p>전화: 1577-3119 &nbsp;|&nbsp; 팩스: 031-701-4119 &nbsp;|&nbsp; 이메일: tobesmart@tobesmart.co.kr</p>
+                    <p>고객센터: 평일 09:00 ~ 18:00</p>
+                </div>
+                <p class="footer-copyright">COPYRIGHT © TOBESMART. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="quick-buttons" id="quick-buttons">
+        <a href="tel:15773119" class="quick-btn quick-call"><span class="qb-icon">📞</span><span
+                class="qb-text">전화상담<br /><strong>1577-3119</strong></span></a>
+        <button class="quick-btn quick-top" onclick="scrollToTop()"><span class="qb-icon">▲</span><span
+                class="qb-text">TOP</span></button>
+    </div>
+
+    <script src="sub.js"></script>
+    <script>
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const terms = document.getElementById('cf-terms');
+            if (!terms.checked) { alert('개인정보 수집 및 이용에 동의해 주세요.'); return; }
+            const btn = e.target.querySelector('.btn-submit-contact');
+            btn.textContent = '처리 중...'; btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = '<span class="bsc-icon">📋</span>도입상담 신청완료';
+                btn.disabled = false;
+                e.target.reset();
+                showToast('✅ 상담 신청이 완료되었습니다! 영업일 기준 24시간 이내 연락드립니다.');
+            }, 1300);
+        }
+        function toggleTerms() {
+            const el = document.getElementById('terms-content');
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            if (msg) t.textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 4500);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스터디큐브 - 스터디카페·독서실 무인 토털 솔루션 | 투비스마트</title>
+  <meta name="description"
+    content="스터디큐브(투비스마트)는 스터디카페 및 독서실 무인 운영을 위한 키오스크, 관리자웹, 모바일앱, 입퇴실기를 포함한 All-in-One B2B 솔루션을 제공합니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================================================
+       HEADER / GNB
+  ========================================================= -->
+  <header id="site-header">
+    <div class="header-inner container">
+      <a href="#hero" class="logo" id="logo-link">
+        <span class="logo-study">STUDY</span><span class="logo-cube">CUBE</span>
+      </a>
+      <nav class="gnb" id="gnb">
+        <ul>
+          <li><a href="contact.html">도입문의</a></li>
+          <li><a href="#sec-barrier">All 배리어프리</a></li>
+          <li><a href="kiosk.html">키오스크</a></li>
+          <li><a href="admin-app.html">관리자웹</a></li>
+          <li><a href="admin-app.html#sec-app">모바일앱</a></li>
+          <li><a href="entrance.html">입퇴실기</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       SECTION 1 — 메인 히어로 배너
+  ========================================================= -->
+  <section id="hero">
+    <div class="hero-bg">
+      <!-- Animated background grid / ambient glow -->
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="hero-grid-overlay"></div>
+      <div class="hero-particles" id="hero-particles"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-badge animate-fade-down">
+        <span class="badge-dot"></span>스터디카페 무인솔루션 1위 브랜드
+      </div>
+      <h1 class="hero-title animate-fade-up" style="animation-delay:.1s">
+        시작부터 끝까지 완벽하게.<br />
+        <span class="gradient-text">당신의 효율적인 학습 공간 파트너</span><br />
+        스터디큐브
+      </h1>
+      <p class="hero-sub animate-fade-up" style="animation-delay:.22s">
+        스터디큐브는 ㈜투비스마트의 무인 스터디카페 &amp; 독서실 전용<br />
+        토털 솔루션 서비스입니다.
+      </p>
+      <div class="hero-cta animate-fade-up" style="animation-delay:.34s">
+        <a href="#contact-section" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          도입문의
+        </a>
+        <a href="#" class="btn btn-outline btn-lg" id="download-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          제안서 다운로드
+        </a>
+      </div>
+
+      <!-- Floating KPI cards -->
+      <div class="hero-kpi-row animate-fade-up" style="animation-delay:.46s">
+        <div class="kpi-card">
+          <span class="kpi-num" data-target="1200">0</span><span class="kpi-unit">+</span>
+          <span class="kpi-label">도입 매장</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-card">
+          <span class="kpi-num" data-target="100">0</span><span class="kpi-unit">만+</span>
+          <span class="kpi-label">이용 회원</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-card">
+          <span class="kpi-num" data-target="70">0</span><span class="kpi-unit">+</span>
+          <span class="kpi-label">프랜차이즈</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-card">
+          <span class="kpi-num" data-target="365">0</span><span class="kpi-unit">일</span>
+          <span class="kpi-label">전문 C.S 운영</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>스크롤하여 더 알아보기</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 2 — 서비스 핵심 가치
+  ========================================================= -->
+  <section id="sec-value" class="sec-value">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">CORE VALUE</span>
+        <h2 class="section-title">
+          스터디큐브와 함께라면<br />
+          <span class="gradient-text">키오스크에서 IoT까지,</span> 터치 한 번으로<br />
+          스마트하게 무인운영!
+        </h2>
+      </div>
+
+      <!-- 3-icon grid -->
+      <div class="value-icon-grid reveal">
+        <div class="vi-card">
+          <div class="vi-icon-wrap vi-blue">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="4" width="32" height="40" rx="4" fill="#1a6bc7" opacity=".15" />
+              <rect x="14" y="10" width="20" height="28" rx="2" fill="#1a6bc7" opacity=".25" />
+              <circle cx="24" cy="36" r="2" fill="#1a6bc7" />
+              <rect x="18" y="16" width="12" height="2" rx="1" fill="#1a6bc7" />
+              <rect x="18" y="21" width="8" height="2" rx="1" fill="#1a6bc7" />
+            </svg>
+          </div>
+          <h3>키오스크 / 모바일앱</h3>
+          <p>직관적인 UI로 회원권 구매, 좌석 선택, 결제까지 원스톱 처리</p>
+        </div>
+        <div class="vi-card">
+          <div class="vi-icon-wrap vi-green">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="28" rx="4" fill="#0ea47a" opacity=".15" />
+              <path d="M14 22h4v8h-4zM22 18h4v12h-4zM30 14h4v16h-4z" fill="#0ea47a" opacity=".6" />
+              <circle cx="16" cy="18" r="2" fill="#0ea47a" />
+              <circle cx="24" cy="14" r="2" fill="#0ea47a" />
+              <circle cx="32" cy="10" r="2" fill="#0ea47a" />
+            </svg>
+          </div>
+          <h3>통합 관리 시스템</h3>
+          <p>매출·회원·좌석 현황을 실시간 대시보드 하나로 완전 통합 관리</p>
+        </div>
+        <div class="vi-card">
+          <div class="vi-icon-wrap vi-purple">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 8L8 16v16l16 8 16-8V16L24 8z" fill="#7c3aed" opacity=".12" />
+              <path d="M24 8L8 16l16 8 16-8L24 8z" fill="#7c3aed" opacity=".3" />
+              <path d="M8 16v16l16 8V24L8 16z" fill="#7c3aed" opacity=".2" />
+              <circle cx="24" cy="24" r="4" fill="#7c3aed" opacity=".5" />
+            </svg>
+          </div>
+          <h3>조명 / 입실기 / 사물함 제어</h3>
+          <p>IoT 연동으로 조명·전원·도어락·사물함을 원격에서 스마트 제어</p>
+        </div>
+      </div>
+
+      <!-- 4 highlight boxes -->
+      <div class="value-highlight-grid reveal">
+        <div class="vh-card vh-blue">
+          <div class="vh-top">
+            <span class="vh-badge">업계유일</span>
+            <span class="vh-icon">🏭</span>
+          </div>
+          <h4>자체개발</h4>
+          <p>외주 No! 서버부터 프로그램까지<strong>100% 자체 개발</strong></p>
+        </div>
+        <div class="vh-card vh-green">
+          <div class="vh-top">
+            <span class="vh-badge">서버안정성</span>
+            <span class="vh-icon">🛡️</span>
+          </div>
+          <h4>서버 장애 0건</h4>
+          <p>알림톡 장애 이후 서버장애 0건<strong>실시간 부하 분산</strong></p>
+        </div>
+        <div class="vh-card vh-orange">
+          <div class="vh-top">
+            <span class="vh-badge">365일</span>
+            <span class="vh-icon">📞</span>
+          </div>
+          <h4>전문 C.S</h4>
+          <p>공휴일 포함 365일<strong>09:00~18:00 전문 매니저 응대</strong></p>
+        </div>
+        <div class="vh-card vh-purple">
+          <div class="vh-top">
+            <span class="vh-badge">직영팀</span>
+            <span class="vh-icon">🔧</span>
+          </div>
+          <h4>직영 A.S 팀</h4>
+          <p>수도권 8시간, 지방 24시간 이내<strong>책임 해결</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 3 — 배리어프리 키오스크
+  ========================================================= -->
+  <section id="sec-barrier" class="sec-barrier">
+    <div class="container barrier-wrap">
+      <div class="barrier-text reveal-left">
+        <span class="section-tag tag-white">BARRIER FREE</span>
+        <h2>
+          무인운영에도<br />
+          <em>'장벽없는 키오스크'</em><br />
+          <span class="highlight-nia">NIA 인증!</span>
+        </h2>
+        <h3>스터디큐브 배리어프리 키오스크</h3>
+        <p>
+          상시 보조인력이 없는 <strong>50m² 이상 시설</strong>인 경우<br />
+          배리어프리 키오스크는 이제 <strong>법적 필수</strong>입니다.<br />
+          스터디큐브는 국가정보화진흥원(NIA) 인증을 획득한<br />
+          배리어프리 키오스크로 법적 기준을 완벽히 충족합니다.
+        </p>
+        <ul class="barrier-check-list">
+          <li><span class="chk">✓</span> 음성 안내 시스템 (화면 낭독)</li>
+          <li><span class="chk">✓</span> 저상형 힌지·틸팅 키오스크</li>
+          <li><span class="chk">✓</span> 점자 안내 및 고대비 모드 지원</li>
+          <li><span class="chk">✓</span> 휠체어 접근 동선 설계</li>
+        </ul>
+        <a href="#contact-section" class="btn btn-primary">바로가기 →</a>
+      </div>
+
+      <div class="barrier-visual reveal-right">
+        <!-- Kiosk UI mockup -->
+        <div class="bfk-device">
+          <div class="bfk-top-bar">
+            <span class="bfk-logo">STUDYCUBE</span>
+            <span class="bfk-nia-badge">NIA인증</span>
+          </div>
+          <div class="bfk-screen">
+            <div class="bfk-accessibility-bar">
+              <button class="bfk-acc-btn active">🔊 음성안내</button>
+              <button class="bfk-acc-btn">🔡 대형글씨</button>
+              <button class="bfk-acc-btn">🌗 고대비</button>
+            </div>
+            <div class="bfk-welcome">
+              <div class="bfk-hand-icon">👋</div>
+              <div class="bfk-welcome-text">반갑습니다!<br /><small>서비스를 선택해주세요</small></div>
+            </div>
+            <div class="bfk-menu-grid">
+              <div class="bfk-menu-item">
+                <span>🪑</span>
+                <span>좌석이용</span>
+              </div>
+              <div class="bfk-menu-item">
+                <span>💳</span>
+                <span>회원권 구매</span>
+              </div>
+              <div class="bfk-menu-item">
+                <span>🔄</span>
+                <span>연장/충전</span>
+              </div>
+              <div class="bfk-menu-item">
+                <span>📋</span>
+                <span>이용내역</span>
+              </div>
+            </div>
+          </div>
+          <div class="bfk-stand-plate">
+            <div class="bfk-braille-strip"></div>
+          </div>
+          <!-- 장애인 접근 배지 -->
+          <div class="bfk-badge-row">
+            <div class="bfk-cert-badge">♿ 배리어프리</div>
+            <div class="bfk-cert-badge cert-blue">NIA 인증</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 4 — 비용 절감 하이라이트
+  ========================================================= -->
+  <section id="sec-cost" class="sec-cost">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">COST SAVING</span>
+        <h2 class="section-title cost-title">
+          쓰시던 키오스크 &amp; 입실기 그대로<br />
+          <span class="gradient-text">더 저렴하고 더 안정적인</span><br />
+          스터디큐브로 환승 하세요!!
+        </h2>
+      </div>
+
+      <div class="cost-highlight-row reveal">
+        <div class="cost-hl-card">
+          <div class="cost-hl-icon">📜</div>
+          <div class="cost-hl-label">약정</div>
+          <div class="cost-hl-value accent-green">무약정</div>
+        </div>
+        <div class="cost-hl-card cost-main">
+          <div class="cost-hl-icon">💰</div>
+          <div class="cost-hl-label">월 서버운영관리비</div>
+          <div class="cost-hl-value">
+            <span class="price-big">10만원</span>
+            <span class="price-note">/월</span>
+          </div>
+        </div>
+        <div class="cost-hl-card">
+          <div class="cost-hl-icon">💬</div>
+          <div class="cost-hl-label">시스템 사용 알림톡</div>
+          <div class="cost-hl-value accent-green">0원</div>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="cost-table-wrap reveal">
+        <div class="cost-table-title">💡 타사 대비 절약 비교표</div>
+        <div class="cost-table-scroll">
+          <table class="cost-table">
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th class="th-competitor">타사 평균</th>
+                <th class="th-studycube">스터디큐브</th>
+                <th class="th-save">절약금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>월 서버 운영비</td>
+                <td class="td-competitor">20 ~ 30만원</td>
+                <td class="td-studycube">10만원</td>
+                <td class="td-save">연 120 ~ 240만원</td>
+              </tr>
+              <tr>
+                <td>알림톡 발송비</td>
+                <td class="td-competitor">건당 7 ~ 15원</td>
+                <td class="td-studycube">0원 (무제한)</td>
+                <td class="td-save">연 최대 120 ~ 180만원</td>
+              </tr>
+              <tr>
+                <td>앱 가입비</td>
+                <td class="td-competitor">30 ~ 50만원</td>
+                <td class="td-studycube">0원</td>
+                <td class="td-save">최초 30 ~ 50만원</td>
+              </tr>
+              <tr>
+                <td>연간 보증 보험료</td>
+                <td class="td-competitor">별도 부과</td>
+                <td class="td-studycube">0원</td>
+                <td class="td-save">연 수십만원</td>
+              </tr>
+              <tr class="tr-total">
+                <td><strong>총 절감 효과</strong></td>
+                <td class="td-competitor">—</td>
+                <td class="td-studycube">—</td>
+                <td class="td-save"><strong>연 최대 120~180만원+</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cost-app-note reveal">
+          <span class="app-note-icon">📱</span>
+          <span>앱 가입비 및 연간 보증 보험료 0원 — <strong>Android / iOS 앱 무료 제공</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 5 — 추가 수익 및 관리 기능
+  ========================================================= -->
+  <section id="sec-features" class="sec-features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">FEATURES</span>
+        <h2 class="section-title">스터디큐브로 더 다양한<br /><span class="gradient-text">수익과 편의를 동시에</span></h2>
+        <p class="section-desc">운영 자동화를 넘어 추가 수익 창출까지 가능한 올인원 플랫폼</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feat-card reveal">
+          <div class="feat-icon-wrap f-store">
+            <svg viewBox="0 0 56 56" fill="none">
+              <rect x="8" y="20" width="40" height="28" rx="6" fill="#1a6bc7" opacity=".15" />
+              <path d="M16 20V16a12 12 0 0 1 24 0v4" stroke="#1a6bc7" stroke-width="2.5" stroke-linecap="round" />
+              <rect x="20" y="30" width="6" height="8" rx="2" fill="#1a6bc7" opacity=".4" />
+              <rect x="30" y="30" width="6" height="8" rx="2" fill="#1a6bc7" opacity=".4" />
+              <circle cx="28" cy="40" r="2" fill="#1a6bc7" />
+            </svg>
+          </div>
+          <div class="feat-badge">수익 UP</div>
+          <h3>키오스크 "스토어" 서비스</h3>
+          <p>과자, 음료, 할인권, 프린트 쿠폰 등을 키오스크 내에서 직접 판매하여 <strong>매장 부대 수익을 극대화</strong>합니다.</p>
+          <div class="feat-tags">
+            <span>과자/음료 판매</span>
+            <span>할인권 등록</span>
+            <span>QR 결제</span>
+          </div>
+        </div>
+
+        <div class="feat-card reveal" style="transition-delay:.1s">
+          <div class="feat-icon-wrap f-iot">
+            <svg viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="28" r="18" fill="#0ea47a" opacity=".12" />
+              <path d="M20 28h16M28 20v16" stroke="#0ea47a" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="28" cy="28" r="5" fill="#0ea47a" opacity=".4" />
+              <circle cx="28" cy="10" r="3" fill="#0ea47a" opacity=".3" />
+              <circle cx="28" cy="46" r="3" fill="#0ea47a" opacity=".3" />
+              <circle cx="10" cy="28" r="3" fill="#0ea47a" opacity=".3" />
+              <circle cx="46" cy="28" r="3" fill="#0ea47a" opacity=".3" />
+            </svg>
+          </div>
+          <div class="feat-badge feat-badge-green">IoT 제어</div>
+          <h3>스터디카페 &amp; 독서실 원격 제어</h3>
+          <p>IoT를 통해 <strong>조명, 멀티탭 전원, 에어컨, 도어락</strong> 등을 스마트폰 하나로 언제든지 원격 제어합니다.</p>
+          <div class="feat-tags">
+            <span>조명 제어</span>
+            <span>전원 관리</span>
+            <span>원격 모니터링</span>
+          </div>
+        </div>
+
+        <div class="feat-card reveal" style="transition-delay:.2s">
+          <div class="feat-icon-wrap f-app">
+            <svg viewBox="0 0 56 56" fill="none">
+              <rect x="16" y="6" width="24" height="44" rx="5" fill="#7c3aed" opacity=".12" />
+              <rect x="22" y="12" width="12" height="20" rx="2" fill="#7c3aed" opacity=".2" />
+              <circle cx="28" cy="42" r="3" fill="#7c3aed" opacity=".4" />
+              <rect x="22" y="36" width="12" height="2" rx="1" fill="#7c3aed" opacity=".3" />
+            </svg>
+          </div>
+          <div class="feat-badge feat-badge-purple">다양한 혜택</div>
+          <h3>관리형 앱 &amp; 다양한 요금제</h3>
+          <p>회원 전용 앱에서 <strong>마일리지, 쿠폰, 멤버십 등 다양한 요금제</strong>를 설정하여 고객 재방문율과 충성도를 높입니다.</p>
+          <div class="feat-tags">
+            <span>마일리지</span>
+            <span>쿠폰 발행</span>
+            <span>회원권 설정</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 6 — 도입 절차 5단계 타임라인
+  ========================================================= -->
+  <section id="sec-process" class="sec-process">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">PROCESS</span>
+        <h2 class="section-title">스피드한 설치로<br /><span class="gradient-text">성공 비즈니스를 돕습니다!</span></h2>
+        <p class="section-desc">계약 후 단 1주일 이내 설치 완료 — 빠르게 무인 운영을 시작하세요</p>
+      </div>
+
+      <div class="timeline-wrap reveal">
+        <div class="timeline-line"></div>
+        <div class="timeline-steps">
+
+          <div class="tl-step">
+            <div class="tl-dot">
+              <span class="tl-num">01</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-icon">📞</div>
+              <h4>상담 및 견적</h4>
+              <p>전화 또는 온라인 폼으로 무료 상담 신청. 매장 상황에 맞는 맞춤 견적을 제공합니다.</p>
+            </div>
+          </div>
+
+          <div class="tl-step">
+            <div class="tl-dot">
+              <span class="tl-num">02</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-icon">🔍</div>
+              <h4>원격/현장 실사</h4>
+              <p>전문 컨설턴트가 원격 또는 직접 방문하여 최적의 솔루션 구성을 확정합니다.</p>
+            </div>
+          </div>
+
+          <div class="tl-step">
+            <div class="tl-dot">
+              <span class="tl-num">03</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-icon">📝</div>
+              <h4>계약 / 가맹</h4>
+              <p>간편한 계약 프로세스로 빠르게 정식 파트너십을 맺고 도입을 확정합니다.</p>
+            </div>
+          </div>
+
+          <div class="tl-step tl-highlight">
+            <div class="tl-dot tl-dot-main">
+              <span class="tl-num">04</span>
+            </div>
+            <div class="tl-card tl-card-main">
+              <div class="tl-icon">🔧</div>
+              <h4>설치 완료</h4>
+              <p class="tl-speed">⚡ 계약 후 <strong>1주일 이내!</strong></p>
+              <p>전담 설치팀이 방문하여 키오스크, 입퇴실기, IoT 장비를 완벽하게 설치합니다.</p>
+            </div>
+          </div>
+
+          <div class="tl-step">
+            <div class="tl-dot">
+              <span class="tl-num">05</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-icon">🚀</div>
+              <h4>솔루션 가이드</h4>
+              <p>관리자 웹·앱 사용법 교육 완료 후 즉시 무인 운영 시작! 이후에도 전담팀이 지속 지원합니다.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 7 — 파트너사 & 인증
+  ========================================================= -->
+  <section id="sec-partners" class="sec-partners">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">PARTNERS &amp; CERTIFICATION</span>
+        <h2 class="section-title">이미 <span class="gradient-text">1,200개 매장,</span><br />100만 이용회원, 약 70개 프랜차이즈</h2>
+        <p class="section-desc">가 이용 중입니다.</p>
+      </div>
+
+      <!-- Logo Slider -->
+      <div class="logo-slider-wrap reveal">
+        <div class="logo-slider-track" id="logo-track-1">
+          <div class="logo-slider-inner" id="logo-inner-1">
+            <!-- Row 1 logos -->
+            <div class="partner-logo-item">🎓 서울대학교</div>
+            <div class="partner-logo-item">🎓 서강대학교</div>
+            <div class="partner-logo-item">🎓 연세대학교</div>
+            <div class="partner-logo-item">🎓 홍익대학교</div>
+            <div class="partner-logo-item">🏢 스터디위드</div>
+            <div class="partner-logo-item">🏢 토즈스터디센터</div>
+            <div class="partner-logo-item">🏢 작심스터디</div>
+            <div class="partner-logo-item">🏢 공부의신</div>
+            <div class="partner-logo-item">🏢 스터디에이드</div>
+            <div class="partner-logo-item">🎓 고려대학교</div>
+            <div class="partner-logo-item">🎓 성균관대학교</div>
+            <div class="partner-logo-item">🏢 스타터디</div>
+            <!-- duplicated for seamless loop -->
+            <div class="partner-logo-item">🎓 서울대학교</div>
+            <div class="partner-logo-item">🎓 서강대학교</div>
+            <div class="partner-logo-item">🎓 연세대학교</div>
+            <div class="partner-logo-item">🎓 홍익대학교</div>
+            <div class="partner-logo-item">🏢 스터디위드</div>
+            <div class="partner-logo-item">🏢 토즈스터디센터</div>
+            <div class="partner-logo-item">🏢 작심스터디</div>
+            <div class="partner-logo-item">🏢 공부의신</div>
+            <div class="partner-logo-item">🏢 스터디에이드</div>
+            <div class="partner-logo-item">🎓 고려대학교</div>
+            <div class="partner-logo-item">🎓 성균관대학교</div>
+            <div class="partner-logo-item">🏢 스타터디</div>
+          </div>
+        </div>
+        <!-- Reverse direction row -->
+        <div class="logo-slider-track" id="logo-track-2">
+          <div class="logo-slider-inner logo-slider-reverse" id="logo-inner-2">
+            <div class="partner-logo-item">🏫 강남구청</div>
+            <div class="partner-logo-item">🏫 서대문구청</div>
+            <div class="partner-logo-item">🏢 독서실나인</div>
+            <div class="partner-logo-item">🏢 스터디플러스</div>
+            <div class="partner-logo-item">🏢 북카페</div>
+            <div class="partner-logo-item">🏫 노원구청</div>
+            <div class="partner-logo-item">🏢 마이스터디</div>
+            <div class="partner-logo-item">🏢 스터디맥스</div>
+            <div class="partner-logo-item">🏫 송파구청</div>
+            <div class="partner-logo-item">🏢 열공스터디</div>
+            <div class="partner-logo-item">🏢 스터디하임</div>
+            <div class="partner-logo-item">🏫 성동구청</div>
+            <!-- duplicate -->
+            <div class="partner-logo-item">🏫 강남구청</div>
+            <div class="partner-logo-item">🏫 서대문구청</div>
+            <div class="partner-logo-item">🏢 독서실나인</div>
+            <div class="partner-logo-item">🏢 스터디플러스</div>
+            <div class="partner-logo-item">🏢 북카페</div>
+            <div class="partner-logo-item">🏫 노원구청</div>
+            <div class="partner-logo-item">🏢 마이스터디</div>
+            <div class="partner-logo-item">🏢 스터디맥스</div>
+            <div class="partner-logo-item">🏫 송파구청</div>
+            <div class="partner-logo-item">🏢 열공스터디</div>
+            <div class="partner-logo-item">🏢 스터디하임</div>
+            <div class="partner-logo-item">🏫 성동구청</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="cert-row reveal">
+        <div class="cert-item">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-name">벤처기업</div>
+          <div class="cert-sub">중소벤처기업부 인증</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">💎</div>
+          <div class="cert-name">이노비즈</div>
+          <div class="cert-sub">기술혁신형 중소기업</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">✅</div>
+          <div class="cert-name">ISO 9001</div>
+          <div class="cert-sub">품질경영시스템 인증</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">♿</div>
+          <div class="cert-name">NIA 인증</div>
+          <div class="cert-sub">배리어프리 키오스크</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">🔒</div>
+          <div class="cert-name">개인정보보호</div>
+          <div class="cert-sub">ISMS 준수</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION — 상담 신청 (Contact)
+  ========================================================= -->
+  <section id="contact-section" class="sec-contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info-side reveal-left">
+          <span class="section-tag">CONTACT</span>
+          <h2>지금 바로<br />무료 상담 신청하세요</h2>
+          <p>전문 컨설턴트가 매장 상황에 맞는 최적의 솔루션을 제안해 드립니다.</p>
+          <div class="contact-detail-list">
+            <div class="contact-detail-item">
+              <span class="cd-icon">📞</span>
+              <div>
+                <strong>전화 상담</strong>
+                <span>1577-3119</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <span class="cd-icon">⏰</span>
+              <div>
+                <strong>고객센터 운영시간</strong>
+                <span>평일 09:00 ~ 18:00</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <span class="cd-icon">📧</span>
+              <div>
+                <strong>이메일</strong>
+                <span>tobesmart@tobesmart.co.kr</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-side reveal-right">
+          <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+            <h3>상담 신청</h3>
+            <div class="form-group">
+              <label for="f-name">매장명 *</label>
+              <input type="text" id="f-name" placeholder="매장명을 입력해주세요" required />
+            </div>
+            <div class="form-group">
+              <label for="f-biz">사업자번호 *</label>
+              <input type="text" id="f-biz" placeholder="000-00-00000" required />
+            </div>
+            <div class="form-group">
+              <label for="f-phone">연락처 *</label>
+              <input type="tel" id="f-phone" placeholder="010-0000-0000" required />
+            </div>
+            <div class="form-group">
+              <label for="f-interest">관심 솔루션</label>
+              <select id="f-interest">
+                <option value="">선택해주세요</option>
+                <option>키오스크</option>
+                <option>관리자웹</option>
+                <option>모바일앱</option>
+                <option>입퇴실기</option>
+                <option>All-in-One 패키지</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-msg">문의 내용</label>
+              <textarea id="f-msg" rows="4" placeholder="문의 내용을 자유롭게 입력해주세요"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">상담 신청하기</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer id="site-footer">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+        <div class="footer-logo-area">
+          <span class="footer-logo">TOBESMART</span>
+          <p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-link-col">
+            <strong>솔루션</strong>
+            <a href="#sec-barrier">All 배리어프리</a>
+            <a href="kiosk.html">키오스크</a>
+            <a href="admin-app.html">관리자웹</a>
+            <a href="admin-app.html#sec-app">모바일앱</a>
+            <a href="entrance.html">입퇴실기</a>
+          </div>
+          <div class="footer-link-col">
+            <strong>고객지원</strong>
+            <a href="contact.html">도입문의</a>
+            <a href="tel:15773119">전화 상담</a>
+            <a href="mailto:tobesmart@tobesmart.co.kr">이메일 문의</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div class="footer-company-info">
+          <p>대표: 김광 &nbsp;|&nbsp; 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p>
+          <p>전화: 1577-3119 &nbsp;|&nbsp; 팩스: 031-701-4119 &nbsp;|&nbsp; 이메일: tobesmart@tobesmart.co.kr</p>
+          <p>고객센터: 평일 09:00 ~ 18:00</p>
+        </div>
+        <p class="footer-copyright">COPYRIGHT © TOBESMART. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       QUICK BUTTONS (Fixed Right)
+  ========================================================= -->
+  <div class="quick-buttons" id="quick-buttons">
+    <a href="tel:15773119" class="quick-btn quick-call" id="quick-call-btn">
+      <span class="qb-icon">📞</span>
+      <span class="qb-text">전화상담<br /><strong>1577-3119</strong></span>
+    </a>
+    <a href="#contact-section" class="quick-btn quick-consult" id="quick-consult-btn">
+      <span class="qb-icon">✉️</span>
+      <span class="qb-text">상담신청</span>
+    </a>
+    <button class="quick-btn quick-top" id="quick-top-btn" onclick="scrollToTop()" aria-label="TOP으로 이동">
+      <span class="qb-icon">▲</span>
+      <span class="qb-text">TOP</span>
+    </button>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">✅ 상담 신청이 완료되었습니다! 빠르게 연락드리겠습니다.</div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
