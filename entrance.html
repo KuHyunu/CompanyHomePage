@@ -11,24 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="sub.css" />
+    <link rel="stylesheet" href="sub.css?v=entrance-list-layout" />
 </head>
 
 <body>
 
+    <!-- TOP BRAND BAR -->
+    <div class="top-brand-bar">
+        <a href="https://www.tobesmart.co.kr/" target="_blank" rel="noopener noreferrer">
+            <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
+        </a>
+    </div>
+
     <!-- HEADER -->
     <header id="site-header" class="scrolled">
         <div class="header-inner container">
-            <a href="index.html" class="logo"><span class="logo-study">STUDY</span><span
-                    class="logo-cube">CUBE</span></a>
+            <a href="index.html" class="logo"><img src="image/StudyCubeLogo.png" alt="STUDYCUBE" class="logo-img" /></a>
             <nav class="gnb" id="gnb">
                 <ul>
-                    <li><a href="contact.html">도입문의</a></li>
-                    <li><a href="index.html#sec-barrier">All 배리어프리</a></li>
-                    <li><a href="kiosk.html">키오스크</a></li>
+                    <li class="gnb-tooltip-wrap">
+                        <span class="gnb-tooltip">All 배리어프리 (선택)</span>
+                        <a href="kiosk.html">키오스크</a>
+                    </li>
                     <li><a href="admin-app.html">관리자웹</a></li>
-                    <li><a href="admin-app.html#sec-app">모바일앱</a></li>
+                    <li><a href="mobile-app.html">모바일앱</a></li>
                     <li><a href="entrance.html" class="gnb-active">입퇴실기</a></li>
+                    <li><a href="contact.html">도입문의</a></li>
                 </ul>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
@@ -46,11 +54,12 @@
             <div class="sub-hero-badge">ENTRANCE SYSTEM</div>
             <h1>다양한 인증방식으로<br /><span class="gradient-text">강력하고 안전하게</span><br />매장을 수호(守)합니다.</h1>
             <p>QR코드 · 비밀번호 · 안면인식까지 — 매장 보안의 완성</p>
+        <a href="contact.html" class="btn btn-primary btn-lg sub-hero-contact-btn">도입문의</a>
         </div>
     </section>
 
     <!-- PRODUCTS -->
-    <section class="sec-entrance-products">
+    <section class="sec-entrance-products entrance-legacy">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag">PRODUCT LINE-UP</span>
@@ -217,6 +226,66 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-entrance-products entrance-products-real">
+        <div class="container">
+            <div class="section-header reveal visible">
+                <span class="section-tag">PRODUCT LINE-UP</span>
+                <h2 class="section-title">입퇴실기 라인업</h2>
+                <p class="section-desc">매장 환경과 보안 수준에 맞는 최적의 입퇴실기를 선택하세요</p>
+            </div>
+            <div class="entrance-cards entrance-cards-real">
+                <article class="entrance-card reveal">
+                    <div class="ec-badge">BEST</div>
+                    <div class="ec-device-wrap"><img class="ec-product-photo" src="image/entrance-keypad-qr-entry.png" alt="키패드와 QR 입실기" /></div>
+                    <div class="ec-info">
+                        <h3>키패드 + QR 입실기</h3>
+                        <p class="ec-desc">비밀번호와 QR코드를 이용해 빠르고 안전하게 입실할 수 있는 입실 전용 단말기입니다.</p>
+                        <table class="spec-table spec-compact"><tr><th>인증방식</th><td>비밀번호 · QR코드</td></tr><tr><th>용도</th><td>입실</td></tr><tr><th>연동</th><td>실시간 서버 연동</td></tr></table>
+                        <div class="ec-tags"><span class="ec-tag">🔢 비밀번호</span><span class="ec-tag">📱 QR코드</span></div>
+                    </div>
+                </article>
+                <article class="entrance-card reveal" style="transition-delay:.08s">
+                    <div class="ec-device-wrap"><img class="ec-product-photo" src="image/entrance-keypad-qr-exit.png" alt="키패드와 QR 외출 퇴실기" /></div>
+                    <div class="ec-info">
+                        <h3>키패드 + QR 외출/퇴실기</h3>
+                        <p class="ec-desc">입실기와 동일한 스펙으로, 외출과 퇴실을 명확하게 구분하여 처리합니다.</p>
+                        <table class="spec-table spec-compact"><tr><th>인증방식</th><td>비밀번호 · QR코드</td></tr><tr><th>용도</th><td>외출 / 퇴실</td></tr><tr><th>연동</th><td>실시간 서버 연동</td></tr></table>
+                        <div class="ec-tags"><span class="ec-tag">↗ 외출</span><span class="ec-tag">↪ 퇴실</span></div>
+                    </div>
+                </article>
+                <article class="entrance-card reveal" style="transition-delay:.16s">
+                    <div class="ec-badge ec-badge-green">소형</div>
+                    <div class="ec-device-wrap"><img class="ec-product-photo" src="image/entrance-mini-qr.png" alt="미니 QR 입퇴실기" /></div>
+                    <div class="ec-info">
+                        <h3>미니 QR 입(외출/퇴)실기</h3>
+                        <p class="ec-desc">공간 활용도가 높은 소형 QR 단말기로 입실·외출·퇴실을 간편하게 처리합니다.</p>
+                        <table class="spec-table spec-compact"><tr><th>인증방식</th><td>QR코드</td></tr><tr><th>용도</th><td>입실 / 외출 / 퇴실</td></tr><tr><th>설치</th><td>벽면 / 카운터 부착</td></tr></table>
+                        <div class="ec-tags"><span class="ec-tag">📱 QR전용</span><span class="ec-tag">🔬 초소형</span></div>
+                    </div>
+                </article>
+                <article class="entrance-card reveal" style="transition-delay:.24s">
+                    <div class="ec-device-wrap"><img class="ec-product-photo" src="image/entrance-fingerprint-qr.png" alt="지문과 QR 입퇴실기" /></div>
+                    <div class="ec-info">
+                        <h3>지문 + QR 입(외출/퇴)실기</h3>
+                        <p class="ec-desc">지문과 QR 인증을 함께 지원해 보안성과 편의성을 높인 입퇴실 단말기입니다.</p>
+                        <table class="spec-table spec-compact"><tr><th>인증방식</th><td>지문 · QR코드</td></tr><tr><th>용도</th><td>입실 / 외출 / 퇴실</td></tr><tr><th>특징</th><td>복합 인증 지원</td></tr></table>
+                        <div class="ec-tags"><span class="ec-tag">👆 지문인식</span><span class="ec-tag">📱 QR코드</span></div>
+                    </div>
+                </article>
+                <article class="entrance-card entrance-card-premium reveal" style="transition-delay:.32s">
+                    <div class="ec-badge ec-badge-purple">PREMIUM</div>
+                    <div class="ec-device-wrap"><img class="ec-product-photo" src="image/entrance-face-recognition.png" alt="안면인식기" /></div>
+                    <div class="ec-info">
+                        <h3>안면인식기</h3>
+                        <p class="ec-desc">딥러닝 기반의 비접촉 안면인식으로 빠르고 안전한 출입 관리를 지원합니다.</p>
+                        <table class="spec-table spec-compact"><tr><th>크기</th><td>239 × 116.5 × 33mm</td></tr><tr><th>스크린</th><td>7인치 터치스크린 / FHD 1024×600</td></tr><tr><th>등록인원</th><td>Face 6,000 / Card 6,000</td></tr><tr><th>인식속도</th><td>1인당 0.2초 미만</td></tr><tr><th>인식거리</th><td>권장 0.3m / 최대 3m</td></tr></table>
+                        <div class="ec-tags"><span class="ec-tag">🧠 딥러닝</span><span class="ec-tag">💧 IP65</span><span class="ec-tag">🎥 NVR 영상촬영</span></div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

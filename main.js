@@ -68,8 +68,8 @@ const counterObserver = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.3 });
-const heroSection = document.getElementById('hero');
-if (heroSection) counterObserver.observe(heroSection);
+const kpiSection = document.querySelector('.partner-kpi-row');
+if (kpiSection) counterObserver.observe(kpiSection);
 
 // ─── SCROLL REVEAL ───────────────────────────────────────────
 function setupReveal() {
@@ -133,6 +133,34 @@ function handleFormSubmit(e) {
     e.target.reset();
     showToast('✅ 상담 신청이 완료되었습니다! 빠르게 연락드리겠습니다.');
   }, 1300);
+}
+
+function handleContactSubmit(e) {
+  e.preventDefault();
+  const terms = document.getElementById('cf-terms');
+  if (!terms?.checked) {
+    showToast('개인정보 수집 및 이용 동의가 필요합니다.');
+    return;
+  }
+
+  const btn = e.target.querySelector('.btn-submit-contact');
+  if (!btn) return;
+  const originalContent = btn.innerHTML;
+  btn.textContent = '처리 중...';
+  btn.disabled = true;
+
+  setTimeout(() => {
+    btn.innerHTML = originalContent;
+    btn.disabled = false;
+    e.target.reset();
+    showToast('도입상담 요청이 완료되었습니다. 빠르게 연락드리겠습니다.');
+  }, 1300);
+}
+
+function toggleTerms() {
+  const termsContent = document.getElementById('terms-content');
+  if (!termsContent) return;
+  termsContent.style.display = termsContent.style.display === 'block' ? 'none' : 'block';
 }
 
 // ─── TOAST ───────────────────────────────────────────────────

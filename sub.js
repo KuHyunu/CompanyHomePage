@@ -79,6 +79,23 @@ document.querySelectorAll('.bfk-acc-btn').forEach(btn => {
     });
 });
 
+// Barrier-free kiosk screen slider
+document.querySelectorAll('.bf-image-slider').forEach(slider => {
+    const slides = Array.from(slider.querySelectorAll('.bf-slide'));
+    const dots = Array.from(slider.querySelectorAll('.bf-slider-dots button'));
+    let current = 0;
+
+    const show = (index) => {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+    };
+
+    slider.querySelector('.bf-slider-prev')?.addEventListener('click', () => show(current - 1));
+    slider.querySelector('.bf-slider-next')?.addEventListener('click', () => show(current + 1));
+    dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
+});
+
 // Toast
 function showToast(msg) {
     const t = document.getElementById('toast');

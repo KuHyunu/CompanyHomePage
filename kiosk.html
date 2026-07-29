@@ -11,24 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="sub.css" />
+  <link rel="stylesheet" href="sub.css?v=barrierfree-guide" />
 </head>
 
 <body>
 
+    <!-- TOP BRAND BAR -->
+    <div class="top-brand-bar">
+        <a href="https://www.tobesmart.co.kr/" target="_blank" rel="noopener noreferrer">
+            <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
+        </a>
+    </div>
+
     <!-- HEADER -->
     <header id="site-header" class="scrolled">
         <div class="header-inner container">
-            <a href="index.html" class="logo"><span class="logo-study">STUDY</span><span
-                    class="logo-cube">CUBE</span></a>
+            <a href="index.html" class="logo"><img src="image/StudyCubeLogo.png" alt="STUDYCUBE" class="logo-img" /></a>
             <nav class="gnb" id="gnb">
                 <ul>
-                    <li><a href="contact.html">도입문의</a></li>
-                    <li><a href="index.html#sec-barrier">All 배리어프리</a></li>
-                    <li><a href="kiosk.html" class="gnb-active">키오스크</a></li>
+                    <li class="gnb-tooltip-wrap">
+                        <span class="gnb-tooltip">All 배리어프리 (선택)</span>
+                        <a href="kiosk.html" class="gnb-active">키오스크</a>
+                    </li>
                     <li><a href="admin-app.html">관리자웹</a></li>
-                    <li><a href="admin-app.html#sec-app">모바일앱</a></li>
+                    <li><a href="mobile-app.html">모바일앱</a></li>
                     <li><a href="entrance.html">입퇴실기</a></li>
+                    <li><a href="contact.html">도입문의</a></li>
                 </ul>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
@@ -46,6 +54,12 @@
             <div class="sub-hero-badge">KIOSK LINE-UP</div>
             <h1>운영주님 매장에 가장 Fit 한 키오스크,<br /><span class="gradient-text">스터디큐브에 '다(多)' 있습니다.</span></h1>
             <p>일반 운영모드 및 <strong>배리어프리 모드</strong> 지원 — 매장 규모와 목적에 최적화된 키오스크를 선택하세요</p>
+            <a href="contact.html" class="btn btn-primary btn-lg sub-hero-contact-btn">도입문의</a>
+            <div class="kiosk-hero-notes">
+                <p>※ 일부 100석 이상 대형 매장과 특별 서비스 공급 계약자는 제외되며, A/S는 별도 운영 정책이 적용됩니다. (무상 A/S 1년 보장)</p>
+                <p>※ 시스템 운영 필수 알림톡/문자 외 운영주님 개별 문자 발송은 관리자 웹에서 별도 충전 후 사용 가능합니다. (알림톡 15원, SMS 20원, LMS 30원)</p>
+                <p>※ 스터디큐브 전용 앱 사용시 0원이며, 프렌차이즈 전용 및 센터 단독 앱 구축시 초기 1회에 한해 별도 개설비가 발생합니다.</p>
+            </div>
         </div>
     </section>
 
@@ -59,6 +73,7 @@
                 <button class="ltab" data-tab="t24" role="tab">24인치</button>
                 <button class="ltab" data-tab="t27" role="tab">27인치</button>
                 <button class="ltab" data-tab="t32" role="tab">32인치</button>
+                <button class="ltab ltab-option" data-tab="toptions" role="tab">부가옵션 상품</button>
             </div>
 
             <!-- ═══ 21.5인치 ═══ -->
@@ -545,8 +560,89 @@
         </div>
     </section>
 
+    <section class="sec-lineup-options">
+        <div class="container">
+            <div class="lineup-panel" id="toptions">
+                <div class="option-panel-header">
+                    <span class="lph-badge badge-blue">OPTIONAL PRODUCTS</span>
+                    <h2>매장 운영을 더 스마트하게 만드는 부가옵션</h2>
+                    <p>키오스크와 연동해 매장 운영의 편의성과 고객 경험을 한층 높여주는 맞춤형 하드웨어 상품입니다.</p>
+                </div>
+                <div class="option-product-card">
+                    <div class="option-hardware-photo" role="img" aria-label="조명 전원 제어 하드웨어"></div>
+                    <div class="option-product-info">
+                        <span class="section-tag">OPTIONAL HARDWARE</span>
+                        <h2>조명 전원 제어</h2>
+                        <p>키오스크와 연동해 매장 조명을 편리하게 관리하는 무선 전원 제어 솔루션입니다.</p>
+                        <h3>특장점</h3>
+                        <ul>
+                            <li>고객 이용 종료 시 전등을 직접 꺼야 하는 번거로움을 최소화</li>
+                            <li>무선 제어로 다양한 설치 환경에 유연하게 대응</li>
+                            <li>매장의 스마트한 운영 분위기 조성</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="option-product-card option-copier-card">
+                    <div class="option-copier-photos">
+                        <img src="image/option-copier-machine.png" alt="삼성 연동 복합기" />
+                        <img src="image/option-copier-terminal.png" alt="복합기 키오스크 화면" />
+                    </div>
+                    <div class="option-product-info">
+                        <span class="section-tag">OPTIONAL HARDWARE</span>
+                        <h2>삼성 연동 복합기</h2>
+                        <p>키오스크와 연동해 출력과 복사를 편리하게 이용할 수 있는 매장용 복합기입니다.</p>
+                        <h3>주요 사양</h3>
+                        <ul>
+                            <li>CPU 1GHz 듀얼 코어 / 메모리 4GB</li>
+                            <li>인쇄 속도: 분당 최대 25매 (1,200 × 1,200 dpi)</li>
+                            <li>복사 속도: 분당 최대 25매 (600 × 600 dpi)</li>
+                            <li>용지: 표준 1,140매 / 최대 2,180매</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="option-product-card option-locker-card">
+                    <div class="option-locker-photos">
+                        <img src="image/option-locker-01.png" alt="무인 사물함 설치 사례" />
+                        <img src="image/option-locker-02.png" alt="무인 사물함 설치 사례" />
+                        <img src="image/option-locker-03.png" alt="무인 사물함 단말기" />
+                    </div>
+                    <div class="option-product-info">
+                        <span class="section-tag">OPTIONAL HARDWARE</span>
+                        <h2>무인 사물함</h2>
+                        <p>키오스크와 모바일앱에 연계되어 사물함을 판매하고, 고객에게 발급된 QR을 통해 간편하게 결제·재배정·연장할 수 있습니다.</p>
+                        <h3>특장점</h3>
+                        <ul>
+                            <li>사용자가 사물함을 편리하게 관리하고 사용할 수 있는 최소 사물함</li>
+                            <li>키오스크와 모바일앱 연동</li>
+                            <li>사물함 개별 크기: 350(H) × 350(W) × 400(D)mm</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="option-product-card option-iot-card">
+                    <div class="option-iot-photo"><img src="image/option-iot-lighting.png" alt="스터디큐브 IoT 조명 및 전원 제어 하드웨어" /></div>
+                    <div class="option-product-info">
+                        <span class="section-tag">OPTIONAL HARDWARE</span>
+                        <h2>스터디큐브 IoT<br />조명 및 전원 제어</h2>
+                        <p>좌석별 이용 상태와 연동하여 조명과 전원 소켓을 자동으로 제어하는 스마트 IoT 솔루션입니다.</p>
+                        <h3>특장점</h3>
+                        <ul>
+                            <li>좌석 이용 상태에 맞춘 조명·전원 자동 제어</li>
+                            <li>불필요한 전력 사용을 줄이는 효율적인 매장 운영</li>
+                            <li>쾌적하고 스마트한 학습 공간 조성</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lineup-options-placeholder">
+                    <span class="section-tag">OPTIONAL PRODUCTS</span>
+                    <h2>부가옵션 상품</h2>
+                    <p>상품 상세 내용은 추후 안내해 드립니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- COMMON SPECS -->
-    <section class="sec-common-spec">
+    <section class="sec-common-spec" hidden>
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag">COMMON SPEC</span>
@@ -619,6 +715,22 @@
                     <a href="contact.html" class="btn btn-primary">배리어프리 도입 문의</a>
                 </div>
                 <div class="bf-hl-right">
+                    <div class="bf-image-slider" aria-label="배리어프리 키오스크 화면 미리보기">
+                        <button class="bf-slider-arrow bf-slider-prev" type="button" aria-label="이전 화면">‹</button>
+                        <div class="bf-slider-viewport">
+                            <img class="bf-slide active" src="image/barrierfree-slide-01.png" alt="배리어프리 키오스크 이용권 화면" />
+                            <img class="bf-slide" src="image/barrierfree-slide-02.png" alt="배리어프리 키오스크 저자세 모드 화면" />
+                            <img class="bf-slide" src="image/barrierfree-slide-03.png" alt="배리어프리 키오스크 메인 화면" />
+                            <img class="bf-slide" src="image/barrierfree-slide-04.png" alt="배리어프리 키오스크 좌석 선택 화면" />
+                        </div>
+                        <button class="bf-slider-arrow bf-slider-next" type="button" aria-label="다음 화면">›</button>
+                        <div class="bf-slider-dots" aria-label="화면 선택">
+                            <button class="active" type="button" aria-label="1번 화면"></button>
+                            <button type="button" aria-label="2번 화면"></button>
+                            <button type="button" aria-label="3번 화면"></button>
+                            <button type="button" aria-label="4번 화면"></button>
+                        </div>
+                    </div>
                     <div class="bf-hl-device">
                         <div class="bfk-top-bar"><span class="bfk-logo">STUDYCUBE</span><span
                                 class="bfk-nia-badge">NIA인증</span></div>
@@ -649,6 +761,22 @@
                     </div>
                 </div>
             </div>
+            <div class="bf-accessibility-guide">
+                <div class="bf-guide-heading">
+                    <span class="section-tag tag-white">ACCESSIBILITY MODES</span>
+                    <h3>누구나 편리하게 이용하는 배리어프리 모드</h3>
+                </div>
+                <div class="bf-mode-grid">
+                    <div class="bf-mode-card"><span class="bf-mode-icon">🔊</span><strong>기본 모드</strong><p>방향 키패드 조작 및 볼륨 조절 기능</p></div>
+                    <div class="bf-mode-card"><span class="bf-mode-icon">🗣</span><strong>음성안내 모드</strong><p>선택된 화면 요소 정보를 음성으로 안내</p></div>
+                    <div class="bf-mode-card"><span class="bf-mode-icon">⌕</span><strong>확대 모드</strong><p>저시력자를 위한 화면 확대 기능</p></div>
+                    <div class="bf-mode-card"><span class="bf-mode-icon">◐</span><strong>고대비 모드</strong><p>전경과 배경의 명도 대비를 강조해 표시</p></div>
+                </div>
+                <div class="bf-tool-grid">
+                    <div class="bf-tool-card"><img src="image/barrierfree-low-posture.png" alt="낮은 자세 모드" /><div><strong>낮은 자세 모드</strong><p>휠체어 사용자도 편리하게 조작할 수 있도록 화면 높이를 조절합니다.</p></div></div>
+                    <div class="bf-tool-card"><img src="image/barrierfree-keypad.png" alt="키패드" /><div><strong>키패드</strong><p>직관적인 방향 키패드로 화면 이동과 선택을 돕습니다.</p></div></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -658,9 +786,16 @@
             <div class="cta-banner reveal">
                 <h2>지금 바로 전문가에게<br />최적의 키오스크를 추천받으세요</h2>
                 <p>매장 규모, 좌석 수, 운영 방식에 맞는 최적의 모델을 무료로 상담해 드립니다</p>
-                <div class="cta-banner-btns">
-                    <a href="contact.html" class="btn btn-primary btn-lg">도입 상담 신청</a>
-                    <a href="tel:15773119" class="btn btn-outline btn-lg">📞 1577-3119</a>
+                <div class="cta-banner-btns kiosk-cta-btns">
+                    <a href="tel:15773119" class="btn btn-primary btn-lg kiosk-cta-card kiosk-cta-call">
+                        <span>365일 도입상담 문의전화</span>
+                        <strong>1577-3119</strong>
+                        <small>(09:00~18:00 / 점심시간 12:00~13:00 제외)</small>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-lg kiosk-cta-card kiosk-cta-consult">
+                        <span>빠른 도입상담</span>
+                        <strong>신청 바로가기</strong>
+                    </a>
                 </div>
             </div>
         </div>
@@ -689,7 +824,7 @@
                 class="qb-text">TOP</span></button>
     </div>
 
-    <script src="sub.js"></script>
+    <script src="sub.js?v=bf-image-slider"></script>
 </body>
 
 </html>

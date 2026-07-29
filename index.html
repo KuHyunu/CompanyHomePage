@@ -11,10 +11,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=footer-reference" />
 </head>
 
 <body>
+
+  <!-- =========================================================
+       TOP BRAND BAR
+  ========================================================= -->
+  <div class="top-brand-bar">
+    <a href="https://www.tobesmart.co.kr/" target="_blank" rel="noopener noreferrer">
+      <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
+    </a>
+  </div>
 
   <!-- =========================================================
        HEADER / GNB
@@ -22,16 +31,18 @@
   <header id="site-header">
     <div class="header-inner container">
       <a href="#hero" class="logo" id="logo-link">
-        <span class="logo-study">STUDY</span><span class="logo-cube">CUBE</span>
+        <img src="image/StudyCubeLogo.png" alt="STUDYCUBE" class="logo-img" />
       </a>
       <nav class="gnb" id="gnb">
         <ul>
-          <li><a href="contact.html">도입문의</a></li>
-          <li><a href="#sec-barrier">All 배리어프리</a></li>
-          <li><a href="kiosk.html">키오스크</a></li>
+          <li class="gnb-tooltip-wrap">
+            <span class="gnb-tooltip">All 배리어프리 (선택)</span>
+            <a href="kiosk.html">키오스크</a>
+          </li>
           <li><a href="admin-app.html">관리자웹</a></li>
-          <li><a href="admin-app.html#sec-app">모바일앱</a></li>
+          <li><a href="mobile-app.html">모바일앱</a></li>
           <li><a href="entrance.html">입퇴실기</a></li>
+          <li><a href="contact.html">도입문의</a></li>
         </ul>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
@@ -53,9 +64,6 @@
     </div>
 
     <div class="container hero-content">
-      <div class="hero-badge animate-fade-down">
-        <span class="badge-dot"></span>스터디카페 무인솔루션 1위 브랜드
-      </div>
       <h1 class="hero-title animate-fade-up" style="animation-delay:.1s">
         시작부터 끝까지 완벽하게.<br />
         <span class="gradient-text">당신의 효율적인 학습 공간 파트너</span><br />
@@ -73,7 +81,7 @@
           </svg>
           도입문의
         </a>
-        <a href="#" class="btn btn-outline btn-lg" id="download-btn">
+        <a href="Proposal/[제안서 2] 스터디큐브 제안서_타입2_VER231129.pptx" class="btn btn-outline btn-lg" download>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
             <polyline points="7 10 12 15 17 10" />
@@ -83,28 +91,6 @@
         </a>
       </div>
 
-      <!-- Floating KPI cards -->
-      <div class="hero-kpi-row animate-fade-up" style="animation-delay:.46s">
-        <div class="kpi-card">
-          <span class="kpi-num" data-target="1200">0</span><span class="kpi-unit">+</span>
-          <span class="kpi-label">도입 매장</span>
-        </div>
-        <div class="kpi-divider"></div>
-        <div class="kpi-card">
-          <span class="kpi-num" data-target="100">0</span><span class="kpi-unit">만+</span>
-          <span class="kpi-label">이용 회원</span>
-        </div>
-        <div class="kpi-divider"></div>
-        <div class="kpi-card">
-          <span class="kpi-num" data-target="70">0</span><span class="kpi-unit">+</span>
-          <span class="kpi-label">프랜차이즈</span>
-        </div>
-        <div class="kpi-divider"></div>
-        <div class="kpi-card">
-          <span class="kpi-num" data-target="365">0</span><span class="kpi-unit">일</span>
-          <span class="kpi-label">전문 C.S 운영</span>
-        </div>
-      </div>
     </div>
 
     <div class="hero-scroll-hint">
@@ -128,7 +114,7 @@
       </div>
 
       <!-- 3-icon grid -->
-      <div class="value-icon-grid reveal">
+      <div class="value-icon-grid reveal" hidden>
         <div class="vi-card">
           <div class="vi-icon-wrap vi-blue">
             <svg viewBox="0 0 48 48" fill="none">
@@ -169,9 +155,24 @@
         </div>
       </div>
 
+      <div class="value-inhouse-banner reveal">
+        <div class="value-inhouse-main">
+          <span class="value-inhouse-label">100% IN-HOUSE DEVELOPMENT</span>
+          <h3>외주에 의존하지 않는<br />스터디큐브의 <em>자체 개발 역량</em></h3>
+          <p>서버부터 키오스크·모바일앱·통합 관리자웹·IoT 제어까지 직접 설계하고 개발합니다. 변화하는 매장 환경에도 빠르게 대응하고, 하나의 기준으로 안정적인 서비스를 제공합니다.</p>
+        </div>
+        <div class="value-solution-flow" aria-label="통합 솔루션 구성">
+          <div><span>01</span><strong>키오스크 · 모바일앱</strong><small>예약 · 결제 · 이용관리</small></div>
+          <b>+</b>
+          <div><span>02</span><strong>통합 관리 시스템</strong><small>매장 운영 · 데이터 관리</small></div>
+          <b>+</b>
+          <div><span>03</span><strong>매장 IoT 제어</strong><small>조명 · 입퇴실 · 사물함</small></div>
+        </div>
+      </div>
+
       <!-- 4 highlight boxes -->
-      <div class="value-highlight-grid reveal">
-        <div class="vh-card vh-blue">
+      <div class="value-highlight-grid reveal" hidden>
+        <div class="vh-card vh-blue" hidden>
           <div class="vh-top">
             <span class="vh-badge">업계유일</span>
             <span class="vh-icon">🏭</span>
@@ -204,13 +205,47 @@
           <p>수도권 8시간, 지방 24시간 이내<strong>책임 해결</strong></p>
         </div>
       </div>
+
+      <div class="value-detail-grid reveal">
+        <article class="value-detail-card">
+          <span class="value-detail-kicker">SERVER STABILITY</span>
+          <h3>서버 안정성을 더욱 강화했습니다</h3>
+          <p>지속적인 인프라 투자와 모니터링 체계 고도화로, 이용량이 급증하는 시험 기간에도 안정적인 서비스를 제공합니다.</p>
+          <p>실시간 부하 분산과 자동 서버 증설을 통해 매장 운영에 필요한 서비스가 원활하게 유지되도록 관리합니다.</p>
+        </article>
+        <article class="value-detail-card">
+          <span class="value-detail-kicker">365 DAYS C.S</span>
+          <h3>365일 전문 C.S 매니저가 대응합니다</h3>
+          <p>설·추석 연휴를 포함한 공휴일에도 09:00~18:00 전문 C.S 매니저가 전화와 카카오톡으로 문의를 안내합니다.</p>
+          <p>운영 시간 이후에도 카카오톡 채널 접수는 가능하며, 익일 담당 매니저가 신속히 확인해 안내드립니다.</p>
+        </article>
+        <article class="value-detail-card">
+          <span class="value-detail-kicker">FIELD A/S</span>
+          <h3>망설이지 않는 A.S로 전국 어디서나</h3>
+          <p>원격 지원 이후 현장 A.S가 필요할 경우, 지역별 운영 기준에 따라 전문 A.S 팀이 직접 방문해 문제 해결을 지원합니다.</p>
+          <p>수도권은 신속한 방문 지원을, 지방은 지역별 운영 일정에 따른 책임 있는 현장 대응을 제공합니다.</p>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- =========================================================
        SECTION 3 — 배리어프리 키오스크
   ========================================================= -->
-  <section id="sec-barrier" class="sec-barrier">
+  <section id="sec-barrier" class="sec-barrier sec-barrier-event">
+    <div class="container barrier-event-banner reveal">
+      <div class="barrier-event-copy">
+        <span class="barrier-event-label">ALL BARRIER-FREE</span>
+        <h2>누구나 편리하게 이용하는<br /><strong>배리어프리 키오스크</strong></h2>
+        <p>NIA 인증 기반의 접근성 기능으로 더 많은 고객을 위한 매장을 준비하세요.</p>
+        <a href="kiosk.html" class="barrier-event-link">배리어프리 키오스크 살펴보기 <span>→</span></a>
+      </div>
+      <div class="barrier-event-features" aria-label="배리어프리 주요 기능">
+        <div><span>◉</span><strong>NIA 인증</strong><small>접근성 기준 충족</small></div>
+        <div><span>◌</span><strong>음성 안내</strong><small>화면 정보 낭독</small></div>
+        <div><span>↕</span><strong>낮은 자세</strong><small>휠체어 접근 지원</small></div>
+      </div>
+    </div>
     <div class="container barrier-wrap">
       <div class="barrier-text reveal-left">
         <span class="section-tag tag-white">BARRIER FREE</span>
@@ -371,6 +406,116 @@
           <span>앱 가입비 및 연간 보증 보험료 0원 — <strong>Android / iOS 앱 무료 제공</strong></span>
         </div>
       </div>
+
+      <div class="cost-compare-visual reveal">
+        <p class="cost-visual-intro">알림 발송비와 앱 운영에 필요한 별도 비용을 비교해 보세요.</p>
+        <div class="cost-chart" role="img" aria-label="스터디큐브와 타사의 알림 비용 및 앱 운영 비용 비교 그래프">
+          <div class="cost-chart-legend"><span class="legend-sc">■ 스터디큐브</span><span class="legend-other">■ 타사 기준</span></div>
+          <div class="cost-chart-grid">
+            <div class="cost-chart-item">
+              <div class="bar-area"><span class="bar bar-sc" style="--bar: 5%;">0원</span><span class="bar bar-other" style="--bar: 82%;">최대 180만원</span></div>
+              <strong>연간 알림 비용</strong><small>알림톡 · SMS · LMS</small>
+            </div>
+            <div class="cost-chart-item">
+              <div class="bar-area"><span class="bar bar-sc" style="--bar: 5%;">0원</span><span class="bar bar-other" style="--bar: 48%;">22만원</span></div>
+              <strong>앱 가입비</strong><small>최초 1회 기준</small>
+            </div>
+            <div class="cost-chart-item">
+              <div class="bar-area"><span class="bar bar-sc" style="--bar: 5%;">0원</span><span class="bar bar-other" style="--bar: 36%;">연 3~4만원</span></div>
+              <strong>앱 보증보험료</strong><small>매년 1회 기준</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="cost-detail-grid">
+          <article class="cost-detail-card notification-cost">
+            <div class="cost-ppt-head">
+              <p>아직도 장기 의무약정에 알림톡 &amp; 문자비를 따로 내고 계신가요?</p>
+              <h4>스터디큐브는 저렴한 수준이 아니라 <strong>“0”</strong>입니다.</h4>
+            </div>
+            <div class="cost-detail-kicker">01 · 알림 발송 비용</div>
+            <h4>알림톡 · 문자 비용까지<br /><strong>부담 없이 0원</strong></h4>
+            <p class="cost-detail-lead">별도 충전 없이 운영 필수 알림을 제공해 매년 최대 120~180만원의 비용을 절약할 수 있습니다.</p>
+            <div class="mini-cost-table">
+              <div class="mini-head"><span>구분</span><strong>스터디큐브</strong><span>타사 기준</span></div>
+              <div><span>알림톡</span><strong>0원</strong><span>미지원 ~ 10원</span></div>
+              <div><span>SMS</span><strong>0원</strong><span>15 ~ 20원</span></div>
+              <div><span>LMS</span><strong>0원</strong><span>35 ~ 60원</span></div>
+            </div>
+            <p class="cost-detail-emphasis">무약정 · 위약금 없음 · 알림 비용 0원</p>
+          </article>
+
+          <article class="cost-detail-card app-cost">
+            <div class="cost-ppt-head">
+              <p>앱 사용하시는데 별도 가입비 &amp; 연간 보증보험료를 납부하고 계신가요?</p>
+              <h4>이 역시 스터디큐브는 <strong>“0”</strong>입니다.</h4>
+            </div>
+            <div class="cost-detail-kicker">02 · 모바일 앱 운영 비용</div>
+            <h4>가입비 · 보증보험료까지<br /><strong>앱도 0원</strong></h4>
+            <p class="cost-detail-lead">Android · iOS 전용 앱을 무상으로 제공해 별도 가입비와 연간 보증보험료 부담이 없습니다.</p>
+            <div class="mini-cost-table">
+              <div class="mini-head"><span>구분</span><strong>스터디큐브</strong><span>A사 기준</span></div>
+              <div><span>PG사 가입비</span><strong>0원</strong><span>220,000원</span></div>
+              <div><span>보증보험료</span><strong>0원</strong><span>연 3~40,000원</span></div>
+            </div>
+            <p class="cost-detail-emphasis">전용 앱 사용 시 0원 · 초기 별도 부담 없음</p>
+          </article>
+        </div>
+        <p class="cost-disclaimer">※ 일부 100석 이상 대형 매장과 특별 서비스 공급 계약자는 제외되며, 운영주님 개별 문자 발송은 관리자 웹에서 별도 충전 후 사용할 수 있습니다.</p>
+      </div>
+
+      <div class="transfer-platform reveal">
+        <div class="transfer-platform-head">
+          <span class="section-tag">CONNECTED PLATFORM</span>
+          <h3>중앙 서버 하나로 운영과 매장 설비까지 연결합니다</h3>
+          <p>키오스크·모바일앱·관리자웹·입퇴실기·사물함·IoT 설비를 하나의 통합 플랫폼에서 관리합니다.</p>
+        </div>
+        <div class="transfer-platform-grid">
+          <article class="transfer-flow-card">
+            <img class="transfer-reference-img" src="image/transfer-platform-server.png" alt="중앙 서버 기반 통합 운영 구조" />
+            <div class="transfer-reference-copy">
+              <span>CONNECTED MANAGEMENT</span>
+              <h4>중앙 서버 하나로 연결되는 통합 운영</h4>
+              <p>운영주 웹, 고객 서비스, 키오스크, 출입 인증과 사물함까지 하나의 중앙 서버에서 유기적으로 연결하고 관리합니다.</p>
+            </div>
+            <div class="transfer-card-title"><span>01</span><div><strong>중앙 서버 기반 통합 운영</strong><small>실시간 데이터와 서비스 관리</small></div></div>
+            <div class="server-flow">
+              <div class="server-node"><b>🧑‍💼 운영주 웹</b><br /><small>매장·고객·상품 관리</small></div>
+              <i>↔</i>
+              <div class="server-core">☁️<br />중앙 서버</div>
+              <i>↔</i>
+              <div class="server-node"><b>📱 키오스크 · 앱</b><br /><small>예약·결제·이용 관리</small></div>
+            </div>
+            <div class="platform-detail-list">
+              <div><span>📊</span><p><strong>운영주 웹</strong> 실시간 매장·고객(사용자)·매출·관리자·마일리지·프로모션을 한 곳에서 관리</p></div>
+              <div><span>🪪</span><p><strong>고객 서비스</strong> 회원권·상품 구매, 좌석 선택·이동·연장, 사물함 관리와 스터디카페 예약 지원</p></div>
+              <div><span>🎫</span><p><strong>출입 인증</strong> 종이 또는 앱 출입증, 바코드 태깅, 지문 인증(옵션)까지 연동</p></div>
+              <div><span>⚙️</span><p><strong>중앙 서버</strong> 프로그램 업데이트와 상품 관리를 원격으로 빠르게 반영</p></div>
+            </div>
+          </article>
+          <article class="transfer-flow-card">
+            <img class="transfer-reference-img" src="image/transfer-platform-iot.png" alt="IoT 조명 및 전원 원격 제어 구조" />
+            <div class="transfer-reference-copy">
+              <span>SMART IOT CONTROL</span>
+              <h4>조명과 전원까지 이어지는 스마트 매장</h4>
+              <p>IoT 기기를 무선으로 연결해 매장 환경에 맞춘 조명·전원 제어와 웹 기반 원격 관리를 편리하게 지원합니다.</p>
+            </div>
+            <div class="transfer-card-title"><span>02</span><div><strong>IoT 조명·전원 원격 제어</strong><small>웹 관리자 페이지에서 간편하게</small></div></div>
+            <div class="iot-flow">
+              <div>🔌 스마트 콘센트<br />💡 조명 <em>→</em></div>
+              <div>📡 무선 게이트웨이 <em>→</em></div>
+              <div>🖥️ 키오스크 <em>→</em></div>
+              <div>💻 웹 관리자<br />원격 제어</div>
+            </div>
+            <div class="platform-detail-list">
+              <div><span>⚡</span><p><strong>전력 절감</strong> 유휴 전력을 줄이고 전기료 절감에 도움을 주는 자동 제어</p></div>
+              <div><span>📈</span><p><strong>사용 통계</strong> 모니터링 데이터를 활용해 전력 사용을 최적화</p></div>
+              <div><span>🪑</span><p><strong>맞춤 옵션</strong> 시간·장소·좌석 등 매장 운영 조건에 맞춰 다양한 옵션 제어</p></div>
+              <div><span>📶</span><p><strong>간편한 시공</strong> 웹 관리자 원격 제어와 무선 연결로 간편하게 설치·제어</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -386,7 +531,7 @@
       </div>
 
       <div class="features-grid">
-        <div class="feat-card reveal">
+        <div class="feat-card reveal" hidden>
           <div class="feat-icon-wrap f-store">
             <svg viewBox="0 0 56 56" fill="none">
               <rect x="8" y="20" width="40" height="28" rx="6" fill="#1a6bc7" opacity=".15" />
@@ -453,6 +598,25 @@
   <!-- =========================================================
        SECTION 6 — 도입 절차 5단계 타임라인
   ========================================================= -->
+  <section id="sec-store-only" class="sec-store-only">
+    <div class="container">
+      <div class="store-only-wrap reveal">
+        <div class="store-only-visual"><img src="image/kiosk-store-service.png" alt="스터디큐브 키오스크 스토어 서비스 화면" /></div>
+        <div class="store-only-content">
+          <span class="store-only-label">ONLY STUDYCUBE</span>
+          <h2>키오스크 <em>스토어</em> 기능으로<br />매장 수익을 더해보세요.</h2>
+          <p class="store-only-intro">스터디큐브에서만 제공하는 스토어 서비스로, 고객 편의는 높이고 매장의 새로운 수익 기회를 만들어 보세요.</p>
+          <div class="store-only-benefits">
+            <div><span>🎟️</span><div><strong>매장 시설 이용 구매권</strong><p>복합기 이용 포인트 등 매장 시설을 이용할 수 있는 구매권을 판매합니다.</p></div></div>
+            <div><span>🛍️</span><div><strong>매장 판매 실물 상품</strong><p>과자, 음료, 간편식류 등 다양한 실물 상품을 키오스크에서 판매합니다.</p></div></div>
+            <div><span>🏷️</span><div><strong>주변 매장 할인 쿠폰</strong><p>근처 카페 등 주변 매장과 제휴해 고객에게 할인 쿠폰을 제공합니다.</p></div></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">스토어 서비스 도입 문의</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="sec-process" class="sec-process">
     <div class="container">
       <div class="section-header reveal">
@@ -535,6 +699,28 @@
         <span class="section-tag">PARTNERS &amp; CERTIFICATION</span>
         <h2 class="section-title">이미 <span class="gradient-text">1,200개 매장,</span><br />100만 이용회원, 약 70개 프랜차이즈</h2>
         <p class="section-desc">가 이용 중입니다.</p>
+      </div>
+
+      <div class="hero-kpi-row partner-kpi-row reveal">
+        <div class="kpi-card">
+          <span class="kpi-num" data-target="1200">0</span><span class="kpi-unit">+</span>
+          <span class="kpi-label">도입 매장</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-card">
+          <span class="kpi-num" data-target="100">0</span><span class="kpi-unit">만+</span>
+          <span class="kpi-label">이용 회원</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-card">
+          <span class="kpi-num" data-target="70">0</span><span class="kpi-unit">+</span>
+          <span class="kpi-label">프랜차이즈</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-card">
+          <span class="kpi-num" data-target="365">0</span><span class="kpi-unit">일</span>
+          <span class="kpi-label">전문 C.S 운영</span>
+        </div>
       </div>
 
       <!-- Logo Slider -->
@@ -633,6 +819,22 @@
   </section>
 
   <!-- =========================================================
+       SECTION — 신뢰·인증
+  ========================================================= -->
+  <section class="sec-trust-certifications">
+    <div class="container">
+      <div class="trust-cert-head reveal">
+        <span class="section-tag">TRUST &amp; CERTIFICATION</span>
+        <h2>정부가 인정한<br /><span class="gradient-text">신뢰받는 성장 기업</span>입니다.</h2>
+        <p>스터디큐브는 ㈜투비스마트가 제공하는 무인 스터디카페·독서실 토털 솔루션입니다.</p>
+      </div>
+      <figure class="trust-cert-image reveal">
+        <img src="image/certifications-grid.png" alt="벤처기업확인서, 이노비즈 확인서, 기업부설연구소 인정서, ISO9001 품질인증 등 투비스마트 인증서" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- =========================================================
        SECTION — 상담 신청 (Contact)
   ========================================================= -->
   <section id="contact-section" class="sec-contact">
@@ -660,43 +862,73 @@
             <div class="contact-detail-item">
               <span class="cd-icon">📧</span>
               <div>
-                <strong>이메일</strong>
-                <span>tobesmart@tobesmart.co.kr</span>
+                <strong>카카오톡 문의</strong>
+                <a class="kakao-channel-link" href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 채널 바로가기</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="contact-form-side reveal-right">
-          <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
-            <h3>상담 신청</h3>
-            <div class="form-group">
-              <label for="f-name">매장명 *</label>
-              <input type="text" id="f-name" placeholder="매장명을 입력해주세요" required />
+        <div class="contact-form-side cf-right reveal-right">
+          <form class="contact-form-full" id="contact-form-full" onsubmit="handleContactSubmit(event)">
+            <h3>도입상담 신청</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">업체명 / 성함 <span class="req">*</span></label>
+                <input type="text" id="cf-name" placeholder="예) 스터디큐브 강남점 / 홍길동" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-contact">연락처 (전화 또는 이메일) <span class="req">*</span></label>
+                <input type="text" id="cf-contact" placeholder="010-0000-0000 또는 email@example.com" required />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="f-biz">사업자번호 *</label>
-              <input type="text" id="f-biz" placeholder="000-00-00000" required />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-time">상담 가능 시간 <span class="req">*</span></label>
+                <select id="cf-time" required>
+                  <option value="">선택해주세요</option>
+                  <option>오전 9시 ~ 10시</option><option>오전 10시 ~ 11시</option><option>오전 11시 ~ 12시</option>
+                  <option>오후 12시 ~ 1시</option><option>오후 1시 ~ 2시</option><option>오후 2시 ~ 3시</option>
+                  <option>오후 3시 ~ 4시</option><option>오후 4시 ~ 5시</option><option>오후 5시 ~ 6시</option><option>언제든 가능</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cf-region">지역 <span class="req">*</span></label>
+                <select id="cf-region" required>
+                  <option value="">선택해주세요</option><option>서울</option><option>경기도</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>강원도</option><option>충청북도</option><option>충청남도</option><option>전라북도</option><option>전라남도</option><option>경상북도</option><option>경상남도</option><option>제주도</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="f-phone">연락처 *</label>
-              <input type="tel" id="f-phone" placeholder="010-0000-0000" required />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-type">상담 내용 선택</label>
+                <select id="cf-type"><option value="">선택해주세요</option><option>신규 도입 상담</option><option>타사 이용 중으로 전환 도입 상담</option><option>기타</option></select>
+              </div>
+              <div class="form-group">
+                <label for="cf-industry">업종 선택</label>
+                <select id="cf-industry"><option value="">선택해주세요</option><option>스터디카페 / 독서실</option><option>관공서 / 공공기관</option><option>학교시설</option><option>일반판매시설</option><option>교육시설</option><option>기타</option></select>
+              </div>
             </div>
+
             <div class="form-group">
-              <label for="f-interest">관심 솔루션</label>
-              <select id="f-interest">
-                <option value="">선택해주세요</option>
-                <option>키오스크</option>
-                <option>관리자웹</option>
-                <option>모바일앱</option>
-                <option>입퇴실기</option>
-                <option>All-in-One 패키지</option>
-              </select>
+              <label for="cf-product">도입 고려 중인 제품</label>
+              <select id="cf-product"><option value="">선택해주세요</option><option>일반 키오스크</option><option>배리어프리 키오스크</option><option>출입통제기 (입퇴실기)</option><option>관리자 웹 / 모바일앱</option><option>테이블오더 / POS</option><option>All-in-One 패키지</option><option>기타</option></select>
             </div>
+
             <div class="form-group">
-              <label for="f-msg">문의 내용</label>
-              <textarea id="f-msg" rows="4" placeholder="문의 내용을 자유롭게 입력해주세요"></textarea>
+              <label for="cf-msg">문의 내용</label>
+              <textarea id="cf-msg" rows="5" placeholder="궁금하신 점, 매장 규모, 현재 상황 등을 자유롭게 적어주세요"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">상담 신청하기</button>
+
+            <div class="form-terms">
+              <label class="terms-label"><input type="checkbox" id="cf-terms" required /><span><strong>개인정보 수집 및 이용에 동의합니다.</strong> <small>(필수)</small></span></label>
+              <button type="button" class="terms-view-btn" onclick="toggleTerms()">내용보기</button>
+              <div class="terms-content" id="terms-content">수집 목적: 도입상담 서비스 제공 / 수집 항목: 업체명 또는 성함, 연락처 또는 이메일 / 보유 기간: 처리 후 즉시 파기 (단, 법령에 따라 보관이 필요한 경우 해당 기간 보관)</div>
+            </div>
+
+            <button type="submit" class="btn-submit-contact"><span class="bsc-icon">📨</span>도입상담 요청완료</button>
           </form>
         </div>
       </div>
@@ -710,29 +942,39 @@
     <div class="footer-top">
       <div class="container footer-top-inner">
         <div class="footer-logo-area">
-          <span class="footer-logo">TOBESMART</span>
+          <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" />
           <p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p>
-        </div>
-        <div class="footer-links">
-          <div class="footer-link-col">
-            <strong>솔루션</strong>
-            <a href="#sec-barrier">All 배리어프리</a>
-            <a href="kiosk.html">키오스크</a>
-            <a href="admin-app.html">관리자웹</a>
-            <a href="admin-app.html#sec-app">모바일앱</a>
-            <a href="entrance.html">입퇴실기</a>
-          </div>
-          <div class="footer-link-col">
-            <strong>고객지원</strong>
-            <a href="contact.html">도입문의</a>
-            <a href="tel:15773119">전화 상담</a>
-            <a href="mailto:tobesmart@tobesmart.co.kr">이메일 문의</a>
-          </div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
+        <div class="footer-links">
+          <div class="footer-link-col">
+            <strong>솔루션</strong>
+            <div class="footer-link-items">
+              <a href="#sec-barrier">All 배리어프리</a>
+              <a href="kiosk.html">키오스크</a>
+              <a href="admin-app.html">관리자웹</a>
+              <a href="mobile-app.html">모바일앱</a>
+              <a href="entrance.html">입퇴실기</a>
+            </div>
+          </div>
+          <div class="footer-link-col">
+            <strong>고객지원</strong>
+            <div class="footer-link-items">
+              <a href="contact.html">도입문의</a>
+              <a href="tel:15773119">전화 상담</a>
+              <a href="mailto:tobesmart@tobesmart.co.kr">이메일 문의</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider" aria-hidden="true"></div>
+        <div class="footer-reference-contact">
+          <strong>고객센터</strong>
+          <p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p>
+          <p>평일 09:00 ~ 18:00</p>
+        </div>
         <div class="footer-company-info">
           <p>대표: 김광 &nbsp;|&nbsp; 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p>
           <p>전화: 1577-3119 &nbsp;|&nbsp; 팩스: 031-701-4119 &nbsp;|&nbsp; 이메일: tobesmart@tobesmart.co.kr</p>

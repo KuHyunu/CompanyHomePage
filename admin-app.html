@@ -4,31 +4,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>관리자웹 & 모바일앱 | 스터디큐브</title>
-    <meta name="description" content="스터디큐브 관리자 웹과 모바일앱으로 언제 어디서나 매장을 스마트하게 관리하세요." />
+    <title>관리자웹 | 스터디큐브</title>
+    <meta name="description" content="스터디큐브 관리자 웹으로 언제 어디서나 매장을 스마트하게 관리하세요." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="sub.css" />
+    <link rel="stylesheet" href="sub.css?v=hero-contact-center" />
 </head>
 
 <body>
 
+    <!-- TOP BRAND BAR -->
+    <div class="top-brand-bar">
+        <a href="https://www.tobesmart.co.kr/" target="_blank" rel="noopener noreferrer">
+            <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
+        </a>
+    </div>
+
     <!-- HEADER -->
     <header id="site-header" class="scrolled">
         <div class="header-inner container">
-            <a href="index.html" class="logo"><span class="logo-study">STUDY</span><span
-                    class="logo-cube">CUBE</span></a>
+            <a href="index.html" class="logo"><img src="image/StudyCubeLogo.png" alt="STUDYCUBE" class="logo-img" /></a>
             <nav class="gnb" id="gnb">
                 <ul>
-                    <li><a href="contact.html">도입문의</a></li>
-                    <li><a href="index.html#sec-barrier">All 배리어프리</a></li>
-                    <li><a href="kiosk.html">키오스크</a></li>
+                    <li class="gnb-tooltip-wrap">
+                        <span class="gnb-tooltip">All 배리어프리 (선택)</span>
+                        <a href="kiosk.html">키오스크</a>
+                    </li>
                     <li><a href="admin-app.html" class="gnb-active">관리자웹</a></li>
-                    <li><a href="admin-app.html#sec-app">모바일앱</a></li>
+                    <li><a href="mobile-app.html">모바일앱</a></li>
                     <li><a href="entrance.html">입퇴실기</a></li>
+                    <li><a href="contact.html">도입문의</a></li>
                 </ul>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
@@ -42,10 +50,11 @@
             <div class="sub-hero-glow g2"></div>
         </div>
         <div class="container sub-hero-content">
-            <div class="sub-breadcrumb"><a href="index.html">홈</a> <span>›</span> <span>관리자웹 & 모바일앱</span></div>
-            <div class="sub-hero-badge">ADMIN WEB · MOBILE APP</div>
+            <div class="sub-breadcrumb"><a href="index.html">홈</a> <span>›</span> <span>관리자웹</span></div>
+            <div class="sub-hero-badge">ADMIN WEB</div>
             <h1>매장에 가지 않고<br /><span class="gradient-text">언제 어디서나</span><br />스터디큐브가 답(答) 합니다.</h1>
             <p>PC와 스마트폰 하나로 모든 매장 운영을 원격에서 완벽하게</p>
+        <a href="contact.html" class="btn btn-primary btn-lg sub-hero-contact-btn">도입문의</a>
         </div>
     </section>
 
@@ -61,6 +70,7 @@
             <div class="admin-showcase">
                 <!-- Admin Mockup -->
                 <div class="admin-mockup-wrap reveal-left">
+                    <img src="image/admin-dashboard.png" alt="스터디큐브 관리자웹 대시보드" class="admin-dashboard-image" />
                     <div class="admin-browser-frame">
                         <div class="browser-bar">
                             <div class="browser-dots"><span></span><span></span><span></span></div>
@@ -158,7 +168,7 @@
     </section>
 
     <!-- ═══ 모바일앱 ═══ -->
-    <section id="sec-app" class="sec-mobile-app">
+    <section id="sec-app" class="sec-mobile-app" hidden>
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag">MOBILE APP</span>
