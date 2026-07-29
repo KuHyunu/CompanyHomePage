@@ -2151,6 +2151,12 @@
     color: rgba(255, 255, 255, .42) !important;
 }
 
+.app-free-banner .mobile-app-fee-note {
+    margin: 7px 0 0 !important;
+    max-width: 620px;
+    color: rgba(255, 255, 255, .58) !important;
+}
+
 /* ─── ENTRANCE PRODUCT LIST ───────────────────────────────── */
 .entrance-cards-real {
     grid-template-columns: 1fr;
