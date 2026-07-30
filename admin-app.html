@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="sub.css?v=admin-feature-open-layout-8" />
+    <link rel="stylesheet" href="style.css?v=quick-kakao-ci-1" />
+    <link rel="stylesheet" href="sub.css?v=admin-image-zoom-1" />
 </head>
 
 <body>
@@ -162,7 +162,7 @@
                     </article>
                     <article class="af-item af-item-iot">
                         <div class="af-media af-media-iot">
-                            <img src="image/admin-feature-seat-control.png" alt="관리자웹 좌석 제어 메뉴" />
+                            <img src="image/admin-feature-seat-control-menu.png" alt="관리자웹 좌석 제어 메뉴" />
                             <img src="image/admin-feature-door-iot.png" alt="관리자웹 문 열림과 IoT 제어 화면" />
                         </div>
                         <div class="af-content">
@@ -314,15 +314,59 @@
         </div></div>
     </footer>
 
+    <div class="admin-image-modal" id="admin-image-modal" role="dialog" aria-modal="true" aria-label="이미지 확대 보기" hidden>
+        <button type="button" class="admin-image-modal-close" aria-label="닫기">×</button>
+        <img src="" alt="확대된 관리자웹 화면" />
+    </div>
+
     <div class="quick-buttons" id="quick-buttons">
         <a href="tel:15773119" class="quick-btn quick-call"><span class="qb-icon">📞</span><span
                 class="qb-text">전화상담<br /><strong>1577-3119</strong></span></a>
         <a href="contact.html" class="quick-btn quick-consult"><span class="qb-icon">✉️</span><span
                 class="qb-text">상담신청</span></a>
+        <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer" class="quick-btn quick-kakao" aria-label="카카오톡 채널 바로가기"><img src="image/kakao-talk-logo.svg" alt="" /></a>
         <button class="quick-btn quick-top" onclick="scrollToTop()"><span class="qb-icon">▲</span><span
                 class="qb-text">TOP</span></button>
     </div>
     <script src="sub.js"></script>
+    <script>
+        (() => {
+            const modal = document.getElementById('admin-image-modal');
+            const modalImage = modal?.querySelector('img');
+            const closeButton = modal?.querySelector('.admin-image-modal-close');
+            const closeModal = () => {
+                if (!modal) return;
+                modal.hidden = true;
+                document.body.classList.remove('modal-open');
+            };
+
+            document.querySelectorAll('.admin-dashboard-image, .af-media img').forEach(image => {
+                image.classList.add('admin-zoomable-image');
+                image.tabIndex = 0;
+                image.setAttribute('role', 'button');
+                image.setAttribute('aria-label', `${image.alt} 확대 보기`);
+                const openModal = () => {
+                    if (!modal || !modalImage) return;
+                    modalImage.src = image.currentSrc || image.src;
+                    modalImage.alt = image.alt;
+                    modal.hidden = false;
+                    document.body.classList.add('modal-open');
+                    closeButton?.focus();
+                };
+                image.addEventListener('click', openModal);
+                image.addEventListener('keydown', event => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        openModal();
+                    }
+                });
+            });
+
+            closeButton?.addEventListener('click', closeModal);
+            modal?.addEventListener('click', event => { if (event.target === modal) closeModal(); });
+            document.addEventListener('keydown', event => { if (event.key === 'Escape') closeModal(); });
+        })();
+    </script>
 </body>
 
 </html>

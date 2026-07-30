@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="카카오톡">
+  <rect width="80" height="80" rx="20" fill="#FEE500"/>
+  <path d="M40 17c-15.2 0-27.5 9.5-27.5 21.2 0 7.6 5.2 14.3 13 18l-2.7 10.2 11.7-7.7c1.8.3 3.7.5 5.5.5 15.2 0 27.5-9.5 27.5-21.2S55.2 17 40 17Z" fill="#3C1E1E"/>
+  <text x="40" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#FEE500">TALK</text>
+</svg>
