@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="sub.css?v=hero-contact-center" />
+    <link rel="stylesheet" href="sub.css?v=admin-feature-open-layout-8" />
 </head>
 
 <body>
@@ -26,7 +26,7 @@
     <!-- HEADER -->
     <header id="site-header" class="scrolled">
         <div class="header-inner container">
-            <a href="index.html" class="logo"><img src="image/StudyCubeLogo.png" alt="STUDYCUBE" class="logo-img" /></a>
+            <a href="index.html" class="logo"><img src="image/StudyCubeLogo-white-text.png" alt="STUDYCUBE" class="logo-img" /></a>
             <nav class="gnb" id="gnb">
                 <ul>
                     <li class="gnb-tooltip-wrap">
@@ -133,35 +133,60 @@
                 </div>
 
                 <!-- Features -->
-                <div class="admin-features reveal-right">
-                    <div class="af-item">
-                        <div class="af-icon-wrap af-blue"><span>📊</span></div>
-                        <div class="af-text">
-                            <h4>한 눈에 쏙! 매출정보</h4>
-                            <p>시간권, 정기권 등 일별/월별 매출 그래프 및 데이터를 직관적인 대시보드로 확인</p>
+                <div class="admin-features admin-feature-grid reveal-right">
+                    <article class="af-item af-item-sales">
+                        <div class="af-media">
+                            <img src="image/admin-feature-sales.png" alt="관리자웹 매출내역 화면" />
                         </div>
-                    </div>
-                    <div class="af-item">
-                        <div class="af-icon-wrap af-green"><span>🪑</span></div>
-                        <div class="af-text">
-                            <h4>내 손에 좌석 & 룸 이용 라이브</h4>
-                            <p>실시간 좌석 상태 확인 — 이용가능/사용중/청소중 색상 구분으로 한눈에 파악</p>
+                        <div class="af-content">
+                            <div class="af-icon-wrap af-blue"><span>📊</span></div>
+                            <div class="af-text">
+                            <span class="af-kicker">한 눈에 쏙! 매출정보</span>
+                            <h4>접속시간 기준 당일 매출 현황을<br />한 눈에 파악할 수 있습니다.</h4>
+                            <p>시간권·사물함·시간패키지·정기권별 그래프와 일별·월별·연별 매출, 결제수단별 현황을 확인합니다.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="af-item">
-                        <div class="af-icon-wrap af-purple"><span>🎛️</span></div>
-                        <div class="af-text">
-                            <h4>원격 컨트롤</h4>
-                            <p>문 열림, IoT 조명, 사물함 기능을 PC에서 원격으로 즉시 제어</p>
+                    </article>
+                    <article class="af-item af-item-seat">
+                        <div class="af-media">
+                            <img src="image/admin-feature-seat-live.png" alt="관리자웹 실시간 좌석과 룸 이용 현황 화면" />
                         </div>
-                    </div>
-                    <div class="af-item">
-                        <div class="af-icon-wrap af-orange"><span>🎁</span></div>
-                        <div class="af-text">
-                            <h4>고객 맞춤 쿠폰 & 포인트</h4>
-                            <p>단골 고객 확보를 위한 포인트 지급 및 쿠폰 생성으로 재방문율 UP</p>
+                        <div class="af-content">
+                            <div class="af-icon-wrap af-green"><span>🪑</span></div>
+                            <div class="af-text">
+                            <span class="af-kicker">내 손에 좌석 &amp; 룸 이용 라이브</span>
+                            <h4>PC와 모바일로 좌석과 룸 이용 정보를<br />원샷으로 확인할 수 있습니다.</h4>
+                            <p>이용가능·이용불가·이용중·마감예정·사용률을 색상별로 확인해 현재 상태를 바로 파악합니다.</p>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+                    <article class="af-item af-item-iot">
+                        <div class="af-media af-media-iot">
+                            <img src="image/admin-feature-seat-control.png" alt="관리자웹 좌석 제어 메뉴" />
+                            <img src="image/admin-feature-door-iot.png" alt="관리자웹 문 열림과 IoT 제어 화면" />
+                        </div>
+                        <div class="af-content">
+                            <div class="af-icon-wrap af-purple"><span>🎛️</span></div>
+                            <div class="af-text">
+                            <span class="af-kicker">문 열림도 IoT 조명도 원격으로</span>
+                            <h4>클릭 한 번으로 편리하게<br />매장의 모든 좌석을 컨트롤합니다.</h4>
+                            <p>좌석 설정·좌석별 전등·문 열림·사물함까지 언제 어디서든 원격으로 관리할 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="af-item af-item-coupon">
+                        <div class="af-media">
+                            <img src="image/admin-feature-coupon.png" alt="관리자웹 고객 맞춤 쿠폰 관리 화면" />
+                        </div>
+                        <div class="af-content">
+                            <div class="af-icon-wrap af-orange"><span>🎁</span></div>
+                            <div class="af-text">
+                            <span class="af-kicker">고객 맞춤 쿠폰 &amp; 포인트 지원</span>
+                            <h4>한 번 방문한 고객도<br />충성 고객으로 만듭니다.</h4>
+                            <p>좌석·룸·사물함 이용 서비스별 쿠폰과 포인트, 고객 사용 이력까지 확인해 재방문을 지원합니다.</p>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -280,15 +305,13 @@
 
     <!-- FOOTER -->
     <footer id="site-footer">
-        <div class="footer-bottom" style="padding:28px 0;border-top:1px solid rgba(255,255,255,.08)">
-            <div class="container footer-bottom-inner">
-                <div class="footer-company-info">
-                    <p>대표: 김광 &nbsp;|&nbsp; 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p>
-                    <p>전화: 1577-3119 &nbsp;|&nbsp; 팩스: 031-701-4119 &nbsp;|&nbsp; 이메일: tobesmart@tobesmart.co.kr</p>
-                </div>
-                <p class="footer-copyright">COPYRIGHT © TOBESMART. ALL RIGHTS RESERVED.</p>
-            </div>
-        </div>
+        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /><p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p></div></div></div>
+        <div class="footer-bottom"><div class="container footer-bottom-inner">
+            <div class="footer-divider" aria-hidden="true"></div>
+            <div class="footer-reference-contact"><strong>고객센터</strong><p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p><p>평일 09:00 ~ 18:00</p></div>
+            <div class="footer-company-info"><p>대표: 김광 &nbsp;|&nbsp; 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p><p>전화: 1577-3119 &nbsp;|&nbsp; 팩스: 031-701-4119 &nbsp;|&nbsp; 이메일: tobesmart@tobesmart.co.kr</p></div>
+            <p class="footer-copyright">COPYRIGHT © TOBESMART. ALL RIGHTS RESERVED.</p>
+        </div></div>
     </footer>
 
     <div class="quick-buttons" id="quick-buttons">

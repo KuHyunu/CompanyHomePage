@@ -71,6 +71,29 @@ const counterObserver = new IntersectionObserver(entries => {
 const kpiSection = document.querySelector('.partner-kpi-row');
 if (kpiSection) counterObserver.observe(kpiSection);
 
+// ─── PARTNER CI MARQUEE ─────────────────────────────────────
+// Replace the former text chips with the supplied customer CI images.
+const partnerCiRows = [
+  ['KETI.png', 'KT.png', 'LGU플러스png.png', 'SK텔레콤.png', '공주시.png', '구로구.png', '그루.png', '노벨.png', '다다르다.png', '당진시.png', '동승.png', '디딤.png', '레즈고.png', '롯데아울렛.png', '마스터플랜.png', '봄날의서재.png', '봉화군.jpg', '비온탑.png', '비허밍.png', '서강대.png', '서울대.png', '서울시.png'],
+  ['시작스터디카페.png', '얼리버드.png', '에트리.png', '엠큐뷔.png', '온더테스크.png', '올탑.png', '와이즈.png', '위라운드.png', '유한대.png', '이니셜.png', '이마트.jpg', '전남대병원.png', '전북대병원.png', '탐앤탐스.png', '토즈.png', '팜에이트.png', '한국금거래소.jpg', '한국파이롯트.png', '해양대.png', '해커스.jpg', '화수초등학교.png']
+];
+
+partnerCiRows.forEach((row, index) => {
+  const track = document.querySelector(`#logo-inner-${index + 1}`);
+  if (!track) return;
+  const createCi = (fileName) => {
+    const item = document.createElement('div');
+    item.className = 'partner-logo-item';
+    const image = document.createElement('img');
+    image.src = `image/partner-ci/${fileName}`;
+    image.alt = '';
+    item.appendChild(image);
+    return item;
+  };
+  const originals = row.map(createCi);
+  track.replaceChildren(...originals, ...originals.map((item) => item.cloneNode(true)));
+});
+
 // ─── SCROLL REVEAL ───────────────────────────────────────────
 function setupReveal() {
   const observer = new IntersectionObserver(entries => {
@@ -135,7 +158,9 @@ function handleFormSubmit(e) {
   }, 1300);
 }
 
-function handleContactSubmit(e) {
+const CONSULTATION_SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwDyxi4cpZJ8FQTqLK8uUyFAoJ5kXRxzVFUWB2nfAHJnWVoUdqhG16Q0zQszNz-bGAN/exec';
+
+async function handleContactSubmit(e) {
   e.preventDefault();
   const terms = document.getElementById('cf-terms');
   if (!terms?.checked) {
@@ -146,15 +171,39 @@ function handleContactSubmit(e) {
   const btn = e.target.querySelector('.btn-submit-contact');
   if (!btn) return;
   const originalContent = btn.innerHTML;
-  btn.textContent = '처리 중...';
+  const form = e.target;
+  const value = (id) => document.getElementById(id)?.value?.trim() || '';
+  const payload = {
+    name: value('cf-name'),
+    contact: value('cf-contact'),
+    availableTime: value('cf-time'),
+    region: value('cf-region'),
+    consultationType: value('cf-type'),
+    industry: value('cf-industry'),
+    product: value('cf-product'),
+    message: value('cf-msg')
+  };
+
+  btn.textContent = '접수 중...';
   btn.disabled = true;
 
-  setTimeout(() => {
+  try {
+    await fetch(CONSULTATION_SHEET_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+
     btn.innerHTML = originalContent;
     btn.disabled = false;
-    e.target.reset();
-    showToast('도입상담 요청이 완료되었습니다. 빠르게 연락드리겠습니다.');
-  }, 1300);
+    form.reset();
+    showToast('도입상담 요청이 완료되었습니다. 담당자가 빠르게 연락드리겠습니다.');
+  } catch (error) {
+    btn.innerHTML = originalContent;
+    btn.disabled = false;
+    showToast('접수 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+  }
 }
 
 function toggleTerms() {
