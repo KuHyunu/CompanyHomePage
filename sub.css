@@ -92,6 +92,7 @@
     line-height: 1.22;
     letter-spacing: -.03em;
     margin-bottom: 16px;
+    word-break: keep-all;
 }
 
 .sub-hero p {
@@ -99,6 +100,7 @@
     color: rgba(255, 255, 255, .62);
     line-height: 1.7;
     margin-bottom: 0;
+    word-break: keep-all;
 }
 
 .sub-hero p strong {
@@ -564,6 +566,48 @@
     line-height: 1.25;
     letter-spacing: -.03em;
     margin-bottom: 32px;
+    padding-right: 132px;
+}
+
+.bf-hl-left {
+    position: relative;
+}
+
+.bf-nia-certificate-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 112px;
+}
+
+.bf-nia-certificate {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border-radius: 5px;
+    background: var(--white);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .22);
+}
+
+.bf-nia-mark {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    color: var(--white);
+    background: var(--blue-600);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .28);
+    font-size: .58rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: center;
 }
 
 .bf-hl-features {
@@ -2086,6 +2130,31 @@ body.modal-open { overflow: hidden; }
         gap: 40px;
     }
 
+    .bf-hl-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bf-hl-left .section-tag { order: 1; }
+    .bf-hl-left h2 {
+        order: 2;
+        padding-right: 0;
+        margin-bottom: 18px;
+    }
+
+    .bf-nia-certificate-wrap {
+        position: relative;
+        top: auto;
+        right: auto;
+        order: 3;
+        align-self: flex-end;
+        width: 104px;
+        margin: 0 8px 22px 0;
+    }
+
+    .bf-hl-features { order: 4; }
+    .bf-hl-left .btn { order: 5; }
+
     .contact-form-layout {
         grid-template-columns: 1fr;
     }
@@ -2858,4 +2927,61 @@ body.modal-open { overflow: hidden; }
 @media (max-width: 700px) {
     .option-product-card { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
     .option-hardware-photo { min-height: 180px; }
+}
+
+/* The desktop CTA styles are declared late in this file. Repeat the narrow
+   layout at the end so the cards stay readable and tap-friendly on phones. */
+@media (max-width: 600px) {
+    .sec-cta-banner { padding: 56px 0; }
+
+    .cta-banner {
+        padding: 42px 18px 28px;
+        border-radius: 28px;
+    }
+
+    .cta-banner h2 {
+        font-size: 1.45rem;
+        line-height: 1.42;
+        word-break: keep-all;
+    }
+
+    .cta-banner p {
+        font-size: .8rem;
+        line-height: 1.65;
+        margin-bottom: 26px;
+        word-break: keep-all;
+    }
+
+    .kiosk-cta-btns {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        max-width: none;
+    }
+
+    .kiosk-cta-card {
+        min-height: 124px;
+        padding: 18px 16px;
+        border-width: 2px;
+        border-radius: 24px;
+    }
+
+    .kiosk-cta-call { min-height: 142px; }
+
+    .kiosk-cta-card span {
+        font-size: .92rem;
+        line-height: 1.35;
+    }
+
+    .kiosk-cta-card strong {
+        margin: 6px 0 4px;
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .kiosk-cta-consult strong { font-size: 1.45rem; }
+
+    .kiosk-cta-card small {
+        font-size: .68rem;
+        line-height: 1.45;
+    }
 }

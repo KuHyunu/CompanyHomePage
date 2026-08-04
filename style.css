@@ -93,6 +93,9 @@ body {
   background: var(--white);
   line-height: 1.65;
   overflow-x: hidden;
+  /* Korean text should wrap by words, never by individual syllables. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -325,7 +328,7 @@ section {
 
 .gnb-tooltip {
   position: absolute;
-  top: 2px;
+  top: 8px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--gradient-main);
@@ -563,6 +566,21 @@ section {
   text-shadow: 0 3px 20px rgba(1, 14, 30, .42);
 }
 
+/* Keep the brand name as the focal point of the homepage hero. */
+.hero-title .hero-lead,
+.hero-title .hero-partner {
+  font-size: .74em;
+  line-height: 1.42;
+}
+
+.hero-title .hero-brand {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 1.2em;
+  line-height: 1.1;
+  letter-spacing: -.055em;
+}
+
 .hero-sub {
   font-size: clamp(.95rem, 1.8vw, 1.2rem);
   color: rgba(255, 255, 255, .68);
@@ -793,6 +811,31 @@ section {
   .value-solution-flow { grid-template-columns: 1fr; gap: 8px; }
   .value-solution-flow > b { transform: rotate(90deg); text-align: center; }
   .value-solution-flow > div { min-height: auto; }
+}
+
+/* Keep the barrier-free kiosk and its feature copy in separate flow rows on
+   phones. The product image must never overlap the introduction or labels. */
+@media (max-width: 760px) {
+  .sec-barrier-event {
+    padding: 30px 0 40px;
+  }
+
+  .barrier-event-banner {
+    gap: 20px;
+  }
+
+  .barrier-event-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: min(190px, 56vw);
+    margin: 0 auto 8px;
+  }
+
+  .barrier-event-features {
+    margin-top: 0;
+  }
 }
 
 .value-highlight-grid {
@@ -2525,7 +2568,7 @@ section {
 
 @media (max-width: 760px) {
   .app-guide-phone-layout { grid-template-columns: 1fr; }.app-guide-phone { max-width: 230px; margin: 0 auto; }.app-guide-notes { display: none; }.app-screen-carousel { grid-template-columns: 1fr 1fr; }.app-carousel-arrow { display: none; }.app-screen { min-height: 230px; }.app-screen:nth-of-type(n+5) { display: none; }
-  .app-real-carousel { max-width: 100%; }.app-carousel-viewport { height: 490px; }.app-carousel-slide { width: 250px; }.app-carousel-slide img { height: 460px; }.app-carousel-slide.preview-prev { transform: translateX(calc(-50% - 176px)) scale(.7); }.app-carousel-slide.preview-next { transform: translateX(calc(-50% + 176px)) scale(.7); }
+  .app-real-carousel { max-width: 100%; }.app-carousel-viewport { height: 455px; }.app-carousel-slide { width: 220px; }.app-carousel-slide img { height: 420px; }.app-carousel-slide.preview-prev { transform: translateX(calc(-50% - 130px)) scale(.56); }.app-carousel-slide.preview-next { transform: translateX(calc(-50% + 130px)) scale(.56); }
 }
 
 .footer-link-col strong {
@@ -2846,8 +2889,56 @@ section {
 }
 
 @media (max-width: 600px) {
+  html {
+    overflow-x: clip;
+  }
+
   section {
     padding: 70px 0;
+  }
+
+  #hero .hero-title {
+    font-size: 1.58rem;
+    line-height: 1.32;
+    letter-spacing: -.045em;
+    word-break: keep-all;
+  }
+
+  #hero .hero-subtitle {
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  .quick-buttons {
+    right: 14px;
+    bottom: 16px;
+    gap: 8px;
+  }
+
+  .quick-btn.quick-call,
+  .quick-btn.quick-consult,
+  .quick-btn.quick-kakao,
+  .quick-btn.quick-top {
+    width: 52px;
+    height: 52px;
+    min-height: 52px;
+    padding: 0;
+    gap: 0;
+    justify-content: center;
+    align-self: flex-end;
+  }
+
+  .quick-btn .qb-text {
+    display: none;
+  }
+
+  .quick-btn .qb-icon {
+    font-size: 1.15rem;
+  }
+
+  .quick-kakao img {
+    width: 32px;
+    height: 32px;
   }
 
   .hero-kpi-row {
@@ -2880,5 +2971,82 @@ section {
 
   .bfk-device {
     width: 260px;
+  }
+}
+
+/* Footer stacking for phone layouts. Keep each content group in its own row
+   so company information and customer support never overlap. */
+@media (max-width: 600px) {
+  #site-footer .footer-top {
+    padding-top: 24px;
+  }
+
+  #site-footer .footer-top-inner {
+    display: block;
+  }
+
+  #site-footer .footer-bottom {
+    padding: 20px 0 28px;
+  }
+
+  #site-footer .footer-bottom-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  #site-footer .footer-divider {
+    order: 1;
+    margin: 0 0 20px;
+  }
+
+  #site-footer .footer-company-info {
+    order: 2;
+    margin: 0;
+  }
+
+  #site-footer .footer-reference-contact {
+    order: 3;
+    min-width: 0;
+    margin: 18px 0 0;
+  }
+
+  #site-footer .footer-copyright {
+    order: 4;
+    margin: 16px 0 0;
+  }
+
+  #site-footer .footer-company-info p,
+  #site-footer .footer-reference-contact p,
+  #site-footer .footer-copyright {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+  }
+}
+
+/* Final mobile override: this is deliberately after the desktop event-banner
+   rules so the kiosk stays in normal document flow above its feature cards. */
+@media (max-width: 760px) {
+  .sec-barrier-event {
+    padding: 30px 0 40px;
+  }
+
+  .barrier-event-banner {
+    gap: 20px;
+  }
+
+  .barrier-event-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: min(190px, 56vw);
+    margin: 0 auto 8px;
+  }
+
+  .barrier-event-features {
+    margin-top: 0;
   }
 }
