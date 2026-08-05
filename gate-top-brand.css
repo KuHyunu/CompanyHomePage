@@ -1,0 +1,29 @@
+.gate-top-brand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid #eef2f5;
+}
+
+.gate-top-brand a { display: block; line-height: 0; position: absolute; left: 50%; transform: translateX(-50%); }
+.gate-top-brand img { display: block; height: 36px; width: auto; }
+.gate-header { position: fixed; top: 56px; left: 0; right: 0; background: #f4f5f6; }
+.gate-body { padding-top: 144px; }
+.gate-logo img { width: 196px; }
+.gate-hero, .hero-layout { min-height: calc(100vh - 144px); }
+
+@media (max-width: 760px) {
+  .gate-top-brand { height: 56px; }
+  .gate-top-brand img { height: 32px; }
+  .gate-header { top: 56px; }
+  .gate-body { padding-top: 124px; }
+  .gate-logo img { width: 150px; }
+  .gate-hero, .hero-layout { min-height: calc(100vh - 124px); }
+}

@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=header-tooltip-gap-2" />
+    <link rel="stylesheet" href="style.css?v=scrollbar-hidden-2" />
+    <link rel="stylesheet" href="gate-footer.css?v=1" />
+    <script src="shared-footer.js?v=1" defer></script>
   <link rel="stylesheet" href="sub.css?v=kiosk-mobile-layout-1" />
 </head>
 
@@ -18,7 +20,7 @@
 
     <!-- TOP BRAND BAR -->
     <div class="top-brand-bar">
-        <a href="https://www.tobesmart.co.kr/" target="_blank" rel="noopener noreferrer">
+        <a href="index.html" aria-label="투비스마트 메인게이트">
             <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
         </a>
     </div>
@@ -26,7 +28,7 @@
     <!-- HEADER -->
     <header id="site-header" class="scrolled">
         <div class="header-inner container">
-            <a href="index.html" class="logo"><img src="image/StudyCubeLogo-white-text.png" alt="STUDYCUBE" class="logo-img" /></a>
+            <a href="studycube.html" class="logo"><img src="image/StudyCubeLogo-white-text.png" alt="STUDYCUBE" class="logo-img" /></a>
             <nav class="gnb" id="gnb">
                 <ul>
                     <li class="gnb-tooltip-wrap">
@@ -50,7 +52,7 @@
             <div class="sub-hero-glow g2"></div>
         </div>
         <div class="container sub-hero-content">
-            <div class="sub-breadcrumb"><a href="index.html">홈</a> <span>›</span> <span>키오스크</span></div>
+            <div class="sub-breadcrumb"><a href="studycube.html">홈</a> <span>›</span> <span>키오스크</span></div>
             <div class="sub-hero-badge">KIOSK LINE-UP</div>
             <h1>운영주님 매장에 가장 Fit 한 키오스크,<br /><span class="gradient-text">스터디큐브에 '다(多)' 있습니다.</span></h1>
             <p>일반 운영모드 및 <strong>배리어프리 모드</strong> 지원 — 매장 규모와 목적에 최적화된 키오스크를 선택하세요</p>
@@ -801,8 +803,8 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="site-footer">
-        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /><p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p></div></div></div>
+    <footer id="site-footer" class="legacy-footer">
+        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a><p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p></div></div></div>
         <div class="footer-bottom"><div class="container footer-bottom-inner">
             <div class="footer-divider" aria-hidden="true"></div>
             <div class="footer-reference-contact"><strong>고객센터</strong><p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p><p>평일 09:00 ~ 18:00</p></div>

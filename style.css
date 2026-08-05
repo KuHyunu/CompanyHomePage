@@ -85,6 +85,14 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  scrollbar-width: none;
+  /* Prevent the continuously moving partner-logo track from expanding the page. */
+  overflow-x: clip;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -2676,6 +2684,29 @@ section {
   display: block;
   width: 42px;
   height: 42px;
+}
+
+.quick-blog {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  justify-content: center;
+  align-self: flex-end;
+  background: #252525;
+}
+
+.quick-blog span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 5px;
+  background: #20c76a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .quick-top {

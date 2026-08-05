@@ -1,0 +1,105 @@
+.gate-consult-form-section {
+  scroll-margin-top: 132px;
+  padding: 88px 0;
+  color: #14223a;
+  background: #f3f5f8;
+}
+
+@media (max-width: 760px) {
+  .gate-consult-form-section { scroll-margin-top: 116px; }
+}
+
+.gate-consult-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, .82fr) minmax(460px, 1.18fr);
+  gap: clamp(48px, 7vw, 124px);
+  align-items: center;
+  max-width: 1030px;
+}
+
+.gate-consult-copy { max-width: 355px; }
+.gate-consult-label {
+  display: inline-flex;
+  margin: 0 0 13px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: #0c91bb;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+.gate-consult-copy h2 { margin: 0; font-size: clamp(31px, 3.2vw, 43px); line-height: 1.17; letter-spacing: -.075em; }
+.gate-consult-copy h2 strong { color: #0d2344; }
+.gate-consult-intro { margin: 20px 0 26px; color: #718096; font-size: 13px; line-height: 1.75; word-break: keep-all; }
+.gate-consult-info { display: grid; gap: 15px; margin: 0; }
+.gate-consult-info div { display: grid; grid-template-columns: 24px 1fr; gap: 9px; align-items: start; }
+.gate-consult-info dt { color: #ee5f7a; font-size: 15px; line-height: 1.2; }
+.gate-consult-info dd { display: grid; gap: 2px; margin: 0; color: #526176; font-size: 12px; }
+.gate-consult-info strong { color: #21334d; font-size: 12px; }
+.gate-consult-info a { color: #087dba; text-decoration: underline; text-underline-offset: 2px; }
+
+.gate-consult-form {
+  box-sizing: border-box;
+  padding: 30px 33px 29px;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(24, 42, 67, .16);
+}
+.gate-consult-form h3 { margin: 0; font-size: 19px; letter-spacing: -.045em; }
+.gate-consult-form-note { margin: 8px 0 20px; color: #9aa5b3; font-size: 10px; }
+.gate-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; }
+.gate-consult-form label { display: grid; gap: 6px; color: #536174; font-size: 10px; font-weight: 700; }
+.gate-consult-form em { color: #e65b6a; font-style: normal; }
+.gate-consult-form input,
+.gate-consult-form select,
+.gate-consult-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid #dce2e8;
+  border-radius: 5px;
+  outline: none;
+  color: #25344b;
+  background: #fff;
+  font: inherit;
+  font-size: 11px;
+}
+.gate-consult-form select { appearance: auto; }
+.gate-consult-form input:focus,
+.gate-consult-form select:focus,
+.gate-consult-form textarea:focus { border-color: #168db2; box-shadow: 0 0 0 3px rgba(22, 141, 178, .1); }
+.gate-form-full { margin-top: 12px; }
+.gate-consult-form textarea { height: 76px; resize: vertical; line-height: 1.5; }
+.gate-form-agree { display: flex !important; grid-template-columns: auto 1fr auto; align-items: center; gap: 7px !important; margin-top: 14px; color: #718096 !important; font-size: 10px !important; }
+.gate-form-agree input { width: 13px; height: 13px; padding: 0; accent-color: #078fba; }
+.gate-form-agree small { color: #a0a9b6; }
+.gate-form-agree a { color: #1689b1; text-decoration: underline; text-underline-offset: 2px; }
+.gate-consult-submit { width: 100%; margin-top: 17px; padding: 14px 18px; border: 0; border-radius: 999px; color: #fff; background: linear-gradient(90deg, #177ed0, #09af92); box-shadow: 0 8px 14px rgba(12, 133, 173, .22); font-weight: 800; font-size: 12px; cursor: pointer; }
+.gate-consult-submit:hover { filter: brightness(1.04); transform: translateY(-1px); }
+.gate-consult-submit:disabled { cursor: default; filter: grayscale(.15); transform: none; }
+
+@media (max-width: 760px) {
+  .gate-consult-form-section { padding: 56px 0; }
+  body:has(#consult:target) .gate-quick-buttons {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px);
+  }
+  .gate-consult-layout { grid-template-columns: 1fr; gap: 33px; }
+  .gate-consult-copy { max-width: none; }
+  .gate-consult-copy h2 { font-size: 31px; }
+  .gate-consult-intro { margin: 15px 0 20px; }
+  .gate-consult-info { grid-template-columns: repeat(3, 1fr); gap: 12px 8px; }
+  .gate-consult-info div { grid-template-columns: 1fr; gap: 4px; }
+  .gate-consult-info dt { font-size: 13px; }
+  .gate-consult-form { padding: 25px 18px 22px; border-radius: 14px; }
+  .gate-form-grid { gap: 11px; }
+}
+
+@media (max-width: 440px) {
+  .gate-consult-info { grid-template-columns: 1fr; }
+  .gate-consult-info div { grid-template-columns: 21px 1fr; }
+  .gate-form-grid { grid-template-columns: 1fr; }
+}
