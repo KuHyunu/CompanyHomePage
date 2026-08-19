@@ -221,21 +221,25 @@ function showToast(message) {
   setTimeout(() => toast.classList.remove('show'), 4000);
 }
 
-// ─── SMOOTH ANCHOR SCROLL ────────────────────────────────────
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const selector = this.getAttribute('href');
-    if (!selector || selector === '#') return;
-    const target = document.querySelector(selector);
-    if (!target) return;
-    e.preventDefault();
-    const offset = (document.getElementById('site-header')?.offsetHeight ?? 70) + 8;
-    window.scrollTo({
-      top: target.getBoundingClientRect().top + window.scrollY - offset,
-      behavior: 'smooth'
-    });
-  });
-});
+// ─── CENTERED ANCHOR SCROLL ──────────────────────────────────
+function scrollAnchorToCenter(target, behavior = 'smooth') {
+  if (!target || target.id === 'top') { window.scrollTo({ top: 0, behavior }); return; }
+  const headerBottom = document.querySelector('#site-header, .gate-header')?.getBoundingClientRect().bottom ?? 0;
+  const title = target.querySelector('h1, h2, .section-title, .sub-title') || target;
+  const titleCenter = window.scrollY + title.getBoundingClientRect().top + (title.getBoundingClientRect().height / 2);
+  const visibleCenter = headerBottom + ((window.innerHeight - headerBottom) / 2);
+  window.scrollTo({ top: Math.max(0, titleCenter - visibleCenter), behavior });
+}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function (e) {
+  const selector = this.getAttribute('href');
+  if (!selector || selector === '#') return;
+  const target = document.querySelector(selector);
+  if (!target) return;
+  e.preventDefault();
+  history.replaceState(null, '', selector);
+  scrollAnchorToCenter(target);
+}));
+window.addEventListener('load', () => { if (location.hash) window.setTimeout(() => scrollAnchorToCenter(document.querySelector(location.hash), 'auto'), 60); });
 
 // ─── BFK ACC BUTTON ACTIVE TOGGLE ────────────────────────────
 document.querySelectorAll('.bfk-acc-btn').forEach(btn => {

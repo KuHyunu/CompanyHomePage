@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const scrollGateAnchorToCenter = (target, behavior = 'smooth') => {
+    if (!target || target.id === 'top') { window.scrollTo({ top: 0, behavior }); return; }
+    const headerBottom = document.querySelector('.gate-header, #site-header')?.getBoundingClientRect().bottom ?? 0;
+    const title = target.querySelector('h1, h2, .section-title, .sub-title') || target;
+    const titleCenter = window.scrollY + title.getBoundingClientRect().top + (title.getBoundingClientRect().height / 2);
+    const visibleCenter = headerBottom + ((window.innerHeight - headerBottom) / 2);
+    window.scrollTo({ top: Math.max(0, titleCenter - visibleCenter), behavior });
+  };
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => anchor.addEventListener('click', function (event) {
+    const selector = this.getAttribute('href');
+    if (!selector || selector === '#') return;
+    const target = document.querySelector(selector);
+    if (!target) return;
+    event.preventDefault();
+    history.replaceState(null, '', selector);
+    scrollGateAnchorToCenter(target);
+  }));
+  if (location.hash) requestAnimationFrame(() => scrollGateAnchorToCenter(document.querySelector(location.hash), 'auto'));
+
   const tickerItems = [...document.querySelectorAll('.ticker-item')];
   if (tickerItems.length > 1) {
     let tickerIndex = 0;

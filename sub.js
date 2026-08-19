@@ -31,18 +31,25 @@ function toggleQuick() {
 
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-// Smooth anchor scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function (e) {
-        const sel = this.getAttribute('href');
-        if (!sel || sel === '#') return;
-        const target = document.querySelector(sel);
-        if (!target) return;
-        e.preventDefault();
-        const h = document.getElementById('site-header')?.offsetHeight ?? 70;
-        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - h - 8, behavior: 'smooth' });
-    });
-});
+// Centered anchor scroll
+function scrollAnchorToCenter(target, behavior = 'smooth') {
+    if (!target || target.id === 'top') { window.scrollTo({ top: 0, behavior }); return; }
+    const headerBottom = document.querySelector('#site-header, .gate-header')?.getBoundingClientRect().bottom ?? 0;
+    const title = target.querySelector('h1, h2, .section-title, .sub-title') || target;
+    const titleCenter = window.scrollY + title.getBoundingClientRect().top + (title.getBoundingClientRect().height / 2);
+    const visibleCenter = headerBottom + ((window.innerHeight - headerBottom) / 2);
+    window.scrollTo({ top: Math.max(0, titleCenter - visibleCenter), behavior });
+}
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function (e) {
+    const sel = this.getAttribute('href');
+    if (!sel || sel === '#') return;
+    const target = document.querySelector(sel);
+    if (!target) return;
+    e.preventDefault();
+    history.replaceState(null, '', sel);
+    scrollAnchorToCenter(target);
+}));
+window.addEventListener('load', () => { if (location.hash) window.setTimeout(() => scrollAnchorToCenter(document.querySelector(location.hash), 'auto'), 60); });
 
 // Scroll Reveal
 const revealObs = new IntersectionObserver(entries => {
