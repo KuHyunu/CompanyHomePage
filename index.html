@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="gate-location-map.css?v=1" />
   <link rel="stylesheet" href="gate-footer.css?v=1" />
   <link rel="stylesheet" href="gate-consult-form.css?v=1" />
+  <style>.gate-linked-section{cursor:pointer}.gate-linked-section:focus-visible{outline:3px solid #10af92;outline-offset:-3px}</style>
 </head>
 <body class="gate-body">
   <div class="gate-top-brand">
@@ -131,13 +132,13 @@
       </div>
     </section>
 
-    <section id="barrierfree" class="gate-barrier-event"><div class="gate-container gate-barrier-banner">
+    <section id="barrierfree" class="gate-barrier-event gate-linked-section" data-page-link="kiosk.html#barrierfree" tabindex="0" role="link" aria-label="배리어프리 키오스크 페이지로 이동"><div class="gate-container gate-barrier-banner">
       <div class="gate-barrier-copy"><span>ALL BARRIER-FREE</span><span class="gate-nia-mark" aria-label="NIA 인증 지능정보제품 검증"><em>인증</em><strong>NIA</strong><small>지능정보제품 검증</small></span><h2>누구나 편리하게 이용하는<br /><strong>배리어프리 키오스크</strong></h2><p>NIA 인증 기반의 접근성 기능으로 더 많은 고객을 위한 매장을 준비하세요.</p><a href="kiosk.html#barrierfree">배리어프리 키오스크 살펴보기 <b>→</b></a></div>
       <div class="gate-barrier-visual" aria-label="배리어프리 기능 키오스크"><img src="image/barrierfree-kiosk-cutout.png" alt="배리어프리 접근성 화면과 키패드가 적용된 스터디카페 키오스크" /></div>
       <div class="gate-barrier-features" aria-label="배리어프리 주요 기능"><div><span>◉</span><strong>NIA 인증</strong><small>접근성 기준 충족</small></div><div><span>◌</span><strong>음성 안내</strong><small>화면 정보 낭독</small></div><div><span>↕</span><strong>낮은 자세</strong><small>휠체어 접근 지원</small></div></div>
     </div></section>
 
-    <section class="gate-lounge-event" id="lounge-study">
+    <section class="gate-lounge-event gate-linked-section" id="lounge-study" data-page-link="lounge-study.html" tabindex="0" role="link" aria-label="라운지형 스터디큐브 mini 페이지로 이동">
       <div class="gate-container">
         <div class="gate-lounge-banner">
           <div class="gate-lounge-copy">
@@ -212,6 +213,6 @@
     <a href="#top" class="gate-quick-btn gate-quick-top" aria-label="화면 상단으로 이동"><span aria-hidden="true">▲</span><b>TOP</b></a>
   </aside>
   <div class="gate-toast" role="status" aria-live="polite">서비스 페이지를 준비하고 있습니다.</div>
-  <script src="gate.js?v=center-nav-1"></script>
+  <script src="gate.js?v=linked-sections-1"></script>
 </body>
 </html>

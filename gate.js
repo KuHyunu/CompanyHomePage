@@ -18,6 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }));
   if (location.hash) requestAnimationFrame(() => scrollGateAnchorToCenter(document.querySelector(location.hash), 'auto'));
 
+  document.querySelectorAll('[data-page-link]').forEach((section) => {
+    const moveToPage = () => { window.location.href = section.dataset.pageLink; };
+    section.addEventListener('click', (event) => {
+      if (event.target.closest('a, button, input, select, textarea, label')) return;
+      moveToPage();
+    });
+    section.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        moveToPage();
+      }
+    });
+  });
+
   const tickerItems = [...document.querySelectorAll('.ticker-item')];
   if (tickerItems.length > 1) {
     let tickerIndex = 0;
