@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="gate-footer.css?v=1" />
     <script src="shared-footer.js?v=1" defer></script>
   <link rel="stylesheet" href="sub.css?v=mobile-hero-center" />
+  <link rel="stylesheet" href="mobile-update.css?v=1" />
 </head>
 <body>
   <div class="top-brand-bar"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" /></a></div>
@@ -43,7 +44,7 @@
     </div>
   </section>
 
-  <section class="sec-mobile-app">
+  <section class="sec-mobile-app" id="app-features">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">MOBILE APP</span>
@@ -51,14 +52,14 @@
       </div>
       <div class="app-showcase">
         <div class="app-features reveal-left">
-          <div class="app-feat-card"><div class="app-feat-icon">🪑</div><h4>모바일 좌석 예약</h4><p>앱에서 직접 좌석을 확인하고 예약까지 원스톱</p></div>
-          <div class="app-feat-card"><div class="app-feat-icon">💳</div><h4>간편 결제 & 충전</h4><p>카드와 간편결제로 이용권 결제 및 충전</p></div>
-          <div class="app-feat-card"><div class="app-feat-icon">⏱️</div><h4>이용 시간 연장</h4><p>남은 시간을 확인하고 앱에서 바로 연장</p></div>
-          <div class="app-feat-card"><div class="app-feat-icon">🔐</div><h4>사물함 구매</h4><p>사물함 구매와 비밀번호 변경을 앱에서 처리</p></div>
+          <div class="app-feat-card"><div class="app-feat-icon">🎟️</div><h4>모바일 이용권 구매·연장</h4><p>앱에서 직접 이용권을 구매하고 간편하게 연장까지 원스톱</p></div>
+          <div class="app-feat-card"><div class="app-feat-icon">📍</div><h4>근처 센터 확인</h4><p>내 위치에서 가장 가까운 매장을 확인하세요.</p></div>
+          <div class="app-feat-card"><div class="app-feat-icon">⏱️</div><h4>순공 타이머 & 공부 리포트</h4><p>순수 공부시간을 측정하고 주간·일간·월간 리포트로 나의 공부시간을 분석하세요.</p></div>
+          <div class="app-feat-card"><div class="app-feat-icon">🏆</div><h4>센터별 순공랭킹</h4><p>같은 센터 이용자 간의 공부시간 순위 현황을 확인하세요.</p></div>
           <div class="app-feat-card"><div class="app-feat-icon">🎟️</div><h4>쿠폰 & 마일리지</h4><p>보유 쿠폰 확인과 마일리지 적립·사용</p></div>
           <div class="app-feat-card"><div class="app-feat-icon">🔔</div><h4>실시간 알림</h4><p>이벤트와 공지, 이용 시간 알림을 실시간 수신</p></div>
         </div>
-        <div class="app-phone-wrap reveal-right"><img src="image/mobile-app-preview.png" alt="스터디큐브 모바일앱 화면" class="mobile-app-preview" /></div>
+        <div class="app-phone-wrap reveal-right"><img src="image/mobile-update/store.png" alt="스터디큐브 센터 정보와 이용권 구매 화면" class="mobile-app-preview" /></div>
       </div>
       <div class="app-free-banner reveal">
         <div class="afb-left"><div class="afb-icon">📱</div><div><h3>가입비 0원 · 보증 보험료 0원</h3><p>스터디큐브 전용 앱을 무상으로 지원합니다.</p><p class="mobile-app-fee-note">※ <strong>스터디큐브 전용 앱 사용시 0원이며,</strong> 프렌차이즈 전용 및 센터 단독 앱 구축시 초기 1회에 한해 별도 개설비가 발생합니다.</p></div></div>
@@ -69,34 +70,32 @@
 
   <section class="mobile-app-gallery">
     <div class="container">
-      <article class="app-guide-panel reveal">
-        <p class="app-guide-kicker">키오스크의 모든 기능을 한 손에!</p>
-        <h2>스터디큐브 모바일 앱으로 언제든지 예약·구매할 수 있습니다.</h2>
-        <div class="app-guide-phone-layout">
-          <div class="app-guide-notes app-guide-notes-left">
-            <span>나의 이용권 관리</span><span>대기 없는 QR / NFC 출입</span><span>입·퇴실 및 좌석 예약·취소</span>
+      <article class="app-guide-panel reveal" id="study-tools">
+        <p class="app-guide-kicker">공부에 집중하는 모든 순간을 한 손에!</p>
+        <h2>순공 타이머부터 공부 리포트·챌린지까지, 스터디큐브 앱 하나로!</h2>
+        <div class="app-study-layout">
+          <div class="app-guide-notes app-guide-notes-left"><span>타이머 방식 전환</span><span>챌린지 추가·목록</span><span>타 앱 차단</span></div>
+          <div class="app-study-screens">
+            <figure><img src="image/mobile-update/timer.png" alt="순공 타이머, 챌린지 추가 및 타 앱 차단 화면" /><figcaption>순공 타이머</figcaption></figure>
+            <figure><img src="image/mobile-update/report.png" alt="일간·주간·월간 공부시간 분석과 챌린지 성과 리포트" /><figcaption>공부 리포트</figcaption></figure>
+            <figure><img src="image/mobile-update/challenge.png" alt="챌린지 성공·실패 이력과 재도전 아카이브" /><figcaption>챌린지 아카이브</figcaption></figure>
           </div>
-          <div class="app-guide-phone app-guide-phone-real">
-            <img src="image/app-guide-qr-detail.png" alt="스터디큐브 QR 출입과 이용권 관리 화면" />
-          </div>
-          <div class="app-guide-notes app-guide-notes-right">
-            <span>이용권 구매·연장</span><span>로그인 OTP QR</span><span>조명 제어 · 좌석·냉난방·전원</span><span>사전 입실 & 원격 퇴실</span><span>프로필 관리 · 구매내역</span><span>새로운 쿠폰 · 알림</span>
-          </div>
+          <div class="app-guide-notes app-guide-notes-right"><span>일간·주간·월간 공부시간 분석 및 통계</span><span>챌린지 성과 통계 표시</span><span>챌린지 성공·실패 이력 기록</span><span>챌린지 아카이브에서 재도전</span></div>
         </div>
       </article>
 
-      <article class="app-guide-panel app-guide-carousel reveal">
-        <p class="app-guide-kicker">각 브랜드별 포인트 색상 조절은 물론 페이지 이동 없는 좌석 및 사물함 구매까지</p>
-        <h2>키오스크의 모든 기능과 편리성을 그대로 앱에 담았습니다!</h2>
+      <article class="app-guide-panel app-guide-carousel reveal" id="app-sync">
+        <p class="app-guide-kicker">좌석 예약·QR 출입부터 공부 관리까지, 앱 하나로</p>
+        <h2>키오스크와 100% 동기화, 모든 기능을 손안에!</h2>
         <div class="app-real-carousel" aria-label="모바일앱 화면 미리보기">
           <div class="app-carousel-viewport">
-            <figure class="app-carousel-slide active"><img src="image/app-slide-seat-reservation.png" alt="좌석 예약 화면" /><figcaption>좌석 예약</figcaption></figure>
-            <figure class="app-carousel-slide"><img src="image/app-slide-time-package.png" alt="시간 패키지 화면" /><figcaption>시간 패키지</figcaption></figure>
-            <figure class="app-carousel-slide"><img src="image/app-slide-login.png" alt="로그인 화면" /><figcaption>로그인</figcaption></figure>
-            <figure class="app-carousel-slide"><img src="image/app-slide-store-list.png" alt="매장 검색 화면" /><figcaption>매장 검색</figcaption></figure>
-            <figure class="app-carousel-slide"><img src="image/app-slide-qr.png" alt="QR 출입 화면" /><figcaption>QR 출입</figcaption></figure>
+            <figure class="app-carousel-slide active"><img src="image/mobile-update/nearby.png" alt="근처 매장·좌석 예약 화면" /><figcaption>근처 매장·좌석 예약</figcaption></figure>
+            <figure class="app-carousel-slide"><img src="image/mobile-update/timer.png" alt="순공·챌린지 타이머 화면" /><figcaption>순공·챌린지 타이머</figcaption></figure>
+            <figure class="app-carousel-slide"><img src="image/mobile-update/report.png" alt="공부시간 리포트 화면" /><figcaption>공부시간 리포트</figcaption></figure>
+            <figure class="app-carousel-slide"><img src="image/mobile-update/tickets.png" alt="이용권 관리 화면" /><figcaption>이용권 관리</figcaption></figure>
+            <figure class="app-carousel-slide"><img src="image/mobile-update/qr.png" alt="QR 출입 화면" /><figcaption>QR 출입</figcaption></figure>
           </div>
-          <div class="app-carousel-dots" aria-label="화면 선택"><button class="active" aria-label="좌석 예약 화면"></button><button aria-label="시간 패키지 화면"></button><button aria-label="로그인 화면"></button><button aria-label="매장 검색 화면"></button><button aria-label="QR 출입 화면"></button></div>
+          <div class="app-carousel-dots" aria-label="화면 선택"><button class="active" aria-label="근처 매장·좌석 예약 화면"></button><button aria-label="순공·챌린지 타이머 화면"></button><button aria-label="공부시간 리포트 화면"></button><button aria-label="이용권 관리 화면"></button><button aria-label="QR 출입 화면"></button></div>
         </div>
       </article>
     </div>

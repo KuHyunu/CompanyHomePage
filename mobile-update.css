@@ -1,0 +1,24 @@
+/* PDF revision: retain the existing cards, blue headings and carousel. */
+#app-features, #study-tools, #app-sync { scroll-margin-top: 110px; }
+.app-study-layout { display:grid; grid-template-columns:150px minmax(0,1fr) 185px; gap:20px; align-items:center; margin-top:36px; }
+.app-study-screens { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; align-items:start; }
+.app-study-screens figure { margin:0; min-width:0; }
+.app-study-screens img { display:block; width:100%; height:420px; object-fit:contain; object-position:top; }
+.app-study-screens figcaption { margin-top:14px; font-size:14px; font-weight:700; color:#4775c6; }
+.app-study-layout .app-guide-notes { line-height:1.7; }
+.app-study-layout .app-guide-notes span::before,.app-study-layout .app-guide-notes span::after { display:none; }
+#app-sync .app-guide-kicker { max-width:980px; margin-left:auto; margin-right:auto; line-height:1.8; }
+#app-sync h2 { max-width:1000px; margin-left:auto; margin-right:auto; text-wrap:balance; }
+@media(max-width:1000px) {
+ .app-study-layout { grid-template-columns:1fr; }
+ .app-study-layout .app-guide-notes { display:flex; flex-direction:row; flex-wrap:wrap; justify-content:center; text-align:center; gap:8px 18px; }
+ .app-study-screens { max-width:650px; width:100%; margin:auto; }
+ .app-study-screens img { height:360px; }
+}
+@media(max-width:600px) {
+ .app-study-screens { gap:7px; }
+ .app-study-screens img { height:auto; }
+ .app-study-screens figcaption { font-size:11px; }
+ .app-study-layout .app-guide-notes { font-size:12px; }
+ .app-real-carousel { overflow:hidden; }
+}
