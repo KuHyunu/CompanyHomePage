@@ -22,7 +22,11 @@
   <link rel="stylesheet" href="gate-location-map.css?v=1" />
   <link rel="stylesheet" href="gate-footer.css?v=1" />
   <link rel="stylesheet" href="gate-consult-form.css?v=1" />
-  <style>.gate-linked-section{cursor:pointer}.gate-linked-section:focus-visible{outline:3px solid #10af92;outline-offset:-3px}</style>
+  <style>
+    .gate-linked-section{cursor:pointer}.gate-linked-section:focus-visible{outline:3px solid #10af92;outline-offset:-3px}
+    .gate-hero .hero-visual img{width:min(560px,48vw);max-height:calc(100% - 170px);object-fit:contain;top:calc(50% - 55px);transform:translateY(-50%)}
+    @media(max-width:760px){.gate-hero .hero-visual{height:370px;min-height:370px}.gate-hero .hero-visual img{width:280px;max-height:270px;right:0;top:0;transform:none}}
+  </style>
 </head>
 <body class="gate-body">
   <div class="gate-top-brand">
@@ -50,7 +54,7 @@
           <p class="hero-description">미래는 더 가깝게, 가능성은 더 크게.<br />투비스마트는 세상 모든 공간과 시간 속에 함께합니다.</p>
           <div class="hero-actions"><a class="gate-primary-btn" href="#services">서비스 둘러보기 <span>→</span></a><a class="gate-text-btn" href="studycube.html">스터디큐브 바로가기</a></div>
         </div>
-        <div class="hero-visual" aria-hidden="true"><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div><img src="image/gate-studycube-kiosk-family.png" alt="" /></div>
+        <div class="hero-visual" aria-hidden="true"><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div><img src="image/gate-studycube-kiosk-family-transparent.png" alt="" /></div>
       </div>
       <a class="gate-news-ticker" href="news.html" aria-label="투비스마트 소식 전체 보기">
         <div class="gate-container ticker-inner">
