@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="style.css?v=scrollbar-hidden-2" />
     <link rel="stylesheet" href="gate-footer.css?v=1" />
     <script src="shared-footer.js?v=1" defer></script>
+  <link rel="stylesheet" href="gate-lounge-banner.css?v=2" />
+  <style>
+    .gate-lounge-event { word-break:keep-all; scroll-margin-top:110px; cursor:pointer; }
+    .gate-lounge-event > .gate-container { width:min(1180px,calc(100% - 64px)); margin:0 auto; }
+    .gate-lounge-event:focus-visible { outline:3px solid #10af92; outline-offset:-3px; }
+    @media(max-width:760px) { .gate-lounge-event > .gate-container { width:min(100% - 36px,560px); } }
+  </style>
 </head>
 
 <body>
@@ -41,6 +48,7 @@
             <span class="gnb-tooltip">All 배리어프리 (선택)</span>
             <a href="kiosk.html">키오스크</a>
           </li>
+          <li><a href="#lounge-study">MINI</a></li>
           <li><a href="admin-app.html">관리자웹</a></li>
           <li><a href="mobile-app.html">모바일앱</a></li>
           <li><a href="entrance.html">입퇴실기</a></li>
@@ -323,6 +331,27 @@
       </div>
     </div>
   </section>
+
+    <section class="gate-lounge-event gate-linked-section" id="lounge-study" data-page-link="lounge-study.html" tabindex="0" role="link" aria-label="라운지형 스터디큐브 mini 페이지로 이동">
+      <div class="gate-container">
+        <div class="gate-lounge-banner">
+          <div class="gate-lounge-copy">
+            <p class="gate-lounge-eyebrow">LOUNGE TYPE STUDY CUBE</p>
+            <p class="gate-lounge-lead">카페 감성과 집중력 사이, 성인 중심 스터디카페 비즈니스 모델의 등장!</p>
+            <h2><span class="gate-lounge-title-line">혁신 라운지형 스터디카페 전용</span><br /><strong>스터디큐브</strong> mini</h2>
+            <a href="lounge-study.html" class="gate-lounge-link">스터디큐브 mini 알아보기 <b>→</b></a>
+          </div>
+          <div class="gate-lounge-stat" aria-label="성인 이용객 비중">
+            <strong>75%<em>+</em></strong><span>성인 이용객 비중</span><small>기존 스터디카페 대비<br />성인 비중 2.5배 증가</small>
+          </div>
+          <figure class="gate-lounge-photo"><img src="image/lounge-banner/lounge-study-space.png" alt="라운지형 스터디카페 공간" /></figure>
+          <div class="gate-lounge-reasons" aria-label="라운지형 스터디카페 장점">
+            <article><b>01</b><div><strong>높은 객단가 및 장기 구독률</strong><p>프리랜서·재택근무자의 정기 이용으로 안정적 수익 구조 확보</p></div></article>
+            <article><b>02</b><div><strong>초기 개설 CAPEX 절감</strong><p>인테리어 비용은 낮추고, 미니키오스크 도입으로 고가 설비 절감</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- =========================================================
        SECTION 4 — 비용 절감 하이라이트
@@ -1018,6 +1047,20 @@
   <div class="toast" id="toast">✅ 상담 신청이 완료되었습니다! 빠르게 연락드리겠습니다.</div>
 
   <script src="main.js?v=center-nav-2"></script>
+  <script>
+    (() => {
+      const banner = document.getElementById('lounge-study');
+      banner.addEventListener('click', event => {
+        if (!event.target.closest('a, button')) window.location.href = banner.dataset.pageLink;
+      });
+      banner.addEventListener('keydown', event => {
+        if (event.target === banner && (event.key === 'Enter' || event.key === ' ')) {
+          event.preventDefault();
+          window.location.href = banner.dataset.pageLink;
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
