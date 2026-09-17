@@ -434,6 +434,13 @@ section {
   background-repeat: no-repeat;
 }
 
+/* Keep all seven product links visible on compact desktop screens. */
+@media (min-width:901px) and (max-width:1180px) {
+  .header-inner { padding-right:24px; gap:18px; }
+  .logo-img { height:34px; }
+  .gnb ul li a { padding:8px 9px; font-size:.9rem; white-space:nowrap; }
+}
+
 .hero-glow {
   position: absolute;
   border-radius: 50%;
@@ -2851,6 +2858,8 @@ section {
 }
 
 @media (max-width: 900px) {
+  .header-inner { padding-left:20px; padding-right:20px; gap:18px; }
+  .logo-img { height:32px; }
   .gnb {
     display: none;
   }
@@ -2859,7 +2868,9 @@ section {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: var(--header-h);
+    top: calc(var(--top-bar-h) + var(--header-h) + 12px);
+    max-height: calc(100dvh - var(--top-bar-h) - var(--header-h) - 12px);
+    overflow-y: auto;
     left: 0;
     right: 0;
     background: rgba(6, 16, 31, .98);
