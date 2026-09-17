@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR/PASS | 스터디큐브</title>
+  <meta name="description" content="키오스크 대기 없이 QR 패스로 1초 입실! 입실, 퇴실, 좌석 제어까지 내 스마트폰 하나로 끝내세요." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=qr-pass-nav-1" />
+  <link rel="stylesheet" href="sub.css?v=mobile-hero-center" />
+  <link rel="stylesheet" href="gate-footer.css?v=1" />
+  <link rel="stylesheet" href="qr-pass.css?v=1" />
+  <script src="shared-footer.js?v=1" defer></script>
+</head>
+<body class="qr-page">
+  <svg class="qr-symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="icon-phone" viewBox="0 0 48 48"><rect x="13" y="4" width="22" height="40" rx="5"/><path d="M20 10h8M22 38h4M19 24l4 4 8-9"/></symbol>
+    <symbol id="icon-door" viewBox="0 0 48 48"><path d="M6 42h36M12 42V7h24v35M19 42V14l17-7M29 26h1"/></symbol>
+    <symbol id="icon-scan" viewBox="0 0 48 48"><path d="M5 17V6h11M32 6h11v11M43 32v11H32M16 43H5V32M3 24h42"/><path d="M13 13h8v8h-8zM28 13h7v8h-7zM13 29h8v7h-8zM29 29h6v7h-6z"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 48 48"><path d="M39 20c0 11-15 24-15 24S9 31 9 20a15 15 0 0 1 30 0z"/><circle cx="24" cy="20" r="5"/></symbol>
+    <symbol id="icon-move" viewBox="0 0 48 48"><path d="M7 15h32l-8-8M41 33H9l8 8M39 15l-8 8M9 33l8-8"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 48 48"><path d="M24 4 7 11v13c0 11 17 20 17 20s17-9 17-20V11zM16 24l6 6 11-13"/></symbol>
+    <symbol id="icon-seat" viewBox="0 0 48 48"><path d="M14 25V7h20v18M9 25h30v11H9zM12 36v8M36 36v8M14 18h20"/></symbol>
+    <symbol id="icon-wallet" viewBox="0 0 48 48"><path d="M39 13H9a4 4 0 0 1 0-8h27v8M9 13a4 4 0 0 1-4-4v29a5 5 0 0 0 5 5h29V13M39 23H28v11h11"/><circle cx="32" cy="28.5" r="1"/></symbol>
+    <symbol id="icon-key" viewBox="0 0 48 48"><circle cx="17" cy="17" r="11"/><path d="m25 25 18 18M32 32l5-5M38 38l5-5"/></symbol>
+  </defs></svg>
+  <div class="top-brand-bar"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" /></a></div>
+  <header id="site-header">
+    <div class="header-inner container">
+      <a href="studycube.html" class="logo"><img src="image/StudyCubeLogo-white-text.png" alt="STUDYCUBE" class="logo-img" /></a>
+      <nav class="gnb" id="gnb" aria-label="주요 메뉴"><ul>
+        <li class="gnb-tooltip-wrap"><span class="gnb-tooltip">All 배리어프리 (선택)</span><a href="kiosk.html">키오스크</a></li>
+        <li><a href="lounge-study.html">MINI</a></li>
+        <li><a href="admin-app.html">관리자웹</a></li>
+        <li><a href="mobile-app.html">모바일앱</a></li>
+        <li><a href="entrance.html">입퇴실기</a></li>
+        <li><a href="qr-pass.html" class="gnb-active" aria-current="page">QR/PASS</a></li>
+        <li><a href="contact.html">도입문의</a></li>
+      </ul></nav>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="gnb"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="qr-hero" aria-labelledby="qr-title">
+      <img class="qr-hero-photo" src="image/qr-pass/hero.png" alt="키오스크 대기 줄 옆에서 스마트폰으로 QR 명패를 스캔하고 입장하는 이용자" fetchpriority="high" />
+      <div class="container qr-hero-copy">
+        <p class="qr-eyebrow">QR / PASS</p>
+        <h1 id="qr-title">키오스크 대기 없이<br /><span>QR 패스로 1초 입실!</span></h1>
+        <p class="qr-hero-lead">줄 서서 터치할 필요 없습니다.<br />입실, 퇴실, 좌석 제어까지<br />내 스마트폰 하나로 끝내세요.</p>
+        <div class="qr-actions"><a class="btn btn-primary btn-lg" href="contact.html">도입문의 <span aria-hidden="true">↗</span></a><a class="btn btn-outline btn-lg" href="Proposal/스터디큐브_제안서.pptx" download>제안서 다운로드 <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </section>
+
+    <section class="qr-features" aria-labelledby="qr-features-title">
+      <div class="container">
+        <div class="qr-heading"><span class="section-tag">QR PASS</span><h2 id="qr-features-title">키오스크 없이도 출입/이용<br /><span class="gradient-text">QR패스</span></h2></div>
+        <article class="qr-feature">
+          <div class="qr-feature-copy"><span class="qr-number" aria-hidden="true">01</span><h3>1. 스터디큐브 앱 실행 후 [QR명패]를 스캔하면 즉시 입실 완료됩니다.</h3><p>위치 기반(GPS) 인증으로 매장 근처에서만 출입 승인이 처리되어 부정 출입을 완벽히 차단합니다.</p></div>
+          <figure class="qr-feature-photo"><img src="image/qr-pass/scan.png" alt="스마트폰 카메라를 QR명패에 대고 입실 인증하는 모습" loading="lazy" /></figure>
+        </article>
+        <article class="qr-feature qr-feature-reverse">
+          <div class="qr-feature-copy"><span class="qr-number" aria-hidden="true">02</span><h3>2. 외출 / 퇴실 / 좌석 이동: 이제 키오스크로 갈 필요 없이 앱에서 간편하게 처리하세요.</h3><p>좌석 잔여수 현황을 실시간으로 확인하고 간편하게 예약할 수 있습니다.</p></div>
+          <figure class="qr-app-frame"><div class="qr-app-halo"></div><img src="image/mobile-update/store.png" alt="스터디큐브 앱의 자유석·스터디룸·고정석 잔여수 확인 화면" loading="lazy" /></figure>
+        </article>
+        <article class="qr-feature">
+          <div class="qr-feature-copy"><span class="qr-number" aria-hidden="true">03</span><h3>3. 원스톱 결제, 이용권 구매부터 잔여 시간 확인까지 앱 내에서 즉시 결제하고 연장하세요.</h3></div>
+          <figure class="qr-feature-photo"><img src="image/qr-pass/app-touch.png" alt="스터디큐브 앱의 이용권 구매 화면을 터치하는 모습" loading="lazy" /></figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="qr-benefits" aria-labelledby="qr-benefits-title">
+      <div class="container">
+        <div class="qr-heading"><span class="section-tag">SMART SPACE</span><h2 id="qr-benefits-title">QR PASS로 완성하는<br />스마트한 공간 관리</h2></div>
+        <div class="qr-benefit-list">
+          <article><div><svg class="qr-icon" aria-hidden="true"><use href="#icon-shield" /></svg><h3>보안강화</h3><p>GPS 및 QR 기반 인증으로 출입·퇴실·방문자 관리</p></div><img src="image/qr-pass/scan.png" alt="QR 인증으로 출입을 관리하는 입구" loading="lazy" /></article>
+          <article><div><svg class="qr-icon" aria-hidden="true"><use href="#icon-seat" /></svg><h3>공간관리</h3><p>회의실·개인석 예약부터 냉난방 IoT 제어까지 한 번에</p></div><img src="image/lounge-banner/lounge-study-space.png" alt="회의와 개인 학습을 위한 스터디카페 공간" loading="lazy" /></article>
+          <article><div><svg class="qr-icon" aria-hidden="true"><use href="#icon-wallet" /></svg><h3>비용절감</h3><p>무인 운영 시스템 구축으로 인건비 및 관리 비용 최소화</p></div><img src="image/qr-pass/app-touch.png" alt="스마트폰으로 이용권을 직접 구매하는 모습" loading="lazy" /></article>
+        </div>
+        <div class="qr-actions qr-centered"><a class="btn btn-primary btn-lg" href="contact.html">도입문의 <span aria-hidden="true">↗</span></a><a class="btn qr-outline-dark btn-lg" href="Proposal/스터디큐브_제안서.pptx" download>제안서 다운로드 <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </section>
+
+    <section class="qr-process" aria-labelledby="qr-process-title"><div class="container">
+      <div class="qr-heading"><span class="section-tag">HOW IT WORKS</span><h2 id="qr-process-title">QR 패스<br /><span class="gradient-text">하나로 모든 게 다 가능해요.</span></h2><p>스터디큐브 QR패스 이용 프로세스 (STEP 1 ~ STEP 5)</p></div>
+      <ol class="qr-steps">
+        <li><span class="qr-step-num">01</span><svg class="qr-icon" aria-hidden="true"><use href="#icon-phone" /></svg><p>모바일 앱으로<br />좌석 예약 및 결제</p></li>
+        <li><span class="qr-step-num">02</span><svg class="qr-icon" aria-hidden="true"><use href="#icon-door" /></svg><p>입실 시간을 맞춰<br />센터 방문</p></li>
+        <li><span class="qr-step-num">03</span><svg class="qr-icon" aria-hidden="true"><use href="#icon-scan" /></svg><p>출입을 위한<br />QR패스 스캔</p></li>
+        <li><span class="qr-step-num">04</span><svg class="qr-icon" aria-hidden="true"><use href="#icon-pin" /></svg><p>센터 위치 기반<br />자동 입실 처리</p></li>
+        <li><span class="qr-step-num">05</span><svg class="qr-icon" aria-hidden="true"><use href="#icon-move" /></svg><p>입·퇴실부터<br />외출·자리 이동까지</p></li>
+      </ol>
+    </div></section>
+
+    <section class="qr-fit" aria-labelledby="qr-fit-title"><div class="container">
+      <div class="qr-heading"><span class="section-tag">FOR YOUR SPACE</span><h2 id="qr-fit-title">키오스크 비용은 아끼고<br />운영 관리는 스마트하게!</h2><p>이런 센터장님께 잘 맞아요</p></div>
+      <h3 class="qr-check-title">체크포인트 3개</h3>
+      <div class="qr-checks">
+        <article><svg class="qr-icon" aria-hidden="true"><use href="#icon-door" /></svg><p>🏠 무인 공유오피스·회의실 출입 제어가 필요할 때</p></article>
+        <article><svg class="qr-icon" aria-hidden="true"><use href="#icon-wallet" /></svg><p>💰 좌석 예약 및 이용권 결제 자동화를 원할 때</p></article>
+        <article><svg class="qr-icon" aria-hidden="true"><use href="#icon-key" /></svg><p>🔑 비주거 공간을 24시간 효율적으로 운영하고 싶을 때</p></article>
+      </div>
+      <div class="qr-actions qr-centered"><a class="btn btn-primary btn-lg" href="contact.html">도입문의 <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+
+    <section class="qr-comparison" aria-labelledby="qr-comparison-title"><div class="container">
+      <div class="qr-heading"><span class="section-tag">COMPARE</span><h2 id="qr-comparison-title">확실하게 비교해보세요!</h2></div>
+      <div class="qr-table-wrap"><table><caption class="qr-sr-only">QR 패스와 키오스크 비교</caption><thead><tr><th scope="col"><span class="qr-sr-only">비교 항목</span></th><th scope="col">QR 패스</th><th scope="col">키오스크</th></tr></thead><tbody>
+        <tr><th scope="row">초기 도입비</th><td>낮음</td><td>고가 장비 구매</td></tr>
+        <tr><th scope="row">설치 공사</th><td>최소</td><td>배선+전기공사 필수</td></tr>
+        <tr><th scope="row">출입인증</th><td>QR 스캔</td><td>키오스크 직접 터치</td></tr>
+        <tr><th scope="row">출입관리</th><td>O</td><td>O</td></tr>
+        <tr><th scope="row">IoT 연동</th><td>O</td><td>O</td></tr>
+      </tbody></table></div>
+    </div></section>
+
+    <section class="qr-howto" aria-labelledby="qr-howto-title"><div class="container">
+      <div class="qr-heading"><span class="section-tag">QUICK GUIDE</span><h2 id="qr-howto-title">QR패스 이용방법</h2></div>
+      <div class="qr-guide-cards">
+        <article><span class="qr-step-num">01</span><svg class="qr-icon" aria-hidden="true"><use href="#icon-phone" /></svg><p>앱 다운로드 &amp; 로그인: 스터디큐브 앱 다운로드 후 로그인</p></article>
+        <article><span class="qr-step-num">02</span><svg class="qr-icon" aria-hidden="true"><use href="#icon-seat" /></svg><p>이용권 구매 &amp; 좌석 선택: 원하는 이용권 결제 후 모바일 좌석도에서 자리 선택</p></article>
+        <article><span class="qr-step-num">03</span><svg class="qr-icon" aria-hidden="true"><use href="#icon-scan" /></svg><p>QR 스캔 입실: 홈 화면 하단의 QR버튼을 누르고 QR명패에 찍고 바로 입실!(외출/퇴실도 동일)</p></article>
+      </div>
+    </div></section>
+
+    <section class="qr-download" aria-labelledby="qr-download-title"><div class="container">
+      <img class="qr-download-logo" src="image/StudyCubeLogo-white-text.png" alt="STUDYCUBE" loading="lazy" />
+      <h2 id="qr-download-title">키오스크 터치 없이,<br />내 손안의 스터디큐브로<br /><span>더 빠르고 스마트하게 공부하세요!</span></h2>
+      <p class="qr-download-note">무인 운영으로 출입 관리가 필요할때 키오스크 도입 비용이 부담스러울때 매장이 작아서 공간활용이 중요할 때</p>
+      <p class="qr-download-call">지금 앱 다운로드!</p>
+      <div class="qr-actions qr-centered"><a class="qr-store" href="https://play.google.com/store/apps/details?id=kr.co.tobesmart.dannian.studycube" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span> 구글 플레이 스토어</a><a class="qr-store" href="https://apps.apple.com/kr/app/스터디큐브/id1459224910" target="_blank" rel="noopener noreferrer"><svg class="qr-icon" aria-hidden="true"><use href="#icon-phone" /></svg> App Store</a></div>
+    </div></section>
+  </main>
+  <footer class="legacy-footer" aria-label="회사 정보"></footer>
+  <script src="sub.js?v=center-nav-2"></script>
+  <script>
+    const menuButton = document.getElementById('hamburger');
+    menuButton.addEventListener('click', () => menuButton.setAttribute('aria-expanded', String(document.getElementById('gnb').classList.contains('mobile-open'))));
+  </script>
+</body>
+</html>
