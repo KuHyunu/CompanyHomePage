@@ -1,0 +1,78 @@
+/* Kids cafe reference layout; isolated from other SpaceCube categories. */
+.space-kids-page .space-kids-hero{min-height:640px;padding:calc(var(--top-bar-h) + var(--header-h) + 48px) 0 70px}
+.space-kids-page .space-kids-hero .container{width:100%;max-width:1040px}
+.space-kids-page .space-kids-hero h1{font-size:42px;line-height:1.3}
+.space-kids-page .space-kids-hero p{font-size:23px;line-height:1.55;margin:24px 0}
+.space-kids-page .space-actions{margin-top:26px}
+.space-kids-page .space-narrow{max-width:1040px}
+.space-kids-page .space-cases{padding:52px 0 56px}
+.space-kids-page .space-cases h2{font-size:32px;line-height:1.4}
+.space-kids-page .space-cases article{max-width:800px;margin-top:42px}
+.space-kids-page .space-cases article:first-of-type{margin-top:28px}
+.space-kids-page .space-cases article>img{width:100%;height:auto;max-height:none;aspect-ratio:1.68;object-fit:cover;border-radius:36px}
+.space-kids-page .space-cases article:nth-of-type(2)>img{object-position:center 35%}
+.space-kids-page .space-cases article:nth-of-type(3)>img{object-position:center 38%}
+.space-kids-page .space-case-caption{font-size:20px;line-height:1.55;margin:16px -40px 0}
+.space-kids-checkout-frame{aspect-ratio:1.68;display:flex;align-items:center;justify-content:center;background:#d1d1d1;border-radius:36px;overflow:hidden}
+.space-kids-checkout-frame img{display:block;width:74%;height:auto;object-fit:contain}
+.space-kids-page .space-feature-section{padding:46px 0 40px}
+.space-kids-page .space-feature-section h2{font-size:30px;margin-bottom:30px}
+.space-kids-page .space-feature{grid-template-columns:1fr 230px;gap:36px;margin:28px 0}
+.space-kids-page .space-feature h3{font-size:24px;line-height:1.4}
+.space-kids-page .space-feature p{font-size:17px;line-height:1.55;margin-top:10px}
+.space-kids-page .space-feature img{height:auto;aspect-ratio:1.68;object-fit:cover;border-radius:40px;border:1px solid #555}
+.space-kids-page .space-feature:nth-of-type(1) img{object-position:center 37%}
+.space-kids-page .space-process{padding:46px 24px}
+.space-kids-page .space-process>h2{font-size:30px}
+.space-kids-page .space-steps{max-width:1040px;margin-top:22px}
+.space-kids-page .space-steps article{padding:16px 0 52px}
+.space-kids-page .space-steps article:last-child{padding-bottom:0}
+.space-kids-page .space-steps h3{font-size:24px}
+.space-kids-page .space-steps p{font-size:17px;line-height:1.55;margin-top:10px}
+.space-kids-page .space-steps article:not(:last-child)::after{font-size:48px;bottom:-3px}
+.space-kids-page .space-final-cta{padding:54px 24px 62px}
+.space-kids-page .space-final-cta h2{font-size:28px}
+.space-kids-page .space-final-cta .space-pill{margin-top:24px}
+@media(max-width:900px){
+  .space-kids-page .space-kids-hero{min-height:580px}
+  .space-kids-page .space-kids-hero h1{font-size:34px}
+  .space-kids-page .space-kids-hero p{font-size:20px}
+  .space-kids-page .space-cases h2{font-size:27px}
+  .space-kids-page .space-case-caption{font-size:17px;margin-left:0;margin-right:0}
+  .space-kids-page .space-feature{grid-template-columns:1fr 180px;gap:24px}
+  .space-kids-page .space-feature h3{font-size:20px}
+  .space-kids-page .space-feature p{font-size:14px}
+  .space-kids-page .space-steps h3{font-size:21px}
+  .space-kids-page .space-steps p{font-size:14px}
+}
+@media(max-width:600px){
+  .space-kids-page .space-kids-hero{min-height:540px;padding:calc(var(--top-bar-h) + var(--header-h) + 35px) 0 48px;background-position:55% center}
+  .space-kids-page .space-kids-hero .container{width:100%;padding:0 30px}
+  .space-kids-page .space-kids-hero h1{font-size:26px}
+  .space-kids-page .space-kids-hero p{font-size:17px;margin:20px 0;line-height:1.55}
+  .space-kids-page .space-actions{gap:12px;margin-top:22px}
+  .space-kids-page .space-cases{padding:34px 0 38px}
+  .space-kids-page .space-narrow{width:calc(100% - 36px)}
+  .space-kids-page .space-cases h2{font-size:21px;line-height:1.4}
+  .space-kids-page .space-cases article{max-width:84%;margin-top:32px}
+  .space-kids-page .space-cases article:first-of-type{margin-top:22px}
+  .space-kids-page .space-cases article>img,.space-kids-checkout-frame{border-radius:22px}
+  .space-kids-page .space-case-caption{font-size:13px;line-height:1.55;margin:12px -20px 0}
+  .space-kids-page .space-feature-section{padding:32px 0}
+  .space-kids-page .space-feature-section h2{font-size:21px;margin-bottom:24px}
+  .space-kids-page .space-feature{grid-template-columns:1fr 95px;gap:14px;margin:24px 0}
+  .space-kids-page .space-feature h3{font-size:14px;line-height:1.4}
+  .space-kids-page .space-feature p{font-size:12px;line-height:1.5;margin-top:7px}
+  .space-kids-page .space-feature p br{display:none}
+  .space-kids-page .space-feature img{border-radius:20px}
+  .space-kids-page .space-process{padding:34px 18px}
+  .space-kids-page .space-process>h2{font-size:23px}
+  .space-kids-page .space-steps{margin-top:18px}
+  .space-kids-page .space-steps article{padding:14px 0 43px}
+  .space-kids-page .space-steps h3{font-size:18px;line-height:1.4}
+  .space-kids-page .space-steps p{font-size:12px;margin-top:8px;line-height:1.55}
+  .space-kids-page .space-steps article:not(:last-child)::after{font-size:38px;bottom:-4px}
+  .space-kids-page .space-final-cta{padding:38px 22px 44px}
+  .space-kids-page .space-final-cta h2{font-size:21px;line-height:1.45}
+  .space-kids-page .space-final-cta .space-pill{margin-top:22px}
+}
