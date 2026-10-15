@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720" role="img" aria-labelledby="title desc">
+  <title id="title">세일즈큐브 통합 운영 구조</title>
+  <desc id="desc">점주 웹과 중앙 서버가 매장·고객·매출 정보를 관리하고, 중앙 서버와 자판기가 프로그램과 상품 정보를 연동합니다. 고객은 자판기로 회원 인증과 상품 구매를 진행하며 영수증을 발행할 수 있습니다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto-start-reverse"><path d="M0 0 7 4 0 8Z" fill="#9aa4ae"/></marker>
+    <g id="person" fill="none" stroke="#43698a" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
+      <circle cy="-25" r="8"/><path d="M-8-14h16q11 0 11 12v20q0 5-5 5V0M-14 0v23q-5 0-5-5V-2q0-12 11-12M-8-9v52h7V12h2v31h7V-9"/>
+    </g>
+    <style>text{font-family:'Noto Sans KR','Malgun Gothic',sans-serif}.label{fill:#bd8b27;font-size:22px;font-weight:700}.detail{fill:#515c66;font-size:18px}.ring{fill:#fff;stroke:#b8c0c6;stroke-width:2.6}.link{fill:none;stroke:#9aa4ae;stroke-width:2;stroke-dasharray:6 6}</style>
+  </defs>
+  <rect width="1000" height="720" fill="#fff"/>
+  <!-- Point-of-sale relationships retain the original diagram layout. -->
+  <path class="link" d="M281 95H517" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <path class="link" d="M573 165V300" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <path class="link" d="M588 300V165"/>
+  <path class="link" d="M541 390H285" marker-end="url(#arrow)"/>
+  <path class="link" d="M573 488V558" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <path class="link" d="M588 558V488"/>
+  <circle class="ring" cx="220" cy="105" r="55"/><use href="#person" x="220" y="98"/>
+  <text class="label" x="220" y="192" text-anchor="middle">점주</text><text class="label" x="220" y="221" text-anchor="middle">(WEB)</text>
+  <g class="detail"><text x="327" y="133">· 실시간 매장관리</text><text x="327" y="161">· 고객(사용자) 관리</text><text x="327" y="189">· 매출 관리</text><text x="327" y="217">· 관리자 관리</text><text x="327" y="245">· 마일리지 관리</text><text x="327" y="273">· 프로모션 관리</text></g>
+  <circle class="ring" cx="580" cy="105" r="55"/>
+  <g fill="#fff" stroke="#43698a" stroke-width="3" stroke-linejoin="round"><path d="M554 109c-24-1-24-29-4-32 2-22 30-25 40-10 17-6 30 10 25 23 17 4 16 26-1 28h-23"/><rect x="564" y="101" width="38" height="36" rx="2" fill="#e5f0f7"/><path d="M564 113h38m-38 12h38"/></g><g fill="#43698a"><circle cx="571" cy="107" r="1.5"/><circle cx="571" cy="119" r="1.5"/><circle cx="571" cy="131" r="1.5"/></g>
+  <text class="label" x="650" y="102">중앙</text><text class="label" x="650" y="131">서버</text>
+  <g class="detail"><text x="620" y="231">· 프로그램 · 업데이트</text><text x="620" y="262">· 상품 관리</text></g>
+  <circle class="ring" cx="220" cy="395" r="55"/>
+  <g stroke="#43698a" stroke-width="2.8" stroke-linejoin="round"><rect x="197" y="367" width="29" height="42" rx="2" fill="#a3c5df"/><path d="M201 374h21m-21 6h21"/><path d="M214 382h34v46l-4-3-4 3-5-3-4 3-4-3-4 3-4-3-5 3Z" fill="#fff"/><path d="M220 391h22m-22 8h22m-22 8h22"/></g>
+  <text class="label" x="220" y="482" text-anchor="middle">영수증</text><text class="detail" x="220" y="517" text-anchor="middle">종이 또는 앱으로</text><text class="detail" x="220" y="545" text-anchor="middle">발행 가능</text>
+  <!-- Vector kiosk stays sharp at any display or zoom size. -->
+  <g stroke="#43698a" stroke-width="2.4" stroke-linejoin="round">
+    <rect x="541" y="306" width="78" height="174" rx="7" fill="#e7edf1"/><rect x="550" y="318" width="60" height="115" rx="3" fill="#1b2c3e"/>
+    <rect x="555" y="326" width="50" height="12" rx="2" fill="#f4f7fa" stroke="none"/>
+    <g stroke="none"><rect x="556" y="345" width="14" height="20" rx="2" fill="#d49a59"/><rect x="574" y="345" width="14" height="20" rx="2" fill="#b5c879"/><rect x="592" y="345" width="12" height="20" rx="2" fill="#dbaf7b"/><rect x="556" y="370" width="14" height="20" rx="2" fill="#98b9cb"/><rect x="574" y="370" width="14" height="20" rx="2" fill="#d39378"/><rect x="592" y="370" width="12" height="20" rx="2" fill="#c2b496"/><rect x="556" y="395" width="14" height="20" rx="2" fill="#c5b079"/><rect x="574" y="395" width="14" height="20" rx="2" fill="#a9bf99"/><rect x="592" y="395" width="12" height="20" rx="2" fill="#d69a81"/><rect x="556" y="421" width="48" height="5" rx="2" fill="#17a294"/></g>
+    <rect x="550" y="444" width="24" height="13" rx="2" fill="#fff"/><rect x="586" y="442" width="21" height="20" rx="3" fill="#23354a"/><path d="M539 481h82"/>
+  </g>
+  <circle class="ring" cx="580" cy="620" r="55"/><use href="#person" x="580" y="613"/><rect x="594" y="625" width="14" height="19" rx="1" fill="#e5f0f7" stroke="#43698a" stroke-width="2.5"/><path d="M597 625v-5h8v5" fill="none" stroke="#43698a" stroke-width="2.5"/>
+  <text class="label" x="580" y="706" text-anchor="middle">고객</text>
+  <g class="detail"><text x="650" y="591">· 회원인증 · 가입</text><text x="650" y="624">· 상품 구매 (현금/카드 결제)</text></g>
+</svg>
