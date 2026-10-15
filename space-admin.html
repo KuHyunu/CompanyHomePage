@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자웹 | 스페이스큐브</title>
+    <meta name="description" content="스페이스큐브 관리자 웹으로 언제 어디서나 매장을 스마트하게 관리하세요." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=qr-pass-nav-1" />
+    <link rel="stylesheet" href="gate-footer.css?v=1" />
+    <script src="shared-footer.js?v=1" defer></script>
+    <link rel="stylesheet" href="sub.css?v=admin-image-zoom-1" />
+  <link rel="stylesheet" href="spacecube.css?v=original-logo-no-main-1" />
+</head>
+
+<body class="spacecube-site">
+
+    <!-- TOP BRAND BAR -->
+    <div class="top-brand-bar">
+        <a href="index.html" aria-label="투비스마트 메인게이트">
+            <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
+        </a>
+    </div>
+
+    <!-- HEADER -->
+    <header id="site-header" class="scrolled">
+        <div class="header-inner container">
+            <a href="spacecube.html" class="logo"><img src="image/spacecube/logo-original.png" alt="SPACECUBE" class="logo-img" /></a>
+            <nav class="gnb" id="gnb" aria-label="스페이스큐브 메뉴"><ul><li><a href="space-office.html">공유오피스</a></li><li><a href="space-kids.html">키즈카페</a></li><li><a href="space-admin.html" class="gnb-active" aria-current="page">관리자웹</a></li><li><a href="space-mobile.html">모바일앱</a></li><li><a href="space-entrance.html">출입통제기기</a></li><li><a href="spacecube.html#contact-section">도입문의</a></li></ul></nav>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="sub-hero" style="--hero-accent:#1a6bc7">
+        <div class="sub-hero-bg">
+            <div class="sub-hero-glow g1"></div>
+            <div class="sub-hero-glow g2"></div>
+        </div>
+        <div class="container sub-hero-content">
+            <div class="sub-breadcrumb"><a href="spacecube.html">홈</a> <span>›</span> <span>관리자웹</span></div>
+            <div class="sub-hero-badge">ADMIN WEB</div>
+            <h1>매장에 가지 않고<br /><span class="gradient-text">언제 어디서나</span><br />스페이스큐브가 답(答) 합니다.</h1>
+            <p>PC와 스마트폰 하나로 모든 매장 운영을 원격에서 완벽하게</p>
+        <a href="spacecube.html#contact-section" class="btn btn-primary btn-lg sub-hero-contact-btn">도입문의</a>
+        </div>
+    </section>
+
+    <!-- ═══ 관리자웹 ═══ -->
+    <section id="sec-admin" class="sec-admin">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">ADMIN WEB</span>
+                <h2 class="section-title">관리자 웹</h2>
+                <p class="section-desc">별도 설치 없이 브라우저만으로 모든 매장 데이터를 실시간 관리</p>
+            </div>
+
+            <div class="admin-showcase">
+                <!-- Admin Mockup -->
+                <div class="admin-mockup-wrap reveal-left">
+                    <img src="image/admin-dashboard.png" alt="스페이스큐브 관리자웹 대시보드" class="admin-dashboard-image" />
+                    <div class="admin-browser-frame">
+                        <div class="browser-bar">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <div class="browser-url">studycube-admin.co.kr</div>
+                        </div>
+                        <div class="admin-screen-full">
+                            <div class="admin-sidebar-full">
+                                <div class="asf-logo">SC</div>
+                                <div class="asf-nav-item active">📊</div>
+                                <div class="asf-nav-item">👥</div>
+                                <div class="asf-nav-item">💳</div>
+                                <div class="asf-nav-item">🪑</div>
+                                <div class="asf-nav-item">💡</div>
+                                <div class="asf-nav-item">⚙️</div>
+                            </div>
+                            <div class="admin-main-full">
+                                <div class="amf-top-row">
+                                    <div class="amf-stat today">
+                                        <div class="amf-label">오늘 매출</div>
+                                        <div class="amf-value">₩ 312,000</div>
+                                        <div class="amf-badge up">▲ 12%</div>
+                                    </div>
+                                    <div class="amf-stat mem">
+                                        <div class="amf-label">현재 이용자</div>
+                                        <div class="amf-value">47명</div>
+                                        <div class="amf-badge">/ 80석</div>
+                                    </div>
+                                    <div class="amf-stat new">
+                                        <div class="amf-label">신규 회원</div>
+                                        <div class="amf-value">8명</div>
+                                        <div class="amf-badge up">오늘</div>
+                                    </div>
+                                </div>
+                                <div class="amf-chart-area">
+                                    <div class="amf-chart-label">주간 매출 현황</div>
+                                    <div class="amf-bars">
+                                        <div class="amf-bar" style="height:55%"><span>월</span></div>
+                                        <div class="amf-bar" style="height:72%"><span>화</span></div>
+                                        <div class="amf-bar" style="height:60%"><span>수</span></div>
+                                        <div class="amf-bar" style="height:90%"><span>목</span></div>
+                                        <div class="amf-bar" style="height:78%"><span>금</span></div>
+                                        <div class="amf-bar highlight" style="height:95%"><span>토</span></div>
+                                        <div class="amf-bar" style="height:83%"><span>일</span></div>
+                                    </div>
+                                </div>
+                                <div class="amf-seat-row">
+                                    <div class="amf-seat-label">실시간 좌석</div>
+                                    <div class="amf-seat-grid">
+                                        <span class="amf-seat avail"></span><span class="amf-seat busy"></span><span
+                                            class="amf-seat avail"></span><span class="amf-seat busy"></span><span
+                                            class="amf-seat avail"></span>
+                                        <span class="amf-seat busy"></span><span class="amf-seat avail"></span><span
+                                            class="amf-seat avail"></span><span class="amf-seat busy"></span><span
+                                            class="amf-seat avail"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="admin-features admin-feature-grid reveal-right">
+                    <article class="af-item af-item-sales">
+                        <div class="af-media">
+                            <img src="image/admin-feature-sales.png" alt="관리자웹 매출내역 화면" />
+                        </div>
+                        <div class="af-content">
+                            <div class="af-icon-wrap af-blue"><span>📊</span></div>
+                            <div class="af-text">
+                            <span class="af-kicker">한 눈에 쏙! 매출정보</span>
+                            <h4>접속시간 기준 당일 매출 현황을<br />한 눈에 파악할 수 있습니다.</h4>
+                            <p>시간권·사물함·시간패키지·정기권별 그래프와 일별·월별·연별 매출, 결제수단별 현황을 확인합니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="af-item af-item-seat">
+                        <div class="af-media">
+                            <img src="image/admin-feature-seat-live.png" alt="관리자웹 실시간 좌석과 룸 이용 현황 화면" />
+                        </div>
+                        <div class="af-content">
+                            <div class="af-icon-wrap af-green"><span>🪑</span></div>
+                            <div class="af-text">
+                            <span class="af-kicker">내 손에 좌석 &amp; 룸 이용 라이브</span>
+                            <h4>PC와 모바일로 좌석과 룸 이용 정보를<br />원샷으로 확인할 수 있습니다.</h4>
+                            <p>이용가능·이용불가·이용중·마감예정·사용률을 색상별로 확인해 현재 상태를 바로 파악합니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="af-item af-item-iot">
+                        <div class="af-media af-media-iot">
+                            <img src="image/admin-feature-seat-control-menu.png" alt="관리자웹 좌석 제어 메뉴" />
+                            <img src="image/admin-feature-door-iot.png" alt="관리자웹 문 열림과 IoT 제어 화면" />
+                        </div>
+                        <div class="af-content">
+                            <div class="af-icon-wrap af-purple"><span>🎛️</span></div>
+                            <div class="af-text">
+                            <span class="af-kicker">문 열림도 IoT 조명도 원격으로</span>
+                            <h4>클릭 한 번으로 편리하게<br />매장의 모든 좌석을 컨트롤합니다.</h4>
+                            <p>좌석 설정·좌석별 전등·문 열림·사물함까지 언제 어디서든 원격으로 관리할 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="af-item af-item-coupon">
+                        <div class="af-media">
+                            <img src="image/admin-feature-coupon.png" alt="관리자웹 고객 맞춤 쿠폰 관리 화면" />
+                        </div>
+                        <div class="af-content">
+                            <div class="af-icon-wrap af-orange"><span>🎁</span></div>
+                            <div class="af-text">
+                            <span class="af-kicker">고객 맞춤 쿠폰 &amp; 포인트 지원</span>
+                            <h4>한 번 방문한 고객도<br />충성 고객으로 만듭니다.</h4>
+                            <p>좌석·룸·사물함 이용 서비스별 쿠폰과 포인트, 고객 사용 이력까지 확인해 재방문을 지원합니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 모바일앱 ═══ -->
+
+
+    <!-- CTA -->
+    <section class="sec-cta-banner">
+        <div class="container">
+            <div class="cta-banner reveal">
+                <h2>지금 바로 스페이스큐브로<br />스마트하게 시작하세요</h2>
+                <p>관리자 웹 & 모바일 앱 데모를 직접 체험해 보세요</p>
+                <div class="cta-banner-btns">
+                    <a href="spacecube.html#contact-section" class="btn btn-primary btn-lg">도입 상담 신청</a>
+                    <a href="tel:15773119" class="btn btn-outline btn-lg">📞 1577-3119</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="site-footer" class="legacy-footer">
+        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a><p class="footer-tagline">공유오피스·공간대여 무인 토털 솔루션</p></div></div></div>
+        <div class="footer-bottom"><div class="container footer-bottom-inner">
+            <div class="footer-divider" aria-hidden="true"></div>
+            <div class="footer-reference-contact"><strong>고객센터</strong><p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p><p>평일 09:00 ~ 18:00</p></div>
+            <div class="footer-company-info"><p>대표: 김광 &nbsp;|&nbsp; 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p><p>전화: 1577-3119 &nbsp;|&nbsp; 팩스: 031-701-4119 &nbsp;|&nbsp; 이메일: tobesmart@tobesmart.co.kr</p></div>
+            <p class="footer-copyright">COPYRIGHT © TOBESMART. ALL RIGHTS RESERVED.</p>
+        </div></div>
+    </footer>
+
+    <div class="admin-image-modal" id="admin-image-modal" role="dialog" aria-modal="true" aria-label="이미지 확대 보기" hidden>
+        <button type="button" class="admin-image-modal-close" aria-label="닫기">×</button>
+        <img src="" alt="확대된 관리자웹 화면" />
+    </div>
+
+    <div class="quick-buttons" id="quick-buttons">
+        <a href="tel:15773119" class="quick-btn quick-call"><span class="qb-icon">📞</span><span
+                class="qb-text">전화상담<br /><strong>1577-3119</strong></span></a>
+        <a href="spacecube.html#contact-section" class="quick-btn quick-consult"><span class="qb-icon">✉️</span><span
+                class="qb-text">상담신청</span></a>
+        <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer" class="quick-btn quick-kakao" aria-label="카카오톡 채널 바로가기"><img src="image/kakao-talk-logo.svg" alt="" /></a>
+        <button class="quick-btn quick-top" onclick="scrollToTop()"><span class="qb-icon">▲</span><span
+                class="qb-text">TOP</span></button>
+    </div>
+    <script src="anchor-navigation.js?v=stable-center-1"></script><script src="sub.js?v=stable-center-1"></script>
+    <script>
+        (() => {
+            const modal = document.getElementById('admin-image-modal');
+            const modalImage = modal?.querySelector('img');
+            const closeButton = modal?.querySelector('.admin-image-modal-close');
+            const closeModal = () => {
+                if (!modal) return;
+                modal.hidden = true;
+                document.body.classList.remove('modal-open');
+            };
+
+            document.querySelectorAll('.admin-dashboard-image, .af-media img').forEach(image => {
+                image.classList.add('admin-zoomable-image');
+                image.tabIndex = 0;
+                image.setAttribute('role', 'button');
+                image.setAttribute('aria-label', `${image.alt} 확대 보기`);
+                const openModal = () => {
+                    if (!modal || !modalImage) return;
+                    modalImage.src = image.currentSrc || image.src;
+                    modalImage.alt = image.alt;
+                    modal.hidden = false;
+                    document.body.classList.add('modal-open');
+                    closeButton?.focus();
+                };
+                image.addEventListener('click', openModal);
+                image.addEventListener('keydown', event => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        openModal();
+                    }
+                });
+            });
+
+            closeButton?.addEventListener('click', closeModal);
+            modal?.addEventListener('click', event => { if (event.target === modal) closeModal(); });
+            document.addEventListener('keydown', event => { if (event.key === 'Escape') closeModal(); });
+        })();
+    </script>
+<script src="spacecube.js?v=1"></script>
+</body>
+
+</html>

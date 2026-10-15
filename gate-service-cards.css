@@ -1,0 +1,18 @@
+/* Service selection matches 메인게이트.pdf; other gate sections stay shared. */
+.service-grid{gap:16px}
+.service-card{min-height:390px;padding:38px 32px;display:flex;align-items:flex-start;justify-content:flex-start;isolation:isolate}
+.service-card>div{max-width:360px}
+.service-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;z-index:-2;transition:transform .4s}
+.service-card::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(4,40,62,.52)}
+.service-study::after{background:linear-gradient(90deg,rgba(3,35,61,.88),rgba(3,35,61,.45))}
+.service-space::after{background:rgba(0,89,97,.65)}
+.service-sales::after{background:rgba(115,65,35,.48)}
+.service-control::after{background:rgba(0,0,0,.65)}
+.service-space img{object-position:50% 23%}
+.service-card h3{font-size:43px;line-height:1.02;letter-spacing:-.04em;margin:16px 0 25px}
+.service-card small,.service-card p,.service-number{opacity:1}
+.service-card p{font-size:14px;line-height:1.7;font-weight:600}
+.service-card em{position:static;display:block;margin-top:48px}
+.service-card:hover img{transform:scale(1.035);opacity:1}
+.service-card:focus-visible{outline:3px solid #11bfa7;outline-offset:4px}
+@media(max-width:760px){.service-card{min-height:320px;padding:28px}.service-card h3{font-size:38px}.service-card p{font-size:13px}.service-card em{margin-top:34px}}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="gate-footer.css?v=1" />
     <script src="shared-footer.js?v=1" defer></script>
   <link rel="stylesheet" href="gate-lounge-banner.css?v=2" />
+  <link rel="stylesheet" href="gate-qr-pass-banner.css?v=3" />
   <style>
     .gate-lounge-event { word-break:keep-all; scroll-margin-top:110px; cursor:pointer; }
     .gate-lounge-event > .gate-container { width:min(1180px,calc(100% - 64px)); margin:0 auto; }
@@ -351,6 +352,27 @@
             <article><b>02</b><div><strong>초기 개설 CAPEX 절감</strong><p>인테리어 비용은 낮추고, 미니키오스크 도입으로 고가 설비 절감</p></div></article>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="gate-qr-event" id="qr-pass-event" aria-label="스터디큐브 QR/PASS 안내">
+      <div class="gate-container">
+        <a class="gate-qr-banner" href="qr-pass.html">
+          <div class="gate-qr-copy">
+            <p class="gate-qr-eyebrow">SMART ENTRY STUDY CUBE</p>
+            <p class="gate-qr-lead">입실·퇴실부터 좌석 이동, 이용권 결제까지 스마트폰 하나로!</p>
+            <h2><span class="gate-qr-title-line">키오스크 대기 없이 간편하게</span><span class="gate-qr-product"><strong>스터디큐브</strong> QR/PASS</span></h2>
+            <span class="gate-qr-link">QR/PASS 알아보기 <b aria-hidden="true">→</b></span>
+          </div>
+          <figure class="gate-qr-photo">
+            <img src="image/qr-pass/scan.png" alt="스터디카페 입구에서 스마트폰으로 QR 명패를 스캔하는 모습" loading="lazy" />
+            <div class="gate-qr-speed"><strong>1초</strong><span>QR 패스로 빠른 입실</span><small>앱에서 스캔하고 입실</small></div>
+          </figure>
+          <div class="gate-qr-reasons" aria-label="QR 패스 주요 기능">
+            <div><b>01</b><div><strong>위치 기반 출입 인증</strong><p>매장 근처에서 QR 스캔으로 안전하고 간편하게 출입</p></div></div>
+            <div><b>02</b><div><strong>앱으로 예약부터 결제까지</strong><p>좌석 이동과 이용권 구매·연장도 스마트폰으로 한 번에</p></div></div>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -1047,7 +1069,7 @@
   <!-- Toast -->
   <div class="toast" id="toast">✅ 상담 신청이 완료되었습니다! 빠르게 연락드리겠습니다.</div>
 
-  <script src="main.js?v=center-nav-2"></script>
+  <script src="anchor-navigation.js?v=stable-center-1"></script><script src="main.js?v=stable-center-1"></script>
   <script>
     (() => {
       const banner = document.getElementById('lounge-study');
