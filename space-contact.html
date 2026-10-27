@@ -15,13 +15,15 @@
     <script src="shared-footer.js?v=1" defer></script>
     <link rel="stylesheet" href="sub.css?v=admin-image-zoom-1" />
   <link rel="stylesheet" href="spacecube.css?v=original-logo-no-main-1" />
+  <link rel="stylesheet" href="service-switcher.css?v=3" />
+  <script src="service-switcher.js?v=3" defer></script>
 </head>
 
 <body class="spacecube-site">
 
     <!-- TOP BRAND BAR -->
     <div class="top-brand-bar">
-        <a href="index.html" aria-label="투비스마트 메인게이트">
+        <a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트">
             <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
         </a>
     </div>
@@ -29,8 +31,17 @@
     <!-- HEADER -->
     <header id="site-header" class="scrolled">
         <div class="header-inner container">
-            <a href="spacecube.html" class="logo"><img src="image/spacecube/logo-original.png" alt="SPACECUBE" class="logo-img" /></a>
-            <nav class="gnb" id="gnb" aria-label="스페이스큐브 메뉴"><ul><li><a href="space-office.html">공유오피스</a></li><li><a href="space-kids.html">키즈카페</a></li><li><a href="space-admin.html">관리자웹</a></li><li><a href="space-mobile.html">모바일앱</a></li><li><a href="space-entrance.html">출입통제기기</a></li><li><a href="#contact-section" class="gnb-active" aria-current="page">도입문의</a></li></ul></nav>
+            <a href="spacecube.html?v=service-nav-20261027-4" class="logo"><img src="image/spacecube/logo-sharp.svg?v=2" alt="SPACECUBE" class="logo-img" /></a>
+            <nav class="gnb" id="gnb" aria-label="스페이스큐브 메뉴"><ul><li><a href="space-office.html?v=service-nav-20261027-4">공유오피스</a></li><li><a href="space-kids.html?v=service-nav-20261027-4">키즈카페</a></li><li><a href="space-admin.html?v=service-nav-20261027-4">관리자웹</a></li><li><a href="space-mobile.html?v=service-nav-20261027-4">모바일앱</a></li><li><a href="space-entrance.html?v=service-nav-20261027-4">출입통제기기</a></li><li><a href="#contact-section" class="gnb-active" aria-current="page">도입문의</a></li></ul></nav>
+            <div class="service-switcher">
+        <button class="service-switcher-toggle" type="button" aria-expanded="false" aria-controls="other-services">다른 서비스 둘러보기 <span aria-hidden="true"></span></button>
+        <ul class="service-switcher-list" id="other-services" aria-label="다른 서비스" hidden>
+          <li><a href="studycube.html?v=service-nav-20261027-4">스터디큐브</a></li>
+          <li><a href="spacecube.html?v=service-nav-20261027-4">스페이스큐브</a></li>
+          <li><a href="salescube.html?v=vending-orbit-20261027-2">세일즈큐브</a></li>
+          <li><a href="controlcube.html?v=service-cards-20261027-4">컨트롤큐브</a></li>
+        </ul>
+      </div>
             <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
         </div>
     </header>
@@ -134,7 +145,7 @@
     </div>
   </section></main>    <!-- FOOTER -->
     <footer id="site-footer" class="legacy-footer">
-        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a><p class="footer-tagline">공유오피스·공간대여 무인 토털 솔루션</p></div></div></div>
+        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a><p class="footer-tagline">공유오피스·공간대여 무인 토털 솔루션</p></div></div></div>
         <div class="footer-bottom"><div class="container footer-bottom-inner">
             <div class="footer-divider" aria-hidden="true"></div>
             <div class="footer-reference-contact"><strong>고객센터</strong><p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p><p>평일 09:00 ~ 18:00</p></div>

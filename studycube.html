@@ -22,6 +22,8 @@
     .gate-lounge-event:focus-visible { outline:3px solid #10af92; outline-offset:-3px; }
     @media(max-width:760px) { .gate-lounge-event > .gate-container { width:min(100% - 36px,560px); } }
   </style>
+  <link rel="stylesheet" href="service-switcher.css?v=3" />
+  <script src="service-switcher.js?v=3" defer></script>
 </head>
 
 <body>
@@ -30,7 +32,7 @@
        TOP BRAND BAR
   ========================================================= -->
   <div class="top-brand-bar">
-    <a href="index.html" aria-label="투비스마트 메인게이트">
+    <a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트">
       <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
     </a>
   </div>
@@ -47,16 +49,25 @@
         <ul>
           <li class="gnb-tooltip-wrap">
             <span class="gnb-tooltip">All 배리어프리 (선택)</span>
-            <a href="kiosk.html?v=study-menu-20261015-3">키오스크</a>
+            <a href="kiosk.html?v=service-nav-20261027-4">키오스크</a>
           </li>
-          <li><a href="lounge-study.html?v=study-menu-20261015-3">MINI</a></li>
-          <li><a href="qr-pass.html?v=study-menu-20261015-3">QR/PASS</a></li>
-          <li><a href="admin-app.html?v=study-menu-20261015-3">관리자웹</a></li>
-          <li><a href="mobile-app.html?v=study-menu-20261015-3">모바일앱</a></li>
-          <li><a href="entrance.html?v=study-menu-20261015-3">입퇴실기</a></li>
-          <li><a href="contact.html?v=study-menu-20261015-3">도입문의</a></li>
+          <li><a href="lounge-study.html?v=mini-photo-20261027-5">MINI</a></li>
+          <li><a href="qr-pass.html?v=service-nav-20261027-4">QR/PASS</a></li>
+          <li><a href="admin-app.html?v=service-nav-20261027-4">관리자웹</a></li>
+          <li><a href="mobile-app.html?v=service-nav-20261027-4">모바일앱</a></li>
+          <li><a href="entrance.html?v=service-nav-20261027-4">입퇴실기</a></li>
+          <li><a href="contact.html?v=service-nav-20261027-4">도입문의</a></li>
         </ul>
       </nav>
+      <div class="service-switcher">
+        <button class="service-switcher-toggle" type="button" aria-expanded="false" aria-controls="other-services">다른 서비스 둘러보기 <span aria-hidden="true"></span></button>
+        <ul class="service-switcher-list" id="other-services" aria-label="다른 서비스" hidden>
+          <li><a href="studycube.html?v=service-nav-20261027-4">스터디큐브</a></li>
+          <li><a href="spacecube.html?v=service-nav-20261027-4">스페이스큐브</a></li>
+          <li><a href="salescube.html?v=vending-orbit-20261027-2">세일즈큐브</a></li>
+          <li><a href="controlcube.html?v=service-cards-20261027-4">컨트롤큐브</a></li>
+        </ul>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
         <span></span><span></span><span></span>
       </button>
@@ -250,7 +261,7 @@
         <span class="barrier-event-label">ALL BARRIER-FREE</span>
         <h2>누구나 편리하게 이용하는<br /><strong>배리어프리 키오스크</strong></h2>
         <p>NIA 인증 기반의 접근성 기능으로 더 많은 고객을 위한 매장을 준비하세요.</p>
-        <a href="kiosk.html?v=study-menu-20261015-3" class="barrier-event-link">배리어프리 키오스크 살펴보기 <span>→</span></a>
+        <a href="kiosk.html?v=service-nav-20261027-4" class="barrier-event-link">배리어프리 키오스크 살펴보기 <span>→</span></a>
       </div>
       <div class="barrier-event-visual" aria-label="배리어프리 기능 키오스크">
         <img src="image/barrierfree-kiosk-cutout.png" alt="배리어프리 접근성 화면과 키패드가 적용된 스터디카페 키오스크" />
@@ -341,7 +352,7 @@
             <p class="gate-lounge-eyebrow">LOUNGE TYPE STUDY CUBE</p>
             <p class="gate-lounge-lead">카페 감성과 집중력 사이, 성인 중심 스터디카페 비즈니스 모델의 등장!</p>
             <h2><span class="gate-lounge-title-line">혁신 라운지형 스터디카페 전용</span><br /><strong>스터디큐브</strong> mini</h2>
-            <a href="lounge-study.html?v=study-menu-20261015-3" class="gate-lounge-link">스터디큐브 mini 알아보기 <b>→</b></a>
+            <a href="lounge-study.html?v=mini-photo-20261027-5" class="gate-lounge-link">스터디큐브 mini 알아보기 <b>→</b></a>
           </div>
           <div class="gate-lounge-stat" aria-label="성인 이용객 비중">
             <strong>75%<em>+</em></strong><span>성인 이용객 비중</span><small>기존 스터디카페 대비<br />성인 비중 2.5배 증가</small>
@@ -357,7 +368,7 @@
 
     <section class="gate-qr-event" id="qr-pass-event" aria-label="스터디큐브 QR/PASS 안내">
       <div class="gate-container">
-        <a class="gate-qr-banner" href="qr-pass.html?v=study-menu-20261015-3">
+        <a class="gate-qr-banner" href="qr-pass.html?v=service-nav-20261027-4">
           <div class="gate-qr-copy">
             <p class="gate-qr-eyebrow">SMART ENTRY STUDY CUBE</p>
             <p class="gate-qr-lead">입실·퇴실부터 좌석 이동, 이용권 결제까지 스마트폰 하나로!</p>
@@ -671,7 +682,7 @@
             <div><span>🛍️</span><div><strong>매장 판매 실물 상품</strong><p>과자, 음료, 간편식류 등 다양한 실물 상품을 키오스크에서 판매합니다.</p></div></div>
             <div><span>🏷️</span><div><strong>주변 매장 할인 쿠폰</strong><p>근처 카페 등 주변 매장과 제휴해 고객에게 할인 쿠폰을 제공합니다.</p></div></div>
           </div>
-          <a href="contact.html?v=study-menu-20261015-3" class="btn btn-primary">스토어 서비스 도입 문의</a>
+          <a href="contact.html?v=service-nav-20261027-4" class="btn btn-primary">스토어 서비스 도입 문의</a>
         </div>
       </div>
     </div>
@@ -1003,7 +1014,7 @@
     <div class="footer-top">
       <div class="container footer-top-inner">
         <div class="footer-logo-area">
-          <a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a>
+          <a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a>
           <p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p>
         </div>
       </div>
@@ -1015,16 +1026,16 @@
             <strong>솔루션</strong>
             <div class="footer-link-items">
               <a href="#sec-barrier">All 배리어프리</a>
-              <a href="kiosk.html?v=study-menu-20261015-3">키오스크</a>
-              <a href="admin-app.html?v=study-menu-20261015-3">관리자웹</a>
-              <a href="mobile-app.html?v=study-menu-20261015-3">모바일앱</a>
-              <a href="entrance.html?v=study-menu-20261015-3">입퇴실기</a>
+              <a href="kiosk.html?v=service-nav-20261027-4">키오스크</a>
+              <a href="admin-app.html?v=service-nav-20261027-4">관리자웹</a>
+              <a href="mobile-app.html?v=service-nav-20261027-4">모바일앱</a>
+              <a href="entrance.html?v=service-nav-20261027-4">입퇴실기</a>
             </div>
           </div>
           <div class="footer-link-col">
             <strong>고객지원</strong>
             <div class="footer-link-items">
-              <a href="contact.html?v=study-menu-20261015-3">도입문의</a>
+              <a href="contact.html?v=service-nav-20261027-4">도입문의</a>
               <a href="tel:15773119">전화 상담</a>
               <a href="mailto:tobesmart@tobesmart.co.kr">이메일 문의</a>
             </div>

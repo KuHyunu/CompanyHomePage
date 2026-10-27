@@ -22,6 +22,8 @@
     @media(max-width:760px) { .gate-lounge-event > .gate-container { width:min(100% - 36px,560px); } }
   </style>
   <link rel="stylesheet" href="spacecube.css?v=original-logo-no-main-1" />
+  <link rel="stylesheet" href="service-switcher.css?v=3" />
+  <script src="service-switcher.js?v=3" defer></script>
 </head>
 
 <body class="spacecube-site">
@@ -30,7 +32,7 @@
        TOP BRAND BAR
   ========================================================= -->
   <div class="top-brand-bar">
-    <a href="index.html" aria-label="투비스마트 메인게이트">
+    <a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트">
       <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
     </a>
   </div>
@@ -40,10 +42,19 @@
   ========================================================= -->
   <header id="site-header">
     <div class="header-inner container">
-      <a href="spacecube.html" class="logo" id="logo-link">
-        <img src="image/spacecube/logo-original.png" alt="SPACECUBE" class="logo-img" />
+      <a href="spacecube.html?v=service-nav-20261027-4" class="logo" id="logo-link">
+        <img src="image/spacecube/logo-sharp.svg?v=2" alt="SPACECUBE" class="logo-img" />
       </a>
-      <nav class="gnb" id="gnb" aria-label="스페이스큐브 메뉴"><ul><li><a href="space-office.html">공유오피스</a></li><li><a href="space-kids.html">키즈카페</a></li><li><a href="space-admin.html">관리자웹</a></li><li><a href="space-mobile.html">모바일앱</a></li><li><a href="space-entrance.html">출입통제기기</a></li><li><a href="#contact-section">도입문의</a></li></ul></nav>
+      <nav class="gnb" id="gnb" aria-label="스페이스큐브 메뉴"><ul><li><a href="space-office.html?v=service-nav-20261027-4">공유오피스</a></li><li><a href="space-kids.html?v=service-nav-20261027-4">키즈카페</a></li><li><a href="space-admin.html?v=service-nav-20261027-4">관리자웹</a></li><li><a href="space-mobile.html?v=service-nav-20261027-4">모바일앱</a></li><li><a href="space-entrance.html?v=service-nav-20261027-4">출입통제기기</a></li><li><a href="#contact-section">도입문의</a></li></ul></nav>
+      <div class="service-switcher">
+        <button class="service-switcher-toggle" type="button" aria-expanded="false" aria-controls="other-services">다른 서비스 둘러보기 <span aria-hidden="true"></span></button>
+        <ul class="service-switcher-list" id="other-services" aria-label="다른 서비스" hidden>
+          <li><a href="studycube.html?v=service-nav-20261027-4">스터디큐브</a></li>
+          <li><a href="spacecube.html?v=service-nav-20261027-4">스페이스큐브</a></li>
+          <li><a href="salescube.html?v=vending-orbit-20261027-2">세일즈큐브</a></li>
+          <li><a href="controlcube.html?v=service-cards-20261027-4">컨트롤큐브</a></li>
+        </ul>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
         <span></span><span></span><span></span>
       </button>
@@ -226,7 +237,7 @@
         <span class="barrier-event-label">ALL BARRIER-FREE</span>
         <h2>누구나 편리하게 이용하는<br /><strong>배리어프리 키오스크</strong></h2>
         <p>NIA 인증 기반의 접근성 기능으로 더 많은 고객을 위한 매장을 준비하세요.</p>
-        <a href="space-kiosk.html" class="barrier-event-link">배리어프리 키오스크 살펴보기 <span>→</span></a>
+        <a href="space-kiosk.html?v=service-nav-20261027-4" class="barrier-event-link">배리어프리 키오스크 살펴보기 <span>→</span></a>
       </div>
       <div class="barrier-event-visual" aria-label="배리어프리 기능 키오스크">
         <img src="image/barrierfree-kiosk-cutout.png" alt="배리어프리 접근성 화면과 키패드가 적용된 스터디카페 키오스크" />
@@ -317,7 +328,7 @@
             <p class="gate-lounge-eyebrow">LOUNGE TYPE STUDY CUBE</p>
             <p class="gate-lounge-lead">카페 감성과 집중력 사이, 성인 중심 비즈니스 모델의 등장!</p>
             <h2><span class="gate-lounge-title-line">혁신 라운지형 공간 전용</span><br /><strong>스페이스큐브</strong> mini</h2>
-            <a href="space-mini.html" class="gate-lounge-link">스페이스큐브 mini 알아보기 <b>→</b></a>
+            <a href="space-mini.html?v=service-nav-20261027-4" class="gate-lounge-link">스페이스큐브 mini 알아보기 <b>→</b></a>
           </div>
           <div class="gate-lounge-stat" aria-label="성인 이용객 비중">
             <strong>75%<em>+</em></strong><span>성인 이용객 비중</span><small>기존 스터디카페 대비<br />성인 비중 2.5배 증가</small>
@@ -941,7 +952,7 @@
     <div class="footer-top">
       <div class="container footer-top-inner">
         <div class="footer-logo-area">
-          <a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a>
+          <a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a>
           <p class="footer-tagline">공유오피스·공간대여 무인 토털 솔루션</p>
         </div>
       </div>
@@ -953,10 +964,10 @@
             <strong>솔루션</strong>
             <div class="footer-link-items">
               <a href="#sec-barrier">All 배리어프리</a>
-              <a href="space-kiosk.html">키오스크</a>
-              <a href="space-admin.html">관리자웹</a>
-              <a href="space-mobile.html">모바일앱</a>
-              <a href="space-entrance.html">입퇴실기</a>
+              <a href="space-kiosk.html?v=service-nav-20261027-4">키오스크</a>
+              <a href="space-admin.html?v=service-nav-20261027-4">관리자웹</a>
+              <a href="space-mobile.html?v=service-nav-20261027-4">모바일앱</a>
+              <a href="space-entrance.html?v=service-nav-20261027-4">입퇴실기</a>
             </div>
           </div>
           <div class="footer-link-col">

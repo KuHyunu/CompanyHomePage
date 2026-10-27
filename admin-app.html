@@ -14,13 +14,15 @@
     <link rel="stylesheet" href="gate-footer.css?v=1" />
     <script src="shared-footer.js?v=1" defer></script>
     <link rel="stylesheet" href="sub.css?v=admin-image-zoom-1" />
+  <link rel="stylesheet" href="service-switcher.css?v=3" />
+  <script src="service-switcher.js?v=3" defer></script>
 </head>
 
 <body>
 
     <!-- TOP BRAND BAR -->
     <div class="top-brand-bar">
-        <a href="index.html" aria-label="투비스마트 메인게이트">
+        <a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트">
             <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
         </a>
     </div>
@@ -28,21 +30,30 @@
     <!-- HEADER -->
     <header id="site-header" class="scrolled">
         <div class="header-inner container">
-            <a href="studycube.html?v=study-menu-20261015-3" class="logo"><img src="image/StudyCubeLogo-white-text.png" alt="STUDYCUBE" class="logo-img" /></a>
+            <a href="studycube.html?v=service-nav-20261027-4" class="logo"><img src="image/StudyCubeLogo-white-text.png" alt="STUDYCUBE" class="logo-img" /></a>
             <nav class="gnb" id="gnb">
                 <ul>
                     <li class="gnb-tooltip-wrap">
                         <span class="gnb-tooltip">All 배리어프리 (선택)</span>
-                        <a href="kiosk.html?v=study-menu-20261015-3">키오스크</a>
+                        <a href="kiosk.html?v=service-nav-20261027-4">키오스크</a>
                     </li>
-                    <li><a href="lounge-study.html?v=study-menu-20261015-3">MINI</a></li>
-                    <li><a href="qr-pass.html?v=study-menu-20261015-3">QR/PASS</a></li>
-                    <li><a href="admin-app.html?v=study-menu-20261015-3" class="gnb-active">관리자웹</a></li>
-                    <li><a href="mobile-app.html?v=study-menu-20261015-3">모바일앱</a></li>
-                    <li><a href="entrance.html?v=study-menu-20261015-3">입퇴실기</a></li>
-                    <li><a href="contact.html?v=study-menu-20261015-3">도입문의</a></li>
+                    <li><a href="lounge-study.html?v=mini-photo-20261027-5">MINI</a></li>
+                    <li><a href="qr-pass.html?v=service-nav-20261027-4">QR/PASS</a></li>
+                    <li><a href="admin-app.html?v=service-nav-20261027-4" class="gnb-active">관리자웹</a></li>
+                    <li><a href="mobile-app.html?v=service-nav-20261027-4">모바일앱</a></li>
+                    <li><a href="entrance.html?v=service-nav-20261027-4">입퇴실기</a></li>
+                    <li><a href="contact.html?v=service-nav-20261027-4">도입문의</a></li>
                 </ul>
             </nav>
+            <div class="service-switcher">
+        <button class="service-switcher-toggle" type="button" aria-expanded="false" aria-controls="other-services">다른 서비스 둘러보기 <span aria-hidden="true"></span></button>
+        <ul class="service-switcher-list" id="other-services" aria-label="다른 서비스" hidden>
+          <li><a href="studycube.html?v=service-nav-20261027-4">스터디큐브</a></li>
+          <li><a href="spacecube.html?v=service-nav-20261027-4">스페이스큐브</a></li>
+          <li><a href="salescube.html?v=vending-orbit-20261027-2">세일즈큐브</a></li>
+          <li><a href="controlcube.html?v=service-cards-20261027-4">컨트롤큐브</a></li>
+        </ul>
+      </div>
             <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
         </div>
     </header>
@@ -54,11 +65,11 @@
             <div class="sub-hero-glow g2"></div>
         </div>
         <div class="container sub-hero-content">
-            <div class="sub-breadcrumb"><a href="studycube.html?v=study-menu-20261015-3">홈</a> <span>›</span> <span>관리자웹</span></div>
+            <div class="sub-breadcrumb"><a href="studycube.html?v=service-nav-20261027-4">홈</a> <span>›</span> <span>관리자웹</span></div>
             <div class="sub-hero-badge">ADMIN WEB</div>
             <h1>매장에 가지 않고<br /><span class="gradient-text">언제 어디서나</span><br />스터디큐브가 답(答) 합니다.</h1>
             <p>PC와 스마트폰 하나로 모든 매장 운영을 원격에서 완벽하게</p>
-        <a href="contact.html?v=study-menu-20261015-3" class="btn btn-primary btn-lg sub-hero-contact-btn">도입문의</a>
+        <a href="contact.html?v=service-nav-20261027-4" class="btn btn-primary btn-lg sub-hero-contact-btn">도입문의</a>
         </div>
     </section>
 
@@ -300,7 +311,7 @@
                 <h2>지금 바로 스터디큐브로<br />스마트하게 시작하세요</h2>
                 <p>관리자 웹 & 모바일 앱 데모를 직접 체험해 보세요</p>
                 <div class="cta-banner-btns">
-                    <a href="contact.html?v=study-menu-20261015-3" class="btn btn-primary btn-lg">도입 상담 신청</a>
+                    <a href="contact.html?v=service-nav-20261027-4" class="btn btn-primary btn-lg">도입 상담 신청</a>
                     <a href="tel:15773119" class="btn btn-outline btn-lg">📞 1577-3119</a>
                 </div>
             </div>
@@ -309,7 +320,7 @@
 
     <!-- FOOTER -->
     <footer id="site-footer" class="legacy-footer">
-        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a><p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p></div></div></div>
+        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a><p class="footer-tagline">스터디카페 무인 토털 솔루션의 선두주자</p></div></div></div>
         <div class="footer-bottom"><div class="container footer-bottom-inner">
             <div class="footer-divider" aria-hidden="true"></div>
             <div class="footer-reference-contact"><strong>고객센터</strong><p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p><p>평일 09:00 ~ 18:00</p></div>
@@ -326,7 +337,7 @@
     <div class="quick-buttons" id="quick-buttons">
         <a href="tel:15773119" class="quick-btn quick-call"><span class="qb-icon">📞</span><span
                 class="qb-text">전화상담<br /><strong>1577-3119</strong></span></a>
-        <a href="contact.html?v=study-menu-20261015-3" class="quick-btn quick-consult"><span class="qb-icon">✉️</span><span
+        <a href="contact.html?v=service-nav-20261027-4" class="quick-btn quick-consult"><span class="qb-icon">✉️</span><span
                 class="qb-text">상담신청</span></a>
         <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer" class="quick-btn quick-kakao" aria-label="카카오톡 채널 바로가기"><img src="image/kakao-talk-logo.svg" alt="" /></a>
         <button class="quick-btn quick-top" onclick="scrollToTop()"><span class="qb-icon">▲</span><span
