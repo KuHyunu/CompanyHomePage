@@ -1,0 +1,21 @@
+.gate-body .gate-menu{align-items:center}
+.gate-service-nav{position:relative;display:flex;align-items:center}
+.gate-service-toggle{display:inline-flex;align-items:center;gap:9px;border:0;padding:0;background:none;font:inherit;font-size:15px;font-weight:700;color:#1c2a3b;cursor:pointer}
+.gate-service-toggle>span{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .18s}
+.gate-service-toggle[aria-expanded="true"]{color:var(--blue)}
+.gate-service-toggle[aria-expanded="true"]>span{transform:translateY(2px) rotate(225deg)}
+.gate-service-toggle:focus-visible,.gate-service-dropdown a:focus-visible,.gate-service-dropdown button:focus-visible{outline:2px solid #087ac4;outline-offset:5px;border-radius:4px}
+.gate-service-nav.is-open::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);width:220px;height:20px}
+.gate-service-dropdown{position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%);z-index:65;width:220px;padding:10px;margin:0;list-style:none;background:#fff;border:1px solid #e1e8ef;border-radius:14px;box-shadow:0 14px 36px #0814231f}
+.gate-service-dropdown[hidden]{display:none}
+.gate-service-dropdown li{margin:0;padding:0}
+.gate-menu .gate-service-dropdown a,.gate-service-dropdown button{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:13px 14px;border:0;border-radius:8px;text-align:left;background:transparent;color:#243447;font:inherit;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;cursor:pointer}
+.gate-menu .gate-service-dropdown a:hover,.gate-service-dropdown button:hover{background:#edf7fb;color:#087ac4}
+.gate-service-dropdown button>span{padding:3px 6px;border-radius:4px;background:#f0f2f5;color:#7c8794;font-size:10px;font-weight:500}
+@media(max-width:760px){
+  .gate-service-nav{display:flex;flex-direction:column;align-items:center;width:100%}
+  .gate-service-toggle{min-height:30px}
+  .gate-service-nav.is-open::after{display:none}
+  .gate-service-dropdown{position:static;transform:none;width:min(100%,340px);margin-top:12px;background:#f6f9fc;box-shadow:none;border-radius:10px}
+}
+@media(prefers-reduced-motion:reduce){.gate-service-toggle>span{transition:none}}
