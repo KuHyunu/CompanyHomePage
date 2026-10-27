@@ -15,13 +15,17 @@
     <script src="shared-footer.js?v=1" defer></script>
     <link rel="stylesheet" href="sub.css?v=admin-image-zoom-1" />
 <link rel="stylesheet" href="salescube.css?v=original-logo-no-main-1" />
+  <link rel="stylesheet" href="service-switcher.css?v=3" />
+  <script src="service-switcher.js?v=3" defer></script>
+  <link rel="stylesheet" href="sales-vending-orbit.css?v=2" />
+  <script src="sales-vending-orbit.js?v=2" defer></script>
 </head>
 
 <body class="salescube-site">
 
     <!-- TOP BRAND BAR -->
     <div class="top-brand-bar">
-        <a href="index.html" aria-label="투비스마트 메인게이트">
+        <a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트">
             <img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" />
         </a>
     </div>
@@ -29,8 +33,17 @@
     <!-- HEADER -->
     <header id="site-header">
         <div class="header-inner container">
-            <a href="salescube.html" class="logo"><img src="image/salescube/logo-original-cutout.svg" alt="SALESCUBE" class="logo-img" /></a>
-            <nav class="gnb" id="gnb" aria-label="세일즈큐브 메뉴"><ul><li><a href="sales-vending.html">스마트자판기</a></li><li><a href="sales-custom.html">커스텀스마트자판기</a></li><li><a href="sales-table-order.html">테이블오더</a></li><li><a href="sales-admin.html">관리자웹</a></li><li><a href="sales-mobile.html">모바일앱</a></li><li><a href="#contact-section">도입문의</a></li></ul></nav>
+            <a href="salescube.html?v=vending-orbit-20261027-2" class="logo"><img src="image/salescube/logo-sharp.svg?v=2" alt="SALESCUBE" class="logo-img" /></a>
+            <nav class="gnb" id="gnb" aria-label="세일즈큐브 메뉴"><ul><li><a href="sales-vending.html?v=service-nav-20261027-4">스마트자판기</a></li><li><a href="sales-custom.html?v=service-nav-20261027-4">커스텀스마트자판기</a></li><li><a href="sales-table-order.html?v=service-nav-20261027-4">테이블오더</a></li><li><a href="sales-admin.html?v=service-nav-20261027-4">관리자웹</a></li><li><a href="sales-mobile.html?v=service-nav-20261027-4">모바일앱</a></li><li><a href="#contact-section">도입문의</a></li></ul></nav>
+            <div class="service-switcher">
+        <button class="service-switcher-toggle" type="button" aria-expanded="false" aria-controls="other-services">다른 서비스 둘러보기 <span aria-hidden="true"></span></button>
+        <ul class="service-switcher-list" id="other-services" aria-label="다른 서비스" hidden>
+          <li><a href="studycube.html?v=service-nav-20261027-4">스터디큐브</a></li>
+          <li><a href="spacecube.html?v=service-nav-20261027-4">스페이스큐브</a></li>
+          <li><a href="salescube.html?v=vending-orbit-20261027-2">세일즈큐브</a></li>
+          <li><a href="controlcube.html?v=service-cards-20261027-4">컨트롤큐브</a></li>
+        </ul>
+      </div>
             <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
         </div>
     </header>
@@ -155,7 +168,10 @@
         </article>
       </div>
     </div>
-  </section><section class="sales-vending-intro"><div class="container"><h2>누구나 편리하게 이용하는<br />스마트자판기 / 커스텀스마트자판기</h2><a class="sales-text-link" href="sales-vending.html">자판기 살펴보기 →</a><div class="sales-vending-pair"><a href="sales-vending.html"><img src="image/salescube/vending-ambient.webp" alt="스마트자판기 실온·냉동·냉장" loading="lazy" class="" /><h3>스마트자판기</h3><p>(실온, 냉동, 냉장)</p></a><a href="sales-custom.html"><img src="image/salescube/custom-vape.webp" alt="커스텀스마트자판기" loading="lazy" class="" /><h3>커스텀자판기</h3><p>(전자담배, 푸드전용, 초유, 금판매, 전당포)</p></a></div></div></section><section class="sales-connected"><div class="container"><span class="sales-kicker">CONNECTED MANAGEMENT</span><h2>중앙 서버 하나로 연결되는 통합 운영</h2><p>운영주 웹, 고객 서비스, 키오스크까지 하나의 중앙 서버에서 유기적으로 연결하고 관리합니다.</p><img src="image/salescube/connected-management-clear.svg" alt="중앙 서버, 운영주 웹, 키오스크와 고객의 통합 운영 구조" loading="lazy" class=" sales-zoomable" /></div></section><section class="sales-delivery"><div class="container"><h2>스마트자판기 배송연동</h2><p class="sales-delivery-lead">이젠 키오스크에서도 배송 상품 판매가 가능합니다.<br />오직 세일즈큐브에서만 이용하실 수 있습니다.</p><div class="sales-delivery-layout"><div class="sales-delivery-screens"><img src="image/salescube/delivery-home.webp" alt="세일즈큐브 배송상품 구매 메뉴" loading="lazy" class=" sales-zoomable" /><img src="image/salescube/delivery-checkout.webp" alt="배송주문 및 선물배송 결제 화면" loading="lazy" class=" sales-zoomable" /></div><div class="sales-delivery-notes"><p><span aria-hidden="true">♧</span>고객 편의를 위해<br />배송 주문 서비스를 제공해 보세요.</p><p><span aria-hidden="true">♔</span>이용객들은 고객님의 우수한 상품을 지인에게<br />선물하실 수 있습니다.</p></div></div></div></section><section id="sec-process" class="sec-process">
+  </section><section class="sales-vending-intro" id="vending-showcase"><div class="container"><h2>누구나 편리하게 이용하는<br />스마트자판기 / 커스텀스마트자판기</h2><a class="sales-text-link" href="sales-vending.html?v=service-nav-20261027-4">자판기 살펴보기 →</a><div class="vending-orbit" role="region" aria-label="자판기 제품 회전 전시">
+  <div class="vending-orbit-scene"><a class="vending-orbit-card" href="sales-custom.html?v=service-nav-20261027-4" data-product="전당포 무인솔루션" aria-label="전당포 무인솔루션 자세히 보기"><img src="image/salescube/proposal-vending/pawn.png" alt="전당포 무인솔루션 제안서 제품 사진" loading="lazy" /><h3>전당포 무인솔루션</h3><p>귀금속·시계 보관 및 무인 거래</p></a><a class="vending-orbit-card" href="sales-vending.html?v=service-nav-20261027-4" data-product="푸드전용 냉장자판기" aria-label="푸드전용 냉장자판기 자세히 보기"><img src="image/salescube/proposal-vending/food.png" alt="푸드전용 냉장자판기 제안서 제품 사진" loading="lazy" /><h3>푸드전용 냉장자판기</h3><p>푸드 전용 냉장 상품 판매</p></a><a class="vending-orbit-card" href="sales-vending.html?v=service-nav-20261027-4" data-product="냉장식품자판기" aria-label="냉장식품자판기 자세히 보기"><img src="image/salescube/proposal-vending/farm.png" alt="냉장식품자판기 제안서 제품 사진" loading="lazy" /><h3>냉장식품자판기</h3><p>식품·음료 무인 판매</p></a><a class="vending-orbit-card" href="sales-custom.html?v=service-nav-20261027-4" data-product="금판매 무인솔루션" aria-label="금판매 무인솔루션 자세히 보기"><img src="image/salescube/proposal-vending/gold.png" alt="금판매 무인솔루션 제안서 제품 사진" loading="lazy" /><h3>금판매 무인솔루션</h3><p>금 상품 무인 판매</p></a></div>
+</div>
+<div class="vending-orbit-category-links"><a href="sales-vending.html?v=service-nav-20261027-4"><strong>스마트자판기</strong><span>실온 · 냉동 · 냉장</span></a><a href="sales-custom.html?v=service-nav-20261027-4"><strong>커스텀자판기</strong><span>전자담배 · 푸드전용 · 초유 · 금판매 · 전당포</span></a></div></div></section><section class="sales-connected"><div class="container"><span class="sales-kicker">CONNECTED MANAGEMENT</span><h2>중앙 서버 하나로 연결되는 통합 운영</h2><p>운영주 웹, 고객 서비스, 키오스크까지 하나의 중앙 서버에서 유기적으로 연결하고 관리합니다.</p><img src="image/salescube/connected-management-clear.svg" alt="중앙 서버, 운영주 웹, 키오스크와 고객의 통합 운영 구조" loading="lazy" class=" sales-zoomable" /></div></section><section class="sales-delivery"><div class="container"><h2>스마트자판기 배송연동</h2><p class="sales-delivery-lead">이젠 키오스크에서도 배송 상품 판매가 가능합니다.<br />오직 세일즈큐브에서만 이용하실 수 있습니다.</p><div class="sales-delivery-layout"><div class="sales-delivery-screens"><img src="image/salescube/delivery-home.webp" alt="세일즈큐브 배송상품 구매 메뉴" loading="lazy" class=" sales-zoomable" /><img src="image/salescube/delivery-checkout.webp" alt="배송주문 및 선물배송 결제 화면" loading="lazy" class=" sales-zoomable" /></div><div class="sales-delivery-notes"><p><span aria-hidden="true">♧</span>고객 편의를 위해<br />배송 주문 서비스를 제공해 보세요.</p><p><span aria-hidden="true">♔</span>이용객들은 고객님의 우수한 상품을 지인에게<br />선물하실 수 있습니다.</p></div></div></div></section><section id="sec-process" class="sec-process">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">PROCESS</span>
@@ -459,7 +475,7 @@
     </div>
   </section></main>
     <footer id="site-footer" class="legacy-footer">
-        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a><p class="footer-tagline">공유오피스·공간대여 무인 토털 솔루션</p></div></div></div>
+        <div class="footer-top"><div class="container footer-top-inner"><div class="footer-logo-area"><a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="footer-logo" /></a><p class="footer-tagline">공유오피스·공간대여 무인 토털 솔루션</p></div></div></div>
         <div class="footer-bottom"><div class="container footer-bottom-inner">
             <div class="footer-divider" aria-hidden="true"></div>
             <div class="footer-reference-contact"><strong>고객센터</strong><p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p><p>평일 09:00 ~ 18:00</p></div>

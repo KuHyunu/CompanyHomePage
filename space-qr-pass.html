@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="qr-pass.css?v=1" />
   <script src="shared-footer.js?v=1" defer></script>
   <link rel="stylesheet" href="spacecube.css?v=original-logo-no-main-1" />
+  <link rel="stylesheet" href="service-switcher.css?v=3" />
+  <script src="service-switcher.js?v=3" defer></script>
 </head>
 <body class="qr-page spacecube-site">
   <svg class="qr-symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -27,11 +29,20 @@
     <symbol id="icon-wallet" viewBox="0 0 48 48"><path d="M39 13H9a4 4 0 0 1 0-8h27v8M9 13a4 4 0 0 1-4-4v29a5 5 0 0 0 5 5h29V13M39 23H28v11h11"/><circle cx="32" cy="28.5" r="1"/></symbol>
     <symbol id="icon-key" viewBox="0 0 48 48"><circle cx="17" cy="17" r="11"/><path d="m25 25 18 18M32 32l5-5M38 38l5-5"/></symbol>
   </defs></svg>
-  <div class="top-brand-bar"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" /></a></div>
+  <div class="top-brand-bar"><a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TobeSmart" class="top-brand-logo" /></a></div>
   <header id="site-header">
     <div class="header-inner container">
-      <a href="spacecube.html" class="logo"><img src="image/spacecube/logo-original.png" alt="SPACECUBE" class="logo-img" /></a>
-      <nav class="gnb" id="gnb" aria-label="스페이스큐브 메뉴"><ul><li><a href="space-office.html">공유오피스</a></li><li><a href="space-kids.html">키즈카페</a></li><li><a href="space-admin.html">관리자웹</a></li><li><a href="space-mobile.html">모바일앱</a></li><li><a href="space-entrance.html">출입통제기기</a></li><li><a href="spacecube.html#contact-section">도입문의</a></li></ul></nav>
+      <a href="spacecube.html?v=service-nav-20261027-4" class="logo"><img src="image/spacecube/logo-sharp.svg?v=2" alt="SPACECUBE" class="logo-img" /></a>
+      <nav class="gnb" id="gnb" aria-label="스페이스큐브 메뉴"><ul><li><a href="space-office.html?v=service-nav-20261027-4">공유오피스</a></li><li><a href="space-kids.html?v=service-nav-20261027-4">키즈카페</a></li><li><a href="space-admin.html?v=service-nav-20261027-4">관리자웹</a></li><li><a href="space-mobile.html?v=service-nav-20261027-4">모바일앱</a></li><li><a href="space-entrance.html?v=service-nav-20261027-4">출입통제기기</a></li><li><a href="spacecube.html?v=service-nav-20261027-4#contact-section">도입문의</a></li></ul></nav>
+      <div class="service-switcher">
+        <button class="service-switcher-toggle" type="button" aria-expanded="false" aria-controls="other-services">다른 서비스 둘러보기 <span aria-hidden="true"></span></button>
+        <ul class="service-switcher-list" id="other-services" aria-label="다른 서비스" hidden>
+          <li><a href="studycube.html?v=service-nav-20261027-4">스터디큐브</a></li>
+          <li><a href="spacecube.html?v=service-nav-20261027-4">스페이스큐브</a></li>
+          <li><a href="salescube.html?v=vending-orbit-20261027-2">세일즈큐브</a></li>
+          <li><a href="controlcube.html?v=service-cards-20261027-4">컨트롤큐브</a></li>
+        </ul>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="gnb"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -42,7 +53,7 @@
         <p class="qr-eyebrow">QR / PASS</p>
         <h1 id="qr-title">키오스크 대기 없이<br /><span>QR 패스로 1초 입실!</span></h1>
         <p class="qr-hero-lead">줄 서서 터치할 필요 없습니다.<br />입실, 퇴실, 좌석 제어까지<br />내 스마트폰 하나로 끝내세요.</p>
-        <div class="qr-actions"><a class="btn btn-primary btn-lg" href="spacecube.html#contact-section">도입문의 <span aria-hidden="true">↗</span></a><a class="btn btn-outline btn-lg" href="Proposal/스페이스큐브_제안서.pdf" download>제안서 다운로드 <span aria-hidden="true">↓</span></a></div>
+        <div class="qr-actions"><a class="btn btn-primary btn-lg" href="spacecube.html?v=service-nav-20261027-4#contact-section">도입문의 <span aria-hidden="true">↗</span></a><a class="btn btn-outline btn-lg" href="Proposal/스페이스큐브_제안서.pdf" download>제안서 다운로드 <span aria-hidden="true">↓</span></a></div>
       </div>
     </section>
 
@@ -72,7 +83,7 @@
           <article><div><svg class="qr-icon" aria-hidden="true"><use href="#icon-seat" /></svg><h3>공간관리</h3><p>회의실·개인석 예약부터 냉난방 IoT 제어까지 한 번에</p></div><img src="image/lounge-banner/lounge-study-space.png" alt="회의와 개인 학습을 위한 스터디카페 공간" loading="lazy" /></article>
           <article><div><svg class="qr-icon" aria-hidden="true"><use href="#icon-wallet" /></svg><h3>비용절감</h3><p>무인 운영 시스템 구축으로 인건비 및 관리 비용 최소화</p></div><img src="image/qr-pass/app-touch.png" alt="스마트폰으로 이용권을 직접 구매하는 모습" loading="lazy" /></article>
         </div>
-        <div class="qr-actions qr-centered"><a class="btn btn-primary btn-lg" href="spacecube.html#contact-section">도입문의 <span aria-hidden="true">↗</span></a><a class="btn qr-outline-dark btn-lg" href="Proposal/스페이스큐브_제안서.pdf" download>제안서 다운로드 <span aria-hidden="true">↓</span></a></div>
+        <div class="qr-actions qr-centered"><a class="btn btn-primary btn-lg" href="spacecube.html?v=service-nav-20261027-4#contact-section">도입문의 <span aria-hidden="true">↗</span></a><a class="btn qr-outline-dark btn-lg" href="Proposal/스페이스큐브_제안서.pdf" download>제안서 다운로드 <span aria-hidden="true">↓</span></a></div>
       </div>
     </section>
 
@@ -95,7 +106,7 @@
         <article><svg class="qr-icon" aria-hidden="true"><use href="#icon-wallet" /></svg><p>💰 좌석 예약 및 이용권 결제 자동화를 원할 때</p></article>
         <article><svg class="qr-icon" aria-hidden="true"><use href="#icon-key" /></svg><p>🔑 비주거 공간을 24시간 효율적으로 운영하고 싶을 때</p></article>
       </div>
-      <div class="qr-actions qr-centered"><a class="btn btn-primary btn-lg" href="spacecube.html#contact-section">도입문의 <span aria-hidden="true">↗</span></a></div>
+      <div class="qr-actions qr-centered"><a class="btn btn-primary btn-lg" href="spacecube.html?v=service-nav-20261027-4#contact-section">도입문의 <span aria-hidden="true">↗</span></a></div>
     </div></section>
 
     <section class="qr-comparison" aria-labelledby="qr-comparison-title"><div class="container">
@@ -119,7 +130,7 @@
     </div></section>
 
     <section class="qr-download" aria-labelledby="qr-download-title"><div class="container">
-      <img class="qr-download-logo" src="image/spacecube/logo-original.png" alt="SPACECUBE" loading="lazy" />
+      <img class="qr-download-logo" src="image/spacecube/logo-sharp.svg?v=2" alt="SPACECUBE" loading="lazy" />
       <h2 id="qr-download-title">키오스크 터치 없이,<br />내 손안의 스페이스큐브로<br /><span>더 빠르고 스마트하게 공부하세요!</span></h2>
       <p class="qr-download-note">무인 운영으로 출입 관리가 필요할때 키오스크 도입 비용이 부담스러울때 매장이 작아서 공간활용이 중요할 때</p>
       <p class="qr-download-call">지금 앱 다운로드!</p>

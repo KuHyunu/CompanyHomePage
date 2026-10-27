@@ -29,36 +29,51 @@
     .lounge-page .gate-logo{flex-shrink:0}
     @media(max-width:760px){.lounge-page .gate-logo img{height:30px}}
   </style>
+  <link rel="stylesheet" href="service-switcher.css?v=3" />
+  <script src="service-switcher.js?v=3" defer></script>
+  <link rel="stylesheet" href="mini-hero.css?v=4" />
+  <script src="mini-page-navigation.js?v=1" defer></script>
 </head>
 <body class="gate-body lounge-page">
-  <div class="gate-top-brand"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TOBESMART" /></a></div>
+  <div class="gate-top-brand"><a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TOBESMART" /></a></div>
   <header class="gate-header" id="top">
     <div class="gate-container gate-nav">
-      <a class="gate-logo" href="studycube.html?v=study-menu-20261015-3" aria-label="스터디큐브 메인페이지"><img src="image/StudyCubeLogo.png" alt="STUDYCUBE" /></a>
-      <nav class="gate-menu" aria-label="페이지 메뉴"><a href="#trend">트렌드</a><a href="#solution">솔루션</a><a href="#mini">mini 키오스크</a></nav>
+      <a class="gate-logo" href="studycube.html?v=service-nav-20261027-4" aria-label="스터디큐브 메인페이지"><img src="image/StudyCubeLogo.png" alt="STUDYCUBE" /></a>
+      <nav class="gate-menu" aria-label="페이지 메뉴"><a href="#trend">트렌드</a><a href="#solution">솔루션</a><a href="#mini" data-mini-section>mini 키오스크</a></nav>
       <a class="gate-contact-link" href="#lounge-consult">도입문의 <span>↗</span></a>
+      <div class="service-switcher">
+        <button class="service-switcher-toggle" type="button" aria-expanded="false" aria-controls="other-services">다른 서비스 둘러보기 <span aria-hidden="true"></span></button>
+        <ul class="service-switcher-list" id="other-services" aria-label="다른 서비스" hidden>
+          <li><a href="studycube.html?v=service-nav-20261027-4">스터디큐브</a></li>
+          <li><a href="spacecube.html?v=service-nav-20261027-4">스페이스큐브</a></li>
+          <li><a href="salescube.html?v=vending-orbit-20261027-2">세일즈큐브</a></li>
+          <li><a href="controlcube.html?v=service-cards-20261027-4">컨트롤큐브</a></li>
+        </ul>
+      </div>
       <button class="gate-menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false"><i></i><i></i></button>
     </div>
   </header>
 
   <main>
-    <section class="lounge-hero">
-      <div class="lounge-shell lounge-hero-grid">
-        <div class="lounge-hero-copy">
+    <section class="lounge-hero lounge-photo-hero">
+      <img class="mini-hero-background" src="image/lounge-page/mini-hero-reference-background.png" width="1674" height="940" fetchpriority="high" alt="라운지형 스터디카페의 나무 기둥에 설치된 스터디큐브 MINI 키오스크와 스마트폰 QR 출입 연출" />
+      <div class="lounge-shell mini-photo-layout">
+        <div class="lounge-hero-copy mini-photo-copy">
           <p class="lounge-kicker">라운지형 스터디카페 전용 무인솔루션</p>
-          <h1>투비스마트 <strong>스터디큐브 mini</strong></h1>
-          <p class="lounge-hero-lead">라운지형 스터디카페 최적화!!<br />도입비용은 더 라이트하고,<br />이용은 더 심플해졌습니다.</p>
-          <a href="contact.html?v=study-menu-20261015-3" class="lounge-primary">도입 상담 신청하기 <b>→</b></a>
+          <h1>스터디큐브 <span>mini</span></h1>
+          <p class="lounge-hero-lead">콤팩트한 디자인, 가벼워진 도입 비용</p>
+          <a href="contact.html?v=service-nav-20261027-4" class="lounge-primary">도입 상담 신청하기 <b>→</b></a>
         </div>
-        <div class="lounge-hero-product"><img src="image/lounge-page/mini-kiosk.png?v=ticket-select-1" alt="스터디큐브 mini 벽걸이형 키오스크" /></div>
-        <ul class="lounge-hero-points">
+      </div>
+    </section>
+    <section class="mini-hero-benefits" aria-label="스터디큐브 mini 주요 기능">
+      <div class="lounge-shell"><ul class="lounge-hero-points">
           <li><b>01</b><span>핸드폰 번호 입력만 하는 간편한 회원가입과 이용권 구매</span></li>
           <li><b>02</b><span>좌석 선택 없는 간편한 QR 발급과 전용 입실기 출입통제</span></li>
           <li><b>03</b><span>당일권·횟수권 자유로운 상품구성</span></li>
           <li><b>04</b><span>패키지 횟수권 할인율과 유효기간 설정 가능</span></li>
           <li><b>05</b><span>네이버 &amp; 카카오 &amp; 삼성페이는 물론 애플페이까지 지원</span></li>
-        </ul>
-      </div>
+        </ul></div>
     </section>
 
     <section class="lounge-section lounge-trend" id="trend">
@@ -133,7 +148,7 @@
     </section>
   </main>
 
-  <footer class="gate-reference-footer"><div class="gate-container"><div class="gate-reference-logo"><a href="index.html" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TOBESMART" /></a></div><div class="gate-reference-line" aria-hidden="true"></div><div class="gate-reference-body"><div class="gate-reference-company"><p>대표: 김광 &nbsp;|&nbsp; 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p><p>전화: 1577-3119 &nbsp;|&nbsp; 팩스: 031-701-4119 &nbsp;|&nbsp; 이메일: tobesmart@tobesmart.co.kr</p><p class="gate-reference-copyright">COPYRIGHT © TOBESMART. ALL RIGHTS RESERVED.</p></div><div class="gate-reference-center"><strong>고객센터</strong><p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p><p>평일 09:00 ~ 18:00</p></div></div></div></footer>
+  <footer class="gate-reference-footer"><div class="gate-container"><div class="gate-reference-logo"><a href="index.html?v=service-nav-20261027-4" aria-label="투비스마트 메인게이트"><img src="image/TobeSmartLogo.png" alt="TOBESMART" /></a></div><div class="gate-reference-line" aria-hidden="true"></div><div class="gate-reference-body"><div class="gate-reference-company"><p>대표: 김광 &nbsp;|&nbsp; 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p><p>전화: 1577-3119 &nbsp;|&nbsp; 팩스: 031-701-4119 &nbsp;|&nbsp; 이메일: tobesmart@tobesmart.co.kr</p><p class="gate-reference-copyright">COPYRIGHT © TOBESMART. ALL RIGHTS RESERVED.</p></div><div class="gate-reference-center"><strong>고객센터</strong><p>전화 1577-3119 | <a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer">카카오톡 문의</a></p><p>평일 09:00 ~ 18:00</p></div></div></div></footer>
   <aside class="gate-quick-buttons" aria-label="빠른 문의"><a href="tel:15773119" class="gate-quick-btn gate-quick-call"><span aria-hidden="true">☎</span><b>전화상담<br />1577-3119</b></a><a href="#lounge-consult" class="gate-quick-btn gate-quick-consult"><span aria-hidden="true">✉</span><b>상담신청</b></a><a href="https://pf.kakao.com/_FKGxnj" target="_blank" rel="noopener noreferrer" class="gate-quick-btn gate-quick-kakao" aria-label="카카오톡 채널 바로가기"><img src="image/kakao-talk-logo.svg" alt="" /></a><a href="https://blog.naver.com/tobesmart111" target="_blank" rel="noopener noreferrer" class="gate-quick-btn gate-quick-blog" aria-label="투비스마트 네이버 블로그 바로가기"><span aria-hidden="true">b</span></a><a href="#top" class="gate-quick-btn gate-quick-top" aria-label="화면 상단으로 이동"><span aria-hidden="true">▲</span><b>TOP</b></a></aside>
   <script src="anchor-navigation.js?v=stable-center-1"></script><script src="gate.js?v=stable-center-1"></script>
   <script>document.getElementById('lounge-consult-form').addEventListener('submit',function(e){e.preventDefault();const message=this.querySelector('.lounge-form-message');message.textContent='상담 요청이 완료되었습니다. 영업일 기준 24시간 이내 연락드리겠습니다.';this.reset();});document.getElementById('lounge-standard-form').addEventListener('submit',function(e){e.preventDefault();const message=this.querySelector('.lounge-standard-message');message.textContent='상담 신청이 완료되었습니다! 영업일 기준 24시간 이내 연락드리겠습니다.';this.reset();});</script>
