@@ -1,24 +1,40 @@
-/* PDF revision: retain the existing cards, blue headings and carousel. */
-#app-features, #study-tools, #app-sync { scroll-margin-top: 110px; }
-.app-study-layout { display:grid; grid-template-columns:150px minmax(0,1fr) 185px; gap:20px; align-items:center; margin-top:36px; }
-.app-study-screens { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; align-items:start; }
-.app-study-screens figure { margin:0; min-width:0; }
-.app-study-screens img { display:block; width:100%; height:420px; object-fit:contain; object-position:top; }
-.app-study-screens figcaption { margin-top:14px; font-size:14px; font-weight:700; color:#4775c6; }
-.app-study-layout .app-guide-notes { line-height:1.7; }
-.app-study-layout .app-guide-notes span::before,.app-study-layout .app-guide-notes span::after { display:none; }
-#app-sync .app-guide-kicker { max-width:980px; margin-left:auto; margin-right:auto; line-height:1.8; }
-#app-sync h2 { max-width:1000px; margin-left:auto; margin-right:auto; text-wrap:balance; }
-@media(max-width:1000px) {
- .app-study-layout { grid-template-columns:1fr; }
- .app-study-layout .app-guide-notes { display:flex; flex-direction:row; flex-wrap:wrap; justify-content:center; text-align:center; gap:8px 18px; }
- .app-study-screens { max-width:650px; width:100%; margin:auto; }
- .app-study-screens img { height:360px; }
+/* Dedicated vertical feature sections for the StudyCube mobile app. */
+.study-app-intro { padding: 100px 0 70px; background: #fff; }
+.study-app-intro .section-header { margin-bottom: 0; }
+.study-app-intro p { margin: 24px auto 0; color: #66758a; font-size: 18px; line-height: 1.9; }
+.study-app-feature { padding: 88px 0; background: #f5f8fd; scroll-margin-top: 145px; }
+.study-app-feature:nth-of-type(even) { background: #fff; }
+.study-app-feature-inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 90px; max-width: 1100px; }
+.study-app-feature-alt .study-app-copy { order: 2; }
+.study-app-feature-alt .study-app-screen { order: 1; }
+.study-app-step { display: block; color: #4276ca; font-size: 14px; font-weight: 800; letter-spacing: 1.6px; margin-bottom: 24px; }
+.study-app-copy h2 { color: #101e34; font-size: clamp(28px, 2.7vw, 38px); line-height: 1.5; letter-spacing: -1.4px; margin: 0 0 24px; word-break: keep-all; }
+.study-app-copy p { font-size: 17px; color: #66758a; line-height: 1.95; word-break: keep-all; margin: 0; }
+.study-app-copy ul { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 13px; }
+.study-app-copy li { color: #344761; font-size: 16px; line-height: 1.6; display: flex; gap: 12px; }
+.study-app-copy li::before { content: "✓"; color: #477bcd; font-weight: 900; }
+.study-app-screen { margin: 0; min-width: 0; text-align: center; }
+.study-app-screen img { display: block; width: auto; height: 540px; max-width: 100%; object-fit: contain; margin: 0 auto; border-radius: 24px; box-shadow: 0 20px 50px rgba(36, 64, 110, .12); }
+.study-app-screen figcaption { margin-top: 22px; font-size: 13px; color: #738097; line-height: 1.6; }
+.study-app-support { padding: 80px 0; background: #fff; }
+.study-app-support .app-free-banner { margin: 0; }
+#app-features, #app-sync { scroll-margin-top: 145px; }
+@media(max-width: 900px) {
+ .study-app-feature-inner { gap: 36px; }
+ .study-app-screen img { height: 460px; }
+ .study-app-copy h2 { font-size: 28px; }
 }
-@media(max-width:600px) {
- .app-study-screens { gap:7px; }
- .app-study-screens img { height:auto; }
- .app-study-screens figcaption { font-size:11px; }
- .app-study-layout .app-guide-notes { font-size:12px; }
- .app-real-carousel { overflow:hidden; }
+@media(max-width: 600px) {
+ .study-app-intro { padding: 64px 0 44px; }
+ .study-app-intro p { font-size: 15px; }
+ .study-app-feature { padding: 56px 0; }
+ .study-app-feature-inner { grid-template-columns: 1fr; gap: 34px; }
+ .study-app-feature-alt .study-app-copy, .study-app-feature-alt .study-app-screen { order: initial; }
+ .study-app-step { font-size: 12px; margin-bottom: 18px; }
+ .study-app-copy h2 { font-size: 27px; margin-bottom: 18px; letter-spacing: -1px; }
+ .study-app-copy p { font-size: 16px; }
+ .study-app-copy li { font-size: 15px; }
+ .study-app-screen img { height: 460px; max-width: 90%; }
+ .study-app-screen figcaption { margin-top: 18px; }
+ .study-app-support { padding: 48px 0; }
 }
